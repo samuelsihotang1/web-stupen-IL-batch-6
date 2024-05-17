@@ -1,39 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-
-const ScriptLoader = ({ src, onLoad }: { src: string; onLoad: () => void }) => {
-	useEffect(() => {
-		const script = document.createElement('script');
-		script.src = src;
-		script.async = true;
-		script.onload = onLoad;
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, [src, onLoad]);
-
-	return null;
-};
+import ScriptLoader from './tools/ScriptLoader.tsx';
 
 const Main = () => {
-	const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+	const [isCommonScriptLoaded, setIsCommonScriptLoaded] = useState(false);
+	const [isMainScriptLoaded, setIsMainScriptLoaded] = useState(false);
 
-	const handleScriptLoad = () => {
-		setIsScriptLoaded(true);
+	const handleCommonScriptLoad = () => {
+		setIsCommonScriptLoaded(true);
+	};
+
+	const handleMainScriptLoad = () => {
+		setIsMainScriptLoaded(true);
 	};
 
 	return (
 		<>
-			{!isScriptLoaded && (
+			{!isCommonScriptLoaded && (
 				<ScriptLoader
 					src="/assets/js/common_scripts.min.js"
-					onLoad={handleScriptLoad}
+					onLoad={handleCommonScriptLoad}
 				/>
 			)}
-			{isScriptLoaded && <App />}
+			{!isMainScriptLoaded && (
+				<ScriptLoader src="/assets/js/main.js" onLoad={handleMainScriptLoad} />
+			)}
+			{isCommonScriptLoaded && isMainScriptLoaded && <App />}
 		</>
 	);
 };
