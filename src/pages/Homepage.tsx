@@ -3,7 +3,7 @@ import '/public/assets/css/home_1.css';
 
 function Homepage() {
 	useEffect(() => {
-        // Specific Scripts
+		// Specific Scripts
 		const script = document.createElement('script');
 		script.src = '/assets/js/carousel-home.min.js';
 		script.async = true;
@@ -35,7 +35,7 @@ function Homepage() {
 									</div>
 								</div>
 								<nav className="col-xl-6 col-lg-7">
-									<a className="open_close" href="javascript:void(0);">
+									<a className="open_close" href="##">
 										<div className="hamburger hamburger--spin">
 											<div className="hamburger-box">
 												<div className="hamburger-inner"></div>
@@ -62,9 +62,7 @@ function Homepage() {
 										</div>
 										<ul>
 											<li className="submenu">
-												<a
-													href="javascript:void(0);"
-													className="show-submenu">
+												<a href="##" className="show-submenu">
 													Home
 												</a>
 												<ul>
@@ -90,7 +88,7 @@ function Homepage() {
 											</li>
 											<li className="megamenu submenu">
 												<a
-													href="javascript:void(0);"
+													href="##"
 													className="show-submenu-mega">
 													Pages
 												</a>
@@ -249,9 +247,7 @@ function Homepage() {
 												{/* /menu-wrapper */}
 											</li>
 											<li className="submenu">
-												<a
-													href="javascript:void(0);"
-													className="show-submenu">
+												<a href="##" className="show-submenu">
 													Extra Pages
 												</a>
 												<ul>
@@ -668,9 +664,7 @@ function Homepage() {
 											{/* /dropdown-access*/}
 										</li>
 										<li>
-											<a
-												href="javascript:void(0);"
-												className="btn_search_mob">
+											<a href="##" className="btn_search_mob">
 												<span>Search</span>
 											</a>
 										</li>
@@ -2171,7 +2165,7 @@ function Homepage() {
 									<li>
 										<div className="styled-select lang-selector">
 											<select>
-												<option value="English" selected>
+												<option defaultValue="English">
 													English
 												</option>
 												<option value="French">French</option>
@@ -2183,7 +2177,7 @@ function Homepage() {
 									<li>
 										<div className="styled-select currency-selector">
 											<select>
-												<option value="US Dollars" selected>
+												<option defaultValue="US Dollars">
 													US Dollars
 												</option>
 												<option value="Euro">Euro</option>
