@@ -18,7 +18,7 @@ function Homepage() {
 			<div id="page">
 				<header className="version_1">
 					<div className="layer"></div>
-					{/* Mobile menu overlay mask */}
+					{/* <!-- Mobile menu overlay mask --> */}
 					<div className="main_header">
 						<div className="container">
 							<div className="row small-gutters">
@@ -42,7 +42,7 @@ function Homepage() {
 											</div>
 										</div>
 									</a>
-									{/* Mobile menu button */}
+									{/* <!-- Mobile menu button --> */}
 									<div className="main-menu">
 										<div id="header_menu">
 											<a href="index.html">
@@ -232,7 +232,8 @@ function Homepage() {
 															<div className="banner_menu">
 																<a href="#0">
 																	<img
-																		src="/assets/img/banner_menu.jpg"
+																		src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+																		data-src="/assets/img/banner_menu.jpg"
 																		width="400"
 																		height="550"
 																		alt=""
@@ -242,9 +243,9 @@ function Homepage() {
 															</div>
 														</div>
 													</div>
-													{/* /row */}
+													{/* <!-- /row --> */}
 												</div>
-												{/* /menu-wrapper */}
+												{/* <!-- /menu-wrapper --> */}
 											</li>
 											<li className="submenu">
 												<a href="##" className="show-submenu">
@@ -310,7 +311,7 @@ function Homepage() {
 											</li>
 										</ul>
 									</div>
-									{/*/main-menu */}
+									{/* <!--/main-menu --> */}
 								</nav>
 								<div className="col-xl-3 col-lg-2 d-lg-flex align-items-center justify-content-end text-end">
 									<a className="phone_top" href="tel://9438843343">
@@ -320,10 +321,10 @@ function Homepage() {
 									</a>
 								</div>
 							</div>
-							{/* /row */}
+							{/* <!-- /row --> */}
 						</div>
 					</div>
-					{/* /main_header */}
+					{/* <!-- /main_header --> */}
 
 					<div className="main_nav Sticky">
 						<div className="container">
@@ -549,7 +550,8 @@ function Homepage() {
 															<a href="product-detail-1.html">
 																<figure>
 																	<img
-																		src="/assets/img/products/shoes/thumb/1.jpg"
+																		src="/assets/img/products/product_placeholder_square_small.jpg"
+																		data-src="/assets/img/products/shoes/thumb/1.jpg"
 																		alt=""
 																		width="50"
 																		height="50"
@@ -574,7 +576,8 @@ function Homepage() {
 															<a href="product-detail-1.html">
 																<figure>
 																	<img
-																		src="/assets/img/products/shoes/thumb/2.jpg"
+																		src="/assets/img/products/product_placeholder_square_small.jpg"
+																		data-src="/assets/img/products/shoes/thumb/2.jpg"
 																		alt=""
 																		width="50"
 																		height="50"
@@ -613,7 +616,7 @@ function Homepage() {
 													</div>
 												</div>
 											</div>
-											{/* /dropdown-cart*/}
+											{/* <!-- /dropdown-cart--> */}
 										</li>
 										<li>
 											<a href="#0" className="wishlist">
@@ -661,7 +664,7 @@ function Homepage() {
 													</ul>
 												</div>
 											</div>
-											{/* /dropdown-access*/}
+											{/* <!-- /dropdown-access--> */}
 										</li>
 										<li>
 											<a href="##" className="btn_search_mob">
@@ -683,7 +686,7 @@ function Homepage() {
 									</ul>
 								</div>
 							</div>
-							{/* /row */}
+							{/* <!-- /row --> */}
 						</div>
 						<div className="search_mob_wp">
 							<input
@@ -697,11 +700,11 @@ function Homepage() {
 								value="Search"
 							/>
 						</div>
-						{/* /search_mobile */}
+						{/* <!-- /search_mobile --> */}
 					</div>
-					{/* /main_nav */}
+					{/* <!-- /main_nav --> */}
 				</header>
-				{/* /header */}
+				{/* <!-- /header --> */}
 
 				<main>
 					<div id="carousel-home">
@@ -710,7 +713,7 @@ function Homepage() {
 								className="owl-slide cover"
 								style={{
 									backgroundImage:
-										'url(/assets/img/slides/slide_home_2.jpg)',
+										"url('/assets/img/slides/slide_home_2.jpg')",
 								}}>
 								<div
 									className="opacity-mask d-flex align-items-center"
@@ -742,12 +745,12 @@ function Homepage() {
 									</div>
 								</div>
 							</div>
-							{/*/owl-slide*/}
+							{/* <!--/owl-slide--> */}
 							<div
 								className="owl-slide cover"
 								style={{
 									backgroundImage:
-										'url(/assets/img/slides/slide_home_1.jpg)',
+										"url('/assets/img/slides/slide_home_1.jpg')",
 								}}>
 								<div
 									className="opacity-mask d-flex align-items-center"
@@ -779,12 +782,12 @@ function Homepage() {
 									</div>
 								</div>
 							</div>
-							{/*/owl-slide*/}
+							{/* <!--/owl-slide--> */}
 							<div
 								className="owl-slide cover"
 								style={{
 									backgroundImage:
-										'url(/assets/img/slides/slide_home_3.jpg)',
+										"url('/assets/img/slides/slide_home_3.jpg')",
 								}}>
 								<div
 									className="opacity-mask d-flex align-items-center"
@@ -815,18 +818,19 @@ function Homepage() {
 										</div>
 									</div>
 								</div>
-								{/*/owl-slide*/}
+								{/* <!--/owl-slide--> */}
 							</div>
 						</div>
 						<div id="icon_drag_mobile"></div>
 					</div>
-					{/*/carousel*/}
+					{/* <!--/carousel--> */}
 
 					<ul id="banners_grid" className="clearfix">
 						<li>
 							<a href="#0" className="img_container">
 								<img
-									src="/assets/img/banner_1.jpg"
+									src="/assets/img/banners_cat_placeholder.jpg"
+									data-src="/assets/img/banner_1.jpg"
 									alt=""
 									className="lazy"
 								/>
@@ -843,7 +847,8 @@ function Homepage() {
 						<li>
 							<a href="#0" className="img_container">
 								<img
-									src="/assets/img/banner_2.jpg"
+									src="/assets/img/banners_cat_placeholder.jpg"
+									data-src="/assets/img/banner_2.jpg"
 									alt=""
 									className="lazy"
 								/>
@@ -860,7 +865,8 @@ function Homepage() {
 						<li>
 							<a href="#0" className="img_container">
 								<img
-									src="/assets/img/banner_3.jpg"
+									src="/assets/img/banners_cat_placeholder.jpg"
+									data-src="/assets/img/banner_3.jpg"
 									alt=""
 									className="lazy"
 								/>
@@ -875,7 +881,7 @@ function Homepage() {
 							</a>
 						</li>
 					</ul>
-					{/*/banners_grid */}
+					{/* <!--/banners_grid --> */}
 
 					<div className="container margin_60_35">
 						<div className="main_title">
@@ -893,12 +899,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/1.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/1.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/1_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/1_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -956,9 +964,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon off">-30%</span>
@@ -966,12 +974,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/2.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/2.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/2_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/2_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1029,9 +1039,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon off">-50%</span>
@@ -1039,12 +1049,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/3.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/3.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/3_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/3_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1102,9 +1114,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon new">New</span>
@@ -1112,12 +1124,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/4.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/4.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/4_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/4_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1171,9 +1185,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon new">New</span>
@@ -1181,12 +1195,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/5.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/5.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/5_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/5_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1240,9 +1256,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon new">New</span>
@@ -1250,12 +1266,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/6.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/6.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/6_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/6_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1309,9 +1327,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon hot">Hot</span>
@@ -1319,12 +1337,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/7.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/7.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/7_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/7_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1378,9 +1398,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<span className="ribbon hot">Hot</span>
@@ -1388,12 +1408,14 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/8.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/8.jpg"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
-												src="/assets/img/products/shoes/8_b.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/8_b.jpg"
 												alt=""
 											/>
 										</a>
@@ -1447,17 +1469,17 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /col */}
+							{/* <!-- /col --> */}
 						</div>
-						{/* /row */}
+						{/* <!-- /row --> */}
 					</div>
-					{/* /container */}
+					{/* <!-- /container --> */}
 
 					<div
 						className="featured lazy"
-						style={{ backgroundImage: 'url(/assets/img/featured_home.jpg)' }}>
+						data-bg="url(/assets/img/featured_home.jpg)">
 						<div
 							className="opacity-mask d-flex align-items-center"
 							data-opacity-mask="rgba(0, 0, 0, 0.5)">
@@ -1490,7 +1512,7 @@ function Homepage() {
 							</div>
 						</div>
 					</div>
-					{/* /featured */}
+					{/* <!-- /featured --> */}
 
 					<div className="container margin_60_35">
 						<div className="main_title">
@@ -1508,7 +1530,8 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="owl-lazy"
-												src="/assets/img/products/shoes/4.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/4.jpg"
 												alt=""
 											/>
 										</a>
@@ -1562,9 +1585,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /item */}
+							{/* <!-- /item --> */}
 							<div className="item">
 								<div className="grid_item">
 									<span className="ribbon new">New</span>
@@ -1572,7 +1595,8 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="owl-lazy"
-												src="/assets/img/products/shoes/5.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/5.jpg"
 												alt=""
 											/>
 										</a>
@@ -1626,9 +1650,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /item */}
+							{/* <!-- /item --> */}
 							<div className="item">
 								<div className="grid_item">
 									<span className="ribbon hot">Hot</span>
@@ -1636,7 +1660,8 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="owl-lazy"
-												src="/assets/img/products/shoes/8.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/8.jpg"
 												alt=""
 											/>
 										</a>
@@ -1690,9 +1715,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /item */}
+							{/* <!-- /item --> */}
 							<div className="item">
 								<div className="grid_item">
 									<span className="ribbon off">-30%</span>
@@ -1700,7 +1725,8 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="owl-lazy"
-												src="/assets/img/products/shoes/2.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/2.jpg"
 												alt=""
 											/>
 										</a>
@@ -1755,9 +1781,9 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /item */}
+							{/* <!-- /item --> */}
 							<div className="item">
 								<div className="grid_item">
 									<span className="ribbon off">-50%</span>
@@ -1765,7 +1791,8 @@ function Homepage() {
 										<a href="product-detail-1.html">
 											<img
 												className="owl-lazy"
-												src="/assets/img/products/shoes/3.jpg"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/assets/img/products/shoes/3.jpg"
 												alt=""
 											/>
 										</a>
@@ -1820,13 +1847,13 @@ function Homepage() {
 										</li>
 									</ul>
 								</div>
-								{/* /grid_item */}
+								{/* <!-- /grid_item --> */}
 							</div>
-							{/* /item */}
+							{/* <!-- /item --> */}
 						</div>
-						{/* /products_carousel */}
+						{/* <!-- /products_carousel --> */}
 					</div>
-					{/* /container */}
+					{/* <!-- /container --> */}
 
 					<div className="bg_gray">
 						<div className="container margin_30">
@@ -1834,69 +1861,75 @@ function Homepage() {
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_1.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_1.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_2.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_2.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_3.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_3.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_4.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_4.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_5.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_5.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 								<div className="item">
 									<a href="#0">
 										<img
-											src="/assets/img/brands/logo_6.png"
+											src="/assets/img/brands/placeholder_brands.png"
+											data-src="/assets/img/brands/logo_6.png"
 											alt=""
 											className="owl-lazy"
 										/>
 									</a>
 								</div>
-								{/* /item */}
+								{/* <!-- /item --> */}
 							</div>
-							{/* /carousel */}
+							{/* <!-- /carousel --> */}
 						</div>
-						{/* /container */}
+						{/* <!-- /container --> */}
 					</div>
-					{/* /bg_gray */}
+					{/* <!-- /bg_gray --> */}
 
 					<div className="container margin_60_35">
 						<div className="main_title">
@@ -1911,7 +1944,8 @@ function Homepage() {
 								<a className="box_news" href="blog.html">
 									<figure>
 										<img
-											src="/assets/img/blog-thumb-1.jpg"
+											src="/assets/img/blog-thumb-placeholder.jpg"
+											data-src="/assets/img/blog-thumb-1.jpg"
 											alt=""
 											width="400"
 											height="266"
@@ -1933,12 +1967,13 @@ function Homepage() {
 									</p>
 								</a>
 							</div>
-							{/* /box_news */}
+							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
 								<a className="box_news" href="blog.html">
 									<figure>
 										<img
-											src="/assets/img/blog-thumb-2.jpg"
+											src="/assets/img/blog-thumb-placeholder.jpg"
+											data-src="/assets/img/blog-thumb-2.jpg"
 											alt=""
 											width="400"
 											height="266"
@@ -1960,12 +1995,13 @@ function Homepage() {
 									</p>
 								</a>
 							</div>
-							{/* /box_news */}
+							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
 								<a className="box_news" href="blog.html">
 									<figure>
 										<img
-											src="/assets/img/blog-thumb-3.jpg"
+											src="/assets/img/blog-thumb-placeholder.jpg"
+											data-src="/assets/img/blog-thumb-3.jpg"
 											alt=""
 											width="400"
 											height="266"
@@ -1987,12 +2023,13 @@ function Homepage() {
 									</p>
 								</a>
 							</div>
-							{/* /box_news */}
+							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
 								<a className="box_news" href="blog.html">
 									<figure>
 										<img
-											src="/assets/img/blog-thumb-4.jpg"
+											src="/assets/img/blog-thumb-placeholder.jpg"
+											data-src="/assets/img/blog-thumb-4.jpg"
 											alt=""
 											width="400"
 											height="266"
@@ -2014,13 +2051,13 @@ function Homepage() {
 									</p>
 								</a>
 							</div>
-							{/* /box_news */}
+							{/* <!-- /box_news --> */}
 						</div>
-						{/* /row */}
+						{/* <!-- /row --> */}
 					</div>
-					{/* /container */}
+					{/* <!-- /container --> */}
 				</main>
-				{/* /main */}
+				{/* <!-- /main --> */}
 
 				<footer className="revealed">
 					<div className="container">
@@ -2157,7 +2194,7 @@ function Homepage() {
 								</div>
 							</div>
 						</div>
-						{/* /row*/}
+						{/* <!-- /row--> */}
 						<hr />
 						<div className="row add_bottom_25">
 							<div className="col-lg-6">
@@ -2165,7 +2202,7 @@ function Homepage() {
 									<li>
 										<div className="styled-select lang-selector">
 											<select>
-												<option defaultValue="English">
+												<option value="English" selected>
 													English
 												</option>
 												<option value="French">French</option>
@@ -2177,7 +2214,7 @@ function Homepage() {
 									<li>
 										<div className="styled-select currency-selector">
 											<select>
-												<option defaultValue="US Dollars">
+												<option value="US Dollars" selected>
 													US Dollars
 												</option>
 												<option value="Euro">Euro</option>
@@ -2186,7 +2223,8 @@ function Homepage() {
 									</li>
 									<li>
 										<img
-											src="/assets/img/cards_all.svg"
+											src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+											data-src="/assets/img/cards_all.svg"
 											alt=""
 											width="198"
 											height="30"
@@ -2211,12 +2249,12 @@ function Homepage() {
 						</div>
 					</div>
 				</footer>
-				{/*/footer*/}
+				{/* <!--/footer--> */}
 			</div>
-			{/* page */}
+			{/* <!-- page --> */}
 
 			<div id="toTop"></div>
-			{/* Back to top button */}
+			{/* <!-- Back to top button --> */}
 		</>
 	);
 }
