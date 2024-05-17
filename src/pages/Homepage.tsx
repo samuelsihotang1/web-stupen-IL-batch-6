@@ -825,6 +825,23 @@ function Homepage() {
 					</div>
 					{/* <!--/carousel--> */}
 
+					<div className="container margin_60_35">
+						<div className="main_title">
+							<h2>Eco Warriors</h2>
+							<span>About</span>
+							<p>
+								Selamat datang di situs kami, tempat di mana kita berbagi
+								semangat untuk menjaga bumi kita dengan mengurangi limbah
+								dan memanfaatkan kembali sumber daya yang ada. Tujuan
+								utama situs ini adalah untuk mempromosikan kesadaran akan
+								pentingnya daur ulang dan memfasilitasi akses mudah ke
+								produk-produk ramah lingkungan.
+							</p>
+						</div>
+						{/* <!-- /row --> */}
+					</div>
+					{/* <!-- /container --> */}
+
 					<ul id="banners_grid" className="clearfix">
 						<li>
 							<a href="#0" className="img_container">
