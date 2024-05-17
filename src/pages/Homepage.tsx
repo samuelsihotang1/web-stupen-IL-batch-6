@@ -3,7 +3,7 @@ import '/public/assets/css/home_1.css';
 
 function Homepage() {
 	useEffect(() => {
-        // CUSTOM SCRIPTS
+        // Specific Scripts
 		const script = document.createElement('script');
 		script.src = '/assets/js/carousel-home.min.js';
 		script.async = true;

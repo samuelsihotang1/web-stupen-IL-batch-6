@@ -4,14 +4,13 @@ import Homepage from './pages/Homepage';
 
 function App() {
 	useEffect(() => {
-		// MAIN SCRIPT
-		const mainScript = document.createElement('script');
-		mainScript.src = '/assets/js/main.js';
-		mainScript.async = true;
-
-		document.body.appendChild(mainScript);
+		// Main Scripts
+		const script = document.createElement('script');
+		script.src = '/assets/js/main.js';
+		script.async = true;
+		document.body.appendChild(script);
 		return () => {
-			document.body.removeChild(mainScript);
+			document.body.removeChild(script);
 		};
 	}, []);
 
