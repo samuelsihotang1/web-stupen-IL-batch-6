@@ -149,7 +149,7 @@
   color: #004dda;
 }
 .payments ul li a.info:after, .shipping ul li a.info:after {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e718";
   position: relative;
   right: 0;

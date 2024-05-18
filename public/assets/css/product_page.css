@@ -135,7 +135,7 @@
 .all .slider .left,
 .all .slider-two .left {
   left: -20px;
-  transition: left ease .25s;
+  transition: left ease 0.25s;
 }
 .all .slider .left:hover,
 .all .slider-two .left:hover {
@@ -155,7 +155,7 @@
 .all .slider .right,
 .all .slider-two .right {
   right: -20px;
-  transition: right ease .25s;
+  transition: right ease 0.25s;
 }
 .all .slider .right:hover,
 .all .slider-two .right:hover {
@@ -176,7 +176,7 @@
   right: 0;
 }
 .all .slider-two .item {
-  transition: all ease .25s;
+  transition: all ease 0.25s;
   height: 100px;
   border: solid 2px #e6ecf2;
   cursor: pointer;
@@ -197,7 +197,7 @@
   top: 20px;
   visibility: hidden;
   opacity: 0;
-  transition: all ease .25s;
+  transition: all ease 0.25s;
   width: 40px;
   height: 99px;
   background: no-repeat rgba(0, 77, 218, 0.85) url(../img/arrow_right.svg) center center;
@@ -315,7 +315,7 @@
   transform: scale(1);
 }
 .prod_options .colors ul li a.color.active:before {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e64c";
   color: #fff;
   font-size: 13px;
@@ -504,7 +504,6 @@
     font-size: 1.3125rem;
   }
 }
-
 .product_actions ul li a {
   color: #444;
 }
@@ -569,15 +568,12 @@
   .tabs_product .nav-tabs {
     display: flex;
   }
-
   .tab_content_wrapper .card {
     border: none;
   }
-
   .tab_content_wrapper .card .card-header {
     display: none;
   }
-
   .tab_content_wrapper .card .collapse {
     display: block;
   }
@@ -586,12 +582,10 @@
   .tab_content_wrapper .fade:not(.show) {
     opacity: 1;
   }
-
   .tab_content_wrapper .tab-pane {
     display: block !important;
     opacity: 1;
   }
-
   .tab_content_wrapper .card .card-header {
     margin-bottom: 15px;
     border: 0;

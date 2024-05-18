@@ -318,7 +318,6 @@ video {
     background-size: cover;
     background-position: center;
   }
-
   .header-video {
     background: none;
   }
@@ -577,10 +576,10 @@ a.box_news ul li:last-child {
   margin-right: 0;
 }
 a.box_news ul li:last-child:after {
-  content: '';
+  content: "";
   margin: 0;
 }
 a.box_news ul li:after {
-  content: '-';
+  content: "-";
   margin: 0 0 0 10px;
 }

@@ -43,10 +43,8 @@
   -webkit-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
-  -ms-filter: fliph;
-  /*IE*/
-  filter: fliph;
-  /*IE*/
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
 }
 
 .box_feat {

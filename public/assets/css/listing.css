@@ -99,7 +99,7 @@
   padding-left: 27px;
 }
 .sort_select:after {
-  font-family: 'themify';
+  font-family: "themify";
   position: absolute;
   color: #444;
   left: 0;
@@ -157,7 +157,7 @@
   }
 }
 .filters_listing_1 .dropdown a.drop:after {
-  font-family: 'themify';
+  font-family: "themify";
   content: "\e64b";
   font-size: 14px;
   font-size: 0.875rem;
@@ -325,7 +325,7 @@
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: 'themify';
+  font-family: "themify";
   font-size: 14px;
   font-size: 0.875rem;
   position: absolute;
