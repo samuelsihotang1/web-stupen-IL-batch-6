@@ -2236,7 +2236,7 @@ header {
             padding: 0;
             width: 100%;
             margin: 0;
-            top: 10px;
+            top: 14px;
             position: relative;
             height: 40px;
             @include border-radius(3px);
@@ -2285,6 +2285,19 @@ header {
         -webkit-animation: smoothScroll 0.5s none;
         border-bottom: 1px solid transparent !important;
         @include box-shadow (0 20px 20px -20px rgba(0, 0, 0, 0.25));
+    }
+}
+
+nav {
+    a.open_close {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        display: none;
+
+        @include tablet {
+            display: inline-block;
+        }
     }
 }
 
@@ -2619,14 +2632,21 @@ header {
 .main-menu ul li,
 .main-menu ul li a {position: relative;margin: 0;padding: 0;}
 
+.centering-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Submenu styles */
 .main-menu ul li a {display: block; padding:3px 10px;}
 			
 /*First level styles version 1 */			
 .main-menu > ul > li > a {padding: 30px 18px 25px 18px; @include fontSize(13px); font-weight: 700; line-height: 1; text-transform: uppercase;}
 
-header.version_1 .main-menu > ul > li > a {color: #fff;}
-header.version_1 .main-menu > ul > li:hover > a {color: #fff;}
+header.version_1 .main-menu > ul > li > a {color: $heading-color}
+header.version_1 .main-menu > ul > li:hover > a {color: $color-1;}
 
 .main-menu > ul > li.submenu:hover > a {
 	&:after {

@@ -2300,7 +2300,7 @@ header .main_nav .custom-search-input {
   padding: 0;
   width: 100%;
   margin: 0;
-  top: 10px;
+  top: 14px;
   position: relative;
   height: 40px;
   -webkit-border-radius: 3px;
@@ -2353,6 +2353,18 @@ header .sticky_element {
   -webkit-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.25);
   box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.25);
+}
+
+nav a.open_close {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  display: none;
+}
+@media (max-width: 991px) {
+  nav a.open_close {
+    display: inline-block;
+  }
 }
 
 @keyframes smoothScroll {
@@ -2624,6 +2636,12 @@ header.version_2 .search_mob_wp .btn_1:hover {
   padding: 0;
 }
 
+.centering-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Submenu styles */
 .main-menu ul li a {
   display: block;
@@ -2641,11 +2659,11 @@ header.version_2 .search_mob_wp .btn_1:hover {
 }
 
 header.version_1 .main-menu > ul > li > a {
-  color: #fff;
+  color: #111;
 }
 
 header.version_1 .main-menu > ul > li:hover > a {
-  color: #fff;
+  color: #004dda;
 }
 
 .main-menu > ul > li.submenu:hover > a:after {
