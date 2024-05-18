@@ -2636,10 +2636,12 @@ header.version_2 .search_mob_wp .btn_1:hover {
   padding: 0;
 }
 
-.centering-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media only screen and (min-width: 768px) {
+  .centering-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Submenu styles */
