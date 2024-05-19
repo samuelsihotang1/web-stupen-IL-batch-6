@@ -26,7 +26,7 @@ function Homepage() {
 				<header className="version_1">
 					<div className="layer"></div>
 					{/* <!-- Mobile menu overlay mask --> */}
-					
+
 					{/* <!-- /main_header --> */}
 
 					<div className="main_nav Sticky">
@@ -36,6 +36,7 @@ function Homepage() {
 									<div id="logo">
 										<a href="index.html">
 											<img
+												className="for-logo"
 												src="/assets/img/logo.svg"
 												alt=""
 												width="100"
@@ -44,7 +45,7 @@ function Homepage() {
 										</a>
 									</div>
 								</div>
-                                
+
 								<nav className="col-xl-6 col-lg-7">
 									<a className="open_close" href="##">
 										<div className="hamburger hamburger--spin">
@@ -337,7 +338,7 @@ function Homepage() {
 								</div>
 								<div className="col-xl-2 col-lg-2 col-md-3">
 									<ul className="top_tools">
-										<li></li>
+										{/* <li></li> */}
 										<li>
 											<div className="dropdown dropdown-access">
 												<a
@@ -462,9 +463,11 @@ function Homepage() {
 											{/* <!-- /dropdown-cart--> */}
 										</li>
 										<li>
-											<a href="##" className="btn_search_mob">
-												<span>Search</span>
-											</a>
+											<div className="dropdown hidden-for-web">
+												<a href="##" className="btn_search_mob">
+													<span>Search</span>
+												</a>
+											</div>
 										</li>
 									</ul>
 								</div>

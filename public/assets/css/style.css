@@ -109,7 +109,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 
 .hamburger-inner {
   display: block;
-  top: 50%;
+  top: 40%;
   margin-top: -3px;
 }
 
@@ -118,7 +118,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 .hamburger-inner::after {
   width: 26px;
   height: 2px;
-  background-color: #fff;
+  background-color: #004dda;
   border-radius: 0;
   position: absolute;
   transition-property: transform;
@@ -182,7 +182,8 @@ Author URI: http://themeforest.net/user/Ansonika/
   font-style: normal;
   font-display: swap;
 }
-[class^=ti-], [class*=" ti-"] {
+[class^=ti-],
+[class*=" ti-"] {
   font-family: "themify";
   speak: none;
   font-style: normal;
@@ -1622,7 +1623,8 @@ Author URI: http://themeforest.net/user/Ansonika/
   }
 }
 */
-[class^=icon-]:before, [class*=" icon-"]:before {
+[class^=icon-]:before,
+[class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1781,7 +1783,8 @@ hr {
     margin-bottom: 30px;
   }
 }
-.main_title h1, .main_title h2 {
+.main_title h1,
+.main_title h2 {
   font-size: 36px;
   font-size: 2.25rem;
   font-weight: 500;
@@ -1790,7 +1793,8 @@ hr {
   z-index: 2;
 }
 @media (max-width: 767px) {
-  .main_title h1, .main_title h2 {
+  .main_title h1,
+  .main_title h2 {
     font-size: 28px;
     font-size: 1.75rem;
   }
@@ -2123,12 +2127,6 @@ header ul.top_tools {
   padding: 0;
   list-style: none;
   float: right;
-}
-@media (max-width: 767px) {
-  header ul.top_tools {
-    float: none;
-    width: 100%;
-  }
 }
 header ul.top_tools > li {
   float: right;
@@ -2485,7 +2483,8 @@ header.version_1 .main_nav ul.top_tools > li .dropdown-cart .dropdown-menu:befor
 header.version_1 .main_nav ul.top_tools > li .dropdown-access .dropdown-menu:before {
   border-bottom-color: #004dda;
 }
-header.version_1 .main_nav ul.top_tools > li .dropdown-cart:hover > a, header.version_1 .main_nav ul.top_tools > li .dropdown-access:hover > a {
+header.version_1 .main_nav ul.top_tools > li .dropdown-cart:hover > a,
+header.version_1 .main_nav ul.top_tools > li .dropdown-access:hover > a {
   color: #004dda;
 }
 
@@ -2609,7 +2608,8 @@ header.version_2 .search_mob_wp .btn_1:hover {
   .menu {
     display: block !important;
   }
-  #mm-menu, .mm-menu {
+  #mm-menu,
+  .mm-menu {
     display: none !important;
   }
 }
@@ -2705,7 +2705,8 @@ header.version_1 .main-menu > ul > li:hover > a {
 }
 
 /*First level version 2 */
-header.version_2 .main-menu > ul > li > a, .main-menu > ul > li.submenu:hover > a {
+header.version_2 .main-menu > ul > li > a,
+.main-menu > ul > li.submenu:hover > a {
   color: #282828;
 }
 
@@ -2754,7 +2755,8 @@ nav a.open_close#close_in > i:hover {
     display: inline-block;
   }
   /* Submenu + megamenu*/
-  .main-menu ul ul, .main-menu ul li .menu-wrapper {
+  .main-menu ul ul,
+  .main-menu ul li .menu-wrapper {
     position: absolute;
     z-index: 1;
     visibility: hidden;
@@ -2775,7 +2777,8 @@ nav a.open_close#close_in > i:hover {
   .main-menu ul ul {
     padding: 10px;
   }
-  .main-menu ul li:hover > ul, .main-menu ul li:hover .menu-wrapper {
+  .main-menu ul li:hover > ul,
+  .main-menu ul li:hover .menu-wrapper {
     visibility: visible;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -2885,7 +2888,8 @@ nav a.open_close#close_in > i:hover {
     padding: 15px 15px 0 15px;
     text-transform: uppercase;
   }
-  .main-menu li, .main-menu a {
+  .main-menu li,
+  .main-menu a {
     display: block;
     color: #444 !important;
   }
@@ -3612,9 +3616,9 @@ header.version_2 .menu ul li ul li ul {
  */
 .owl-carousel .owl-item {
   /**
-      This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
-      calculation of the height of the owl-item that breaks page layouts
-     */
+       This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+       calculation of the height of the owl-item that breaks page layouts
+      */
 }
 
 .owl-carousel .owl-item .owl-lazy {
@@ -3622,7 +3626,8 @@ header.version_2 .menu ul li ul li ul {
   transition: opacity 400ms ease;
 }
 
-.owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+.owl-carousel .owl-item .owl-lazy[src^=""],
+.owl-carousel .owl-item .owl-lazy:not([src]) {
   max-height: 0;
 }
 
@@ -3645,11 +3650,11 @@ header.version_2 .menu ul li ul li ul {
 }
 
 .owl-theme .owl-nav [class*=owl-] {
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   margin: 5px;
   padding: 4px 7px;
-  background: #D6D6D6;
+  background: #d6d6d6;
   display: inline-block;
   cursor: pointer;
   border-radius: 3px;
@@ -3657,7 +3662,7 @@ header.version_2 .menu ul li ul li ul {
 
 .owl-theme .owl-nav [class*=owl-]:hover {
   background: #869791;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -3685,14 +3690,15 @@ header.version_2 .menu ul li ul li ul {
   width: 10px;
   height: 10px;
   margin: 5px 7px;
-  background: #D6D6D6;
+  background: #d6d6d6;
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 30px;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
 }
 
@@ -4425,13 +4431,16 @@ body.modal-open .mm-slideout {
 /* 2.  CONTENT */
 /*============================================================================================*/
 /*-------- 2.1 Home --------*/
-#carousel-home, #carousel-home-2 {
+#carousel-home,
+#carousel-home-2 {
   position: relative;
 }
-#carousel-home .static, #carousel-home-2 .static {
+#carousel-home .static,
+#carousel-home-2 .static {
   position: static;
 }
-#carousel-home .cover, #carousel-home-2 .cover {
+#carousel-home .cover,
+#carousel-home-2 .cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4444,19 +4453,23 @@ body.modal-open .mm-slideout {
   z-index: 2;
   opacity: 1 !important;
 }
-#carousel-home .owl-carousel, #carousel-home-2 .owl-carousel {
+#carousel-home .owl-carousel,
+#carousel-home-2 .owl-carousel {
   position: relative;
 }
-#carousel-home .owl-carousel .owl-slide, #carousel-home-2 .owl-carousel .owl-slide {
+#carousel-home .owl-carousel .owl-slide,
+#carousel-home-2 .owl-carousel .owl-slide {
   height: 500px;
   position: relative;
 }
 @media (max-width: 767px) {
-  #carousel-home .owl-carousel .owl-slide, #carousel-home-2 .owl-carousel .owl-slide {
+  #carousel-home .owl-carousel .owl-slide,
+  #carousel-home-2 .owl-carousel .owl-slide {
     height: 420px;
   }
 }
-#carousel-home .owl-carousel .owl-slide-animated, #carousel-home-2 .owl-carousel .owl-slide-animated {
+#carousel-home .owl-carousel .owl-slide-animated,
+#carousel-home-2 .owl-carousel .owl-slide-animated {
   -webkit-transform: translateX(20px);
   -moz-transform: translateX(20px);
   -ms-transform: translateX(20px);
@@ -4470,7 +4483,8 @@ body.modal-open .mm-slideout {
   -ms-transition: all 0.05s ease;
   transition: all 0.05s ease;
 }
-#carousel-home .owl-carousel .owl-slide-animated.is-transitioned, #carousel-home-2 .owl-carousel .owl-slide-animated.is-transitioned {
+#carousel-home .owl-carousel .owl-slide-animated.is-transitioned,
+#carousel-home-2 .owl-carousel .owl-slide-animated.is-transitioned {
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
@@ -4484,36 +4498,42 @@ body.modal-open .mm-slideout {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#carousel-home .owl-carousel .owl-slide-title.is-transitioned, #carousel-home-2 .owl-carousel .owl-slide-title.is-transitioned {
+#carousel-home .owl-carousel .owl-slide-title.is-transitioned,
+#carousel-home-2 .owl-carousel .owl-slide-title.is-transitioned {
   transition-delay: 0.2s;
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
 }
-#carousel-home .owl-carousel .owl-slide-subtitle.is-transitioned, #carousel-home-2 .owl-carousel .owl-slide-subtitle.is-transitioned {
+#carousel-home .owl-carousel .owl-slide-subtitle.is-transitioned,
+#carousel-home-2 .owl-carousel .owl-slide-subtitle.is-transitioned {
   transition-delay: 0.35s;
   -webkit-transition-delay: 0.35s;
   -moz-transition-delay: 0.35s;
   -o-transition-delay: 0.35s;
 }
-#carousel-home .owl-carousel .owl-slide-cta.is-transitioned, #carousel-home-2 .owl-carousel .owl-slide-cta.is-transitioned {
+#carousel-home .owl-carousel .owl-slide-cta.is-transitioned,
+#carousel-home-2 .owl-carousel .owl-slide-cta.is-transitioned {
   transition-delay: 0.5s;
   -webkit-transition-delay: 0.5s;
   -moz-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
 }
-#carousel-home .owl-carousel .owl-dots, #carousel-home-2 .owl-carousel .owl-dots {
+#carousel-home .owl-carousel .owl-dots,
+#carousel-home-2 .owl-carousel .owl-dots {
   bottom: 15px;
   width: 100%;
   position: absolute;
   z-index: 3;
 }
 #carousel-home .owl-carousel .owl-dots .owl-dot,
-#carousel-home .owl-carousel .owl-nav [class*=owl-]:focus, #carousel-home-2 .owl-carousel .owl-dots .owl-dot,
+#carousel-home .owl-carousel .owl-nav [class*=owl-]:focus,
+#carousel-home-2 .owl-carousel .owl-dots .owl-dot,
 #carousel-home-2 .owl-carousel .owl-nav [class*=owl-]:focus {
   outline: none;
 }
-#carousel-home section, #carousel-home-2 section {
+#carousel-home section,
+#carousel-home-2 section {
   display: none;
 }
 
@@ -4521,7 +4541,8 @@ body.modal-open .mm-slideout {
   font-size: 21px;
   font-size: 1.3125rem;
 }
-.slide-text h2, .slide-text h3 {
+.slide-text h2,
+.slide-text h3 {
   font-size: 46px;
   font-size: 2.875rem;
   font-weight: 900;
@@ -4529,7 +4550,8 @@ body.modal-open .mm-slideout {
   line-height: 1;
 }
 @media (max-width: 767px) {
-  .slide-text h2, .slide-text h3 {
+  .slide-text h2,
+  .slide-text h3 {
     font-size: 42px;
     font-size: 2.625rem;
   }
@@ -4542,7 +4564,8 @@ body.modal-open .mm-slideout {
 .slide-text.white {
   color: #fff;
 }
-.slide-text.white h2, .slide-text.white h3 {
+.slide-text.white h2,
+.slide-text.white h3 {
   color: #fff;
 }
 .slide-text.black {
@@ -4845,7 +4868,7 @@ body.modal-open .mm-slideout {
   box-sizing: border-box;
   font-size: 12px;
   font-size: 0.75rem;
-  background: #F33;
+  background: #f33;
   text-align: center;
 }
 @media (max-width: 575px) {
@@ -4871,7 +4894,7 @@ body.modal-open .mm-slideout {
 }
 
 .percentage {
-  background: #F33;
+  background: #f33;
   color: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -4892,7 +4915,9 @@ body.modal-open .mm-slideout {
 /* 3.  COMMON */
 /*============================================================================================*/
 /*-------- 3.1 Owl Carousel Custom Nav --------*/
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-carousel button.owl-dot {
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
   outline: none;
 }
 
@@ -5184,16 +5209,16 @@ input.qty2:focus {
   border-color: #9933cc transparent transparent;
 }
 .ribbon.hot {
-  background-color: #0C0;
+  background-color: #0c0;
 }
 .ribbon.hot:before {
-  border-color: #0C0 transparent transparent;
+  border-color: #0c0 transparent transparent;
 }
 .ribbon.off {
-  background-color: #F33;
+  background-color: #f33;
 }
 .ribbon.off:before {
-  border-color: #F33 transparent transparent;
+  border-color: #f33 transparent transparent;
 }
 
 .box_general {
@@ -5331,6 +5356,18 @@ input.qty2:focus {
 .small-gutters > [class*=col-] {
   padding-right: 5px !important;
   padding-left: 5px !important;
+}
+
+@media (max-width: 768px) {
+  .for-logo {
+    margin-right: 0vw !important;
+    margin-left: 34vw !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hidden-for-web {
+    display: none;
+  }
 }
 
 .form-control {
@@ -6091,14 +6128,14 @@ a.social_bt.linkedin:before {
 }
 
 a.social_bt.facebook {
-  background-color: #3B5998;
+  background-color: #3b5998;
 }
 a.social_bt.facebook:before {
   content: "\e741";
 }
 
 a.social_bt.google {
-  background-color: #DC4E41;
+  background-color: #dc4e41;
 }
 a.social_bt.google:before {
   content: "\e73e";
