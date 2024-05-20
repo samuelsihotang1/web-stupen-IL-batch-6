@@ -598,6 +598,7 @@ progress {
 }
 
 .img-fluid {
+  background-color: #f4f4f4;
   max-width: 100%;
   height: auto;
 }
