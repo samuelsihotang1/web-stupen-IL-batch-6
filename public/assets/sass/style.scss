@@ -6472,6 +6472,14 @@ ul.footer-selector {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+    .centering_additional_links {
+        float: none !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
 /* Addtional links Footer */
 ul.additional_links {
 	margin: 0;
