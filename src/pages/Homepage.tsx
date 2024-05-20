@@ -37,7 +37,7 @@ function Homepage() {
 										<a href="index.html">
 											<img
 												className="for-logo"
-												src="/assets/img/logo.svg"
+												src="/real_assets/img/logo.png"
 												alt=""
 												width="100"
 												height="35"
@@ -501,11 +501,11 @@ function Homepage() {
 								className="owl-slide cover"
 								style={{
 									backgroundImage:
-										"url('/assets/img/slides/slide_home_1.jpg')",
+										"url('/real_assets/img/slides/frame1.png')",
 								}}>
 								<div
 									className="opacity-mask d-flex align-items-center"
-									data-opacity-mask="rgba(0, 0, 0, 0.5)">
+									data-opacity-mask="rgba(0, 0, 0, 0.25)">
 									<div className="container">
 										<div className="row justify-content-center justify-content-md-start">
 											<div className="col-lg-6 static">
@@ -549,8 +549,8 @@ function Homepage() {
 
 					<div className="container margin_60_35">
 						<div className="main_title">
-							<h2>Eco Warriors</h2>
-							<span>About</span>
+							<h2 style={{ paddingBottom: '2vh' }}>ECO WARRIORS</h2>
+							<span>ABOUT</span>
 							<p>
 								Selamat datang di situs kami, tempat di mana kita berbagi
 								semangat untuk menjaga bumi kita dengan mengurangi limbah

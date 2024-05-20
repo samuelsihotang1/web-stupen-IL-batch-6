@@ -6353,7 +6353,7 @@ footer {
 					@include transition-default(all, 0.5s, ease);
 				}
 			}
-            .white-text {
+			.white-text {
 				position: relative;
 				color: #fff;
 				opacity: 0.8;
@@ -6473,11 +6473,11 @@ ul.footer-selector {
 }
 
 @media screen and (min-width: 1024px) {
-    .centering_additional_links {
-        float: none !important;
-        display: flex !important;
-        justify-content: center !important;
-    }
+	.centering_additional_links {
+		float: none !important;
+		display: flex !important;
+		justify-content: center !important;
+	}
 }
 
 /* Addtional links Footer */
