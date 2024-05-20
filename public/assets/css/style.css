@@ -6497,6 +6497,12 @@ footer .links ul li a:after {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+footer .links ul li .white-text {
+  position: relative;
+  color: #fff;
+  opacity: 0.8;
+  display: inline-block;
+}
 
 /* Newsletter footer*/
 @-webkit-keyframes rotation {

@@ -6353,6 +6353,12 @@ footer {
 					@include transition-default(all, 0.5s, ease);
 				}
 			}
+            .white-text {
+				position: relative;
+				color: #fff;
+				opacity: 0.8;
+				display: inline-block;
+			}
 		}
 	}
 }
