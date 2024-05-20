@@ -496,42 +496,6 @@ function Homepage() {
 				<main>
 					<div id="carousel-home">
 						<div className="owl-carousel owl-theme">
-							<div
-								className="owl-slide cover"
-								style={{
-									backgroundImage:
-										"url('/assets/img/slides/slide_home_2.jpg')",
-								}}>
-								<div
-									className="opacity-mask d-flex align-items-center"
-									data-opacity-mask="rgba(0, 0, 0, 0.5)">
-									<div className="container">
-										<div className="row justify-content-center justify-content-md-end">
-											<div className="col-lg-6 static">
-												<div className="slide-text text-end white">
-													<h2 className="owl-slide-animated owl-slide-title">
-														Attack Air
-														<br />
-														Max 720 Sage Low
-													</h2>
-													<p className="owl-slide-animated owl-slide-subtitle">
-														Limited items available at this
-														price
-													</p>
-													<div className="owl-slide-animated owl-slide-cta">
-														<a
-															className="btn_1"
-															href="listing-grid-1-full.html"
-															role="button">
-															Shop Now
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 							{/* <!--/owl-slide--> */}
 							<div
 								className="owl-slide cover"
@@ -547,20 +511,29 @@ function Homepage() {
 											<div className="col-lg-6 static">
 												<div className="slide-text white">
 													<h2 className="owl-slide-animated owl-slide-title">
-														Attack Air
-														<br />
-														VaporMax Flyknit 3
+														JAGALAH LINGKUNGAN!
 													</h2>
 													<p className="owl-slide-animated owl-slide-subtitle">
-														Limited items available at this
-														price
+														Mengubah plastik menjadi peluang:
+														<br />
+														"Satu langkah kecil untuk planet
+														yang lebih hijau."
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
 															className="btn_1"
 															href="listing-grid-1-full.html"
+															role="button"
+															style={{
+																marginRight: '1vw',
+															}}>
+															Daftar
+														</a>
+														<a
+															className="btn_1"
+															href="listing-grid-1-full.html"
 															role="button">
-															Shop Now
+															Belanja
 														</a>
 													</div>
 												</div>
@@ -568,44 +541,6 @@ function Homepage() {
 										</div>
 									</div>
 								</div>
-							</div>
-							{/* <!--/owl-slide--> */}
-							<div
-								className="owl-slide cover"
-								style={{
-									backgroundImage:
-										"url('/assets/img/slides/slide_home_3.jpg')",
-								}}>
-								<div
-									className="opacity-mask d-flex align-items-center"
-									data-opacity-mask="rgba(255, 255, 255, 0.5)">
-									<div className="container">
-										<div className="row justify-content-center justify-content-md-start">
-											<div className="col-lg-12 static">
-												<div className="slide-text text-center black">
-													<h2 className="owl-slide-animated owl-slide-title">
-														Attack Air
-														<br />
-														Monarch IV SE
-													</h2>
-													<p className="owl-slide-animated owl-slide-subtitle">
-														Lightweight cushioning and durable
-														support with a Phylon midsole
-													</p>
-													<div className="owl-slide-animated owl-slide-cta">
-														<a
-															className="btn_1"
-															href="listing-grid-1-full.html"
-															role="button">
-															Shop Now
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								{/* <!--/owl-slide--> */}
 							</div>
 						</div>
 						<div id="icon_drag_mobile"></div>
@@ -629,94 +564,29 @@ function Homepage() {
 					</div>
 					{/* <!-- /container --> */}
 
-					<ul id="banners_grid" className="clearfix">
-						<li>
-							<a href="#0" className="img_container">
-								<img
-									src="/assets/img/banners_cat_placeholder.jpg"
-									data-src="/assets/img/banner_1.jpg"
-									alt=""
-									className="lazy"
-								/>
-								<div
-									className="short_info opacity-mask"
-									data-opacity-mask="rgba(0, 0, 0, 0.5)">
-									<h3>Men's Collection</h3>
-									<div>
-										<span className="btn_1">Shop Now</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#0" className="img_container">
-								<img
-									src="/assets/img/banners_cat_placeholder.jpg"
-									data-src="/assets/img/banner_2.jpg"
-									alt=""
-									className="lazy"
-								/>
-								<div
-									className="short_info opacity-mask"
-									data-opacity-mask="rgba(0, 0, 0, 0.5)">
-									<h3>Womens's Collection</h3>
-									<div>
-										<span className="btn_1">Shop Now</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#0" className="img_container">
-								<img
-									src="/assets/img/banners_cat_placeholder.jpg"
-									data-src="/assets/img/banner_3.jpg"
-									alt=""
-									className="lazy"
-								/>
-								<div
-									className="short_info opacity-mask"
-									data-opacity-mask="rgba(0, 0, 0, 0.5)">
-									<h3>Kids's Collection</h3>
-									<div>
-										<span className="btn_1">Shop Now</span>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-					{/* <!--/banners_grid --> */}
-
 					<div className="container margin_60_35">
 						<div className="main_title">
-							<h2>Top Selling</h2>
-							<span>Products</span>
-							<p>
-								Cum doctus civibus efficiantur in imperdiet deterruisset
-							</p>
+							<h2>PRODUK</h2>
+							<span>UTAMA</span>
 						</div>
 						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<span className="ribbon off">-30%</span>
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/1.jpg"
+												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/1_b.jpg"
+												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
 												alt=""
 											/>
 										</a>
-										<div
-											data-countdown="2019/05/15"
-											className="countdown"></div>
 									</figure>
 									<div className="rating">
 										<i className="icon-star voted"></i>
@@ -726,11 +596,10 @@ function Homepage() {
 										<i className="icon-star"></i>
 									</div>
 									<a href="product-detail-1.html">
-										<h3>Armor Air x Fear</h3>
+										<h3>Tas Tutup Botol</h3>
 									</a>
 									<div className="price_box">
-										<span className="new_price">$48.00</span>
-										<span className="old_price">$60.00</span>
+										<span className="new_price">Rp. 50.000</span>
 									</div>
 									<ul>
 										<li>
@@ -773,25 +642,21 @@ function Homepage() {
 							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
-									<span className="ribbon off">-30%</span>
 									<figure>
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/2.jpg"
+												data-src="/real_assets/img/products/gantungan-kunci.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/2_b.jpg"
+												data-src="/real_assets/img/products/gantungan-kunci.png"
 												alt=""
 											/>
 										</a>
-										<div
-											data-countdown="2019/05/10"
-											className="countdown"></div>
 									</figure>
 									<div className="rating">
 										<i className="icon-star voted"></i>
@@ -801,11 +666,10 @@ function Homepage() {
 										<i className="icon-star"></i>
 									</div>
 									<a href="product-detail-1.html">
-										<h3>Armor Okwahn II</h3>
+										<h3>Gantungan Kunci</h3>
 									</a>
 									<div className="price_box">
-										<span className="new_price">$90.00</span>
-										<span className="old_price">$170.00</span>
+										<span className="new_price">Rp. 25.000</span>
 									</div>
 									<ul>
 										<li>
@@ -848,25 +712,21 @@ function Homepage() {
 							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
-									<span className="ribbon off">-50%</span>
 									<figure>
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/3.jpg"
+												data-src="/real_assets/img/products/gaun-kertas.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/3_b.jpg"
+												data-src="/real_assets/img/products/gaun-kertas.png"
 												alt=""
 											/>
 										</a>
-										<div
-											data-countdown="2019/05/21"
-											className="countdown"></div>
 									</figure>
 									<div className="rating">
 										<i className="icon-star voted"></i>
@@ -876,11 +736,10 @@ function Homepage() {
 										<i className="icon-star"></i>
 									</div>
 									<a href="product-detail-1.html">
-										<h3>Armor Air Wildwood ACG</h3>
+										<h3>Gaun Kertas</h3>
 									</a>
 									<div className="price_box">
-										<span className="new_price">$75.00</span>
-										<span className="old_price">$155.00</span>
+										<span className="new_price">Rp. 150.000</span>
 									</div>
 									<ul>
 										<li>
@@ -923,19 +782,18 @@ function Homepage() {
 							{/* <!-- /col --> */}
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
-									<span className="ribbon new">New</span>
 									<figure>
 										<a href="product-detail-1.html">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/4.jpg"
+												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/4_b.jpg"
+												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
 												alt=""
 											/>
 										</a>
@@ -948,294 +806,10 @@ function Homepage() {
 										<i className="icon-star"></i>
 									</div>
 									<a href="product-detail-1.html">
-										<h3>Armor ACG React Terra</h3>
+										<h3>Hiasan Dinding Gantung</h3>
 									</a>
 									<div className="price_box">
-										<span className="new_price">$110.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-3">
-								<div className="grid_item">
-									<span className="ribbon new">New</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/5.jpg"
-												alt=""
-											/>
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/5_b.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Armor Air Zoom Alpha</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$140.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-3">
-								<div className="grid_item">
-									<span className="ribbon new">New</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/6.jpg"
-												alt=""
-											/>
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/6_b.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Armor Air Alpha</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$130.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-3">
-								<div className="grid_item">
-									<span className="ribbon hot">Hot</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/7.jpg"
-												alt=""
-											/>
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/7_b.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Armor Air Max 98</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$115.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-3">
-								<div className="grid_item">
-									<span className="ribbon hot">Hot</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/8.jpg"
-												alt=""
-											/>
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/8_b.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Armor Air Max 720</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$120.00</span>
+										<span className="new_price">Rp. 20.000</span>
 									</div>
 									<ul>
 										<li>
@@ -1281,467 +855,10 @@ function Homepage() {
 					</div>
 					{/* <!-- /container --> */}
 
-					<div
-						className="featured lazy"
-						data-bg="url(/assets/img/featured_home.jpg)">
-						<div
-							className="opacity-mask d-flex align-items-center"
-							data-opacity-mask="rgba(0, 0, 0, 0.5)">
-							<div className="container margin_60">
-								<div className="row justify-content-center justify-content-md-start">
-									<div className="col-lg-6 wow" data-wow-offset="150">
-										<h3>
-											Armor
-											<br />
-											Air Color 720
-										</h3>
-										<p>
-											Lightweight cushioning and durable support
-											with a Phylon midsole
-										</p>
-										<div className="feat_text_block">
-											<div className="price_box">
-												<span className="new_price">$90.00</span>
-												<span className="old_price">$170.00</span>
-											</div>
-											<a
-												className="btn_1"
-												href="listing-grid-1-full.html"
-												role="button">
-												Shop Now
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					{/* <!-- /featured --> */}
-
 					<div className="container margin_60_35">
 						<div className="main_title">
-							<h2>Featured</h2>
-							<span>Products</span>
-							<p>
-								Cum doctus civibus efficiantur in imperdiet deterruisset
-							</p>
-						</div>
-						<div className="owl-carousel owl-theme products_carousel">
-							<div className="item">
-								<div className="grid_item">
-									<span className="ribbon new">New</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="owl-lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/4.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>ACG React Terra</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$110.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /item --> */}
-							<div className="item">
-								<div className="grid_item">
-									<span className="ribbon new">New</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="owl-lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/5.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Air Zoom Alpha</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$140.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /item --> */}
-							<div className="item">
-								<div className="grid_item">
-									<span className="ribbon hot">Hot</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="owl-lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/8.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Air Color 720</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$120.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /item --> */}
-							<div className="item">
-								<div className="grid_item">
-									<span className="ribbon off">-30%</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="owl-lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/2.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Okwahn II</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$90.00</span>
-										<span className="old_price">$170.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /item --> */}
-							<div className="item">
-								<div className="grid_item">
-									<span className="ribbon off">-50%</span>
-									<figure>
-										<a href="product-detail-1.html">
-											<img
-												className="owl-lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/assets/img/products/shoes/3.jpg"
-												alt=""
-											/>
-										</a>
-									</figure>
-									<div className="rating">
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star voted"></i>
-										<i className="icon-star"></i>
-									</div>
-									<a href="product-detail-1.html">
-										<h3>Air Wildwood ACG</h3>
-									</a>
-									<div className="price_box">
-										<span className="new_price">$75.00</span>
-										<span className="old_price">$155.00</span>
-									</div>
-									<ul>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to favorites">
-												<i className="ti-heart"></i>
-												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to cart">
-												<i className="ti-shopping-cart"></i>
-												<span>Add to cart</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /item --> */}
-						</div>
-						{/* <!-- /products_carousel --> */}
-					</div>
-					{/* <!-- /container --> */}
-
-					<div className="bg_gray">
-						<div className="container margin_30">
-							<div id="brands" className="owl-carousel owl-theme">
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_1.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_2.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_3.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_4.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_5.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-								<div className="item">
-									<a href="#0">
-										<img
-											src="/assets/img/brands/placeholder_brands.png"
-											data-src="/assets/img/brands/logo_6.png"
-											alt=""
-											className="owl-lazy"
-										/>
-									</a>
-								</div>
-								{/* <!-- /item --> */}
-							</div>
-							{/* <!-- /carousel --> */}
-						</div>
-						{/* <!-- /container --> */}
-					</div>
-					{/* <!-- /bg_gray --> */}
-
-					<div className="container margin_60_35">
-						<div className="main_title">
-							<h2>Latest News</h2>
-							<span>Blog</span>
-							<p>
-								Cum doctus civibus efficiantur in imperdiet deterruisset
-							</p>
+							<h2>ARTIKEL</h2>
+							<span>TERBARU</span>
 						</div>
 						<div className="row">
 							<div className="col-lg-6">
@@ -1749,25 +866,25 @@ function Homepage() {
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
-											data-src="/assets/img/blog-thumb-1.jpg"
+											data-src="/real_assets/img/news/bank-sampah.png"
 											alt=""
 											width="400"
 											height="266"
 											className="lazy"
 										/>
 										<figcaption>
-											<strong>28</strong>Dec
+											<strong>12</strong>Mei
 										</figcaption>
 									</figure>
 									<ul>
-										<li>by Mark Twain</li>
-										<li>20.11.2017</li>
+										<li>by Admin</li>
+										<li>Minggu, 12 Mei 2024</li>
 									</ul>
-									<h4>Pri oportere scribentur eu</h4>
+									<h4>Solusi untuk membantu melestarikan lingkungan</h4>
 									<p>
-										Cu eum alia elit, usu in eius appareat, deleniti
-										sapientem honestatis eos ex. In ius esse ullum
-										vidisse....
+										Bank sampah adalah inisiatif lingkungan yang
+										mengumpulkan, mengelola, dan mendaur ulang sampah
+										dari masyarakat....
 									</p>
 								</a>
 							</div>
@@ -1777,25 +894,25 @@ function Homepage() {
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
-											data-src="/assets/img/blog-thumb-2.jpg"
+											data-src="/real_assets/img/news/persoalan-persampahan.png"
 											alt=""
 											width="400"
 											height="266"
 											className="lazy"
 										/>
 										<figcaption>
-											<strong>28</strong>Dec
+											<strong>12</strong>Mei
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Jhon Doe</li>
-										<li>20.11.2017</li>
+										<li>By Admin</li>
+										<li>12 Mei 2024</li>
 									</ul>
-									<h4>Duo eius postea suscipit ad</h4>
+									<h4>Mengatasi Persoalan Persampahan</h4>
 									<p>
-										Cu eum alia elit, usu in eius appareat, deleniti
-										sapientem honestatis eos ex. In ius esse ullum
-										vidisse....
+										Mengatasi persoalan persampahan merupakan upaya
+										yang dilakukan untuk mengelola sampah agar tidak
+										menjadi masalah....
 									</p>
 								</a>
 							</div>
@@ -1805,25 +922,25 @@ function Homepage() {
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
-											data-src="/assets/img/blog-thumb-3.jpg"
+											data-src="/real_assets/img/news/ibu-ibu.png"
 											alt=""
 											width="400"
 											height="266"
 											className="lazy"
 										/>
 										<figcaption>
-											<strong>28</strong>Dec
+											<strong>12</strong>Mei
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Luca Robinson</li>
-										<li>20.11.2017</li>
+										<li>By Admin</li>
+										<li>12 Mei 2024</li>
 									</ul>
-									<h4>Elitr mandamus cu has</h4>
+									<h4>Ibu-Ibu Rumah Tangga di Sulawesi Tangga</h4>
 									<p>
-										Cu eum alia elit, usu in eius appareat, deleniti
-										sapientem honestatis eos ex. In ius esse ullum
-										vidisse....
+										Ibu-ibu rumah tangga di Sulawesi memiliki peran
+										yang sangat penting dalam kehidupan keluarga dan
+										komunitas mereka....
 									</p>
 								</a>
 							</div>
@@ -1833,25 +950,28 @@ function Homepage() {
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
-											data-src="/assets/img/blog-thumb-4.jpg"
+											data-src="/real_assets/img/news/ibu-rumah-tangga.webp"
 											alt=""
 											width="400"
 											height="266"
 											className="lazy"
 										/>
 										<figcaption>
-											<strong>28</strong>Dec
+											<strong>12</strong>Mei
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Paula Rodrigez</li>
-										<li>20.11.2017</li>
+										<li>By Admin</li>
+										<li>12 Mei 2024</li>
 									</ul>
-									<h4>Id est adhuc ignota delenit</h4>
+									<h4>
+										Peran Ganda Ibu Rumah Tangga di Sulawesi dalam
+										Kehidupan Modern
+									</h4>
 									<p>
-										Cu eum alia elit, usu in eius appareat, deleniti
-										sapientem honestatis eos ex. In ius esse ullum
-										vidisse....
+										Ibu rumah tangga di Sulawesi menghadapi tantangan
+										unik dalam kehidupan modern sambil mempertahankan
+										tradisi dan budaya lokal....
 									</p>
 								</a>
 							</div>
@@ -1866,107 +986,73 @@ function Homepage() {
 				<footer className="revealed">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-3 col-md-6">
-								<h3 data-bs-target="#collapse_1">Quick Links</h3>
+							<div className="col-lg-4 col-md-6">
+								<h3 data-bs-target="#collapse_1">Jagalah Lingkungan !</h3>
 								<div
 									className="collapse dont-collapse-sm links"
 									id="collapse_1">
 									<ul>
 										<li>
-											<a href="about.html">About us</a>
-										</li>
-										<li>
-											<a href="help.html">Faq</a>
-										</li>
-										<li>
-											<a href="help.html">Help</a>
-										</li>
-										<li>
-											<a href="account.html">My account</a>
-										</li>
-										<li>
-											<a href="blog.html">Blog</a>
-										</li>
-										<li>
-											<a href="contacts.html">Contacts</a>
+											<p className="white-text">
+												Mengubah plastik menjadi peluang:
+												<br />
+												Satu langkah kecil untuk bumi yang lebih
+												hijau.
+											</p>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-6">
-								<h3 data-bs-target="#collapse_2">Categories</h3>
-								<div
-									className="collapse dont-collapse-sm links"
-									id="collapse_2">
-									<ul>
-										<li>
-											<a href="listing-grid-1-full.html">Clothes</a>
-										</li>
-										<li>
-											<a href="listing-grid-2-full.html">
-												Electronics
-											</a>
-										</li>
-										<li>
-											<a href="listing-grid-1-full.html">
-												Furniture
-											</a>
-										</li>
-										<li>
-											<a href="listing-grid-3.html">Glasses</a>
-										</li>
-										<li>
-											<a href="listing-grid-1-full.html">Shoes</a>
-										</li>
-										<li>
-											<a href="listing-grid-1-full.html">Watches</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-lg-3 col-md-6">
-								<h3 data-bs-target="#collapse_3">Contacts</h3>
+							<div className="col-lg-4 col-md-6">
+								<h3 data-bs-target="#collapse_3">Hubungi</h3>
 								<div
 									className="collapse dont-collapse-sm contacts"
 									id="collapse_3">
 									<ul>
 										<li>
-											<i className="ti-home"></i>97845 Baker st. 567
+											<i className="ti-home"></i>Desa Sidapurna,
+											Kec. Dukuhturi,
 											<br />
-											Los Angeles - US
+											Kab. Tegal
 										</li>
 										<li>
-											<i className="ti-headphone-alt"></i>+94
-											423-23-221
+											<i className="ti-headphone-alt"></i>
+											+88015-88888-9999
 										</li>
 										<li>
 											<i className="ti-email"></i>
-											<a href="#0">info@allaia.com</a>
+											<a href="#0">sampurna@gmail.com</a>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<div className="col-lg-3 col-md-6">
-								<h3 data-bs-target="#collapse_4">Keep in touch</h3>
+							<div className="col-lg-2 col-md-6">
+								<h3 data-bs-target="#collapse_2">Quick Link</h3>
+								<div
+									className="collapse dont-collapse-sm links"
+									id="collapse_2">
+									<ul>
+										<li>
+											<a href="listing-grid-1-full.html">Edukasi</a>
+										</li>
+										<li>
+											<a href="listing-grid-2-full.html">Produk</a>
+										</li>
+										<li>
+											<a href="listing-grid-1-full.html">Tentang</a>
+										</li>
+										<li>
+											<a href="listing-grid-3.html">Kontak</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div className="col-lg-2 col-md-6">
+								<h3 data-bs-target="#collapse_4">Follow Us</h3>
 								<div
 									className="collapse dont-collapse-sm"
 									id="collapse_4">
-									<div id="newsletter">
-										<div className="form-group">
-											<input
-												type="email"
-												name="email_newsletter"
-												id="email_newsletter"
-												className="form-control"
-												placeholder="Your email"
-											/>
-											<button type="submit" id="submit-newsletter">
-												<i className="ti-angle-double-right"></i>
-											</button>
-										</div>
-									</div>
 									<div className="follow_us">
-										<h5>Follow Us</h5>
 										<ul>
 											<li>
 												<a href="#0">
@@ -2000,53 +1086,11 @@ function Homepage() {
 						</div>
 						{/* <!-- /row--> */}
 						<hr />
-						<div className="row add_bottom_25">
-							<div className="col-lg-6">
-								<ul className="footer-selector clearfix">
+						<div className="row">
+							<div className="col-lg-12">
+								<ul className="additional_links centering_additional_links">
 									<li>
-										<div className="styled-select lang-selector">
-											<select>
-												<option value="English" selected>
-													English
-												</option>
-												<option value="French">French</option>
-												<option value="Spanish">Spanish</option>
-												<option value="Russian">Russian</option>
-											</select>
-										</div>
-									</li>
-									<li>
-										<div className="styled-select currency-selector">
-											<select>
-												<option value="US Dollars" selected>
-													US Dollars
-												</option>
-												<option value="Euro">Euro</option>
-											</select>
-										</div>
-									</li>
-									<li>
-										<img
-											src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-											data-src="/assets/img/cards_all.svg"
-											alt=""
-											width="198"
-											height="30"
-											className="lazy"
-										/>
-									</li>
-								</ul>
-							</div>
-							<div className="col-lg-6">
-								<ul className="additional_links">
-									<li>
-										<a href="#0">Terms and conditions</a>
-									</li>
-									<li>
-										<a href="#0">Privacy</a>
-									</li>
-									<li>
-										<span>© 2024 Allaia</span>
+										<span>© Copyright 2024. All right reserved</span>
 									</li>
 								</ul>
 							</div>
