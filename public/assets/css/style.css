@@ -2947,7 +2947,7 @@ nav a.open_close#close_in > i:hover {
   margin-left: -205px;
 }
 .dropdown-cart .dropdown-menu:before {
-  right: 10%;
+  right: 12.5%;
 }
 .dropdown-cart .dropdown-menu .total_drop {
   font-size: 16px;
@@ -3033,10 +3033,10 @@ nav a.open_close#close_in > i:hover {
 }
 
 .dropdown-access .dropdown-menu {
-  margin-left: -115px;
+  margin-left: -205px;
 }
 .dropdown-access .dropdown-menu:before {
-  left: 50%;
+  right: 12.5%;
 }
 .dropdown-access .dropdown-menu ul {
   margin: 15px -15px -15px -15px;
