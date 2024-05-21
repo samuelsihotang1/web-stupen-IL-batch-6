@@ -22,7 +22,7 @@ function Footer() {
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6">
-							<h3 data-bs-target="#collapse_3">Hubungi</h3>
+							<h3 data-bs-target="#collapse_3">Hubungi Kami</h3>
 							<div
 								className="collapse dont-collapse-sm contacts"
 								id="collapse_3">
@@ -45,7 +45,7 @@ function Footer() {
 							</div>
 						</div>
 						<div className="col-lg-2 col-md-6">
-							<h3 data-bs-target="#collapse_2">Quick Link</h3>
+							<h3 data-bs-target="#collapse_2">Menu</h3>
 							<div
 								className="collapse dont-collapse-sm links"
 								id="collapse_2">
@@ -66,7 +66,7 @@ function Footer() {
 							</div>
 						</div>
 						<div className="col-lg-2 col-md-6">
-							<h3 data-bs-target="#collapse_4">Follow Us</h3>
+							<h3 data-bs-target="#collapse_4">Ikuti Kami</h3>
 							<div className="collapse dont-collapse-sm" id="collapse_4">
 								<div className="follow_us">
 									<ul>
