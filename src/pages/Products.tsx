@@ -7,31 +7,33 @@ let isStickyScriptLoaded = false;
 let isListingScriptLoaded = false;
 
 function Products() {
-	const stickyScript = document.createElement('script');
-	stickyScript.src = '/assets/js/sticky_sidebar.min.js';
-	stickyScript.async = true;
-
-	const listingScript = document.createElement('script');
-	listingScript.src = '/assets/js/specific_listing.js';
-	listingScript.async = true;
-    
 	useEffect(() => {
 		if (!isStickyScriptLoaded) {
+			// Specific Scripts
+			const stickyScript = document.createElement('script');
+			stickyScript.src = '/assets/js/sticky_sidebar.min.js';
+			stickyScript.async = true;
 			document.body.appendChild(stickyScript);
+
 			isStickyScriptLoaded = true;
-		}
 
-		if (!isListingScriptLoaded) {
-			document.body.appendChild(listingScript);
-			isListingScriptLoaded = true;
-		}
-
-        if (isStickyScriptLoaded && isListingScriptLoaded) {
 			return () => {
-				document.body.removeChild(listingScript);
 				document.body.removeChild(stickyScript);
 			};
-        }
+		}
+		if (!isListingScriptLoaded) {
+			// Specific Scripts
+			const listingScript = document.createElement('script');
+			listingScript.src = '/assets/js/specific_listing.js';
+			listingScript.async = true;
+			document.body.appendChild(listingScript);
+
+			isListingScriptLoaded = true;
+
+			return () => {
+				document.body.removeChild(listingScript);
+			};
+		}
 	}, []);
 	return (
 		<>
