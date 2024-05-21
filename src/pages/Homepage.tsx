@@ -152,17 +152,6 @@ function Homepage() {
 												className="tooltip-1"
 												data-bs-toggle="tooltip"
 												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
 												title="Add to cart">
 												<i className="ti-shopping-cart"></i>
 												<span>Add to cart</span>
@@ -214,17 +203,6 @@ function Homepage() {
 												title="Add to favorites">
 												<i className="ti-heart"></i>
 												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
 											</a>
 										</li>
 										<li>
@@ -292,17 +270,6 @@ function Homepage() {
 												className="tooltip-1"
 												data-bs-toggle="tooltip"
 												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
 												title="Add to cart">
 												<i className="ti-shopping-cart"></i>
 												<span>Add to cart</span>
@@ -354,17 +321,6 @@ function Homepage() {
 												title="Add to favorites">
 												<i className="ti-heart"></i>
 												<span>Add to favorites</span>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#0"
-												className="tooltip-1"
-												data-bs-toggle="tooltip"
-												data-bs-placement="left"
-												title="Add to compare">
-												<i className="ti-control-shuffle"></i>
-												<span>Add to compare</span>
 											</a>
 										</li>
 										<li>
