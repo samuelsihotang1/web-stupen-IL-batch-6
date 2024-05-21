@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Homepage from '../src/pages/Homepage';
+import Homepage from './pages/Homepage';
+import Article from './pages/Article';
 
 let isScriptLoaded = false;
 
@@ -25,8 +26,8 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Homepage />} />
-				{/* <Route path="add" element={<AddUser />} />
-                <Route path="edit/:id" element={<EditUser />} /> */}
+				<Route path="article" element={<Article />} />
+                {/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>
 	);
