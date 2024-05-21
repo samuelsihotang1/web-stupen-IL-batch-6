@@ -46,7 +46,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -74,7 +77,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -102,7 +108,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -130,7 +139,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -158,7 +170,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -186,7 +201,10 @@ function Article() {
 										<article className="blog">
 											<figure>
 												<a href="blog-post.html">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 													<div className="preview">
 														<span>Baca lebih lanjut...</span>
 													</div>
@@ -275,39 +293,51 @@ function Article() {
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Tips & Trik - 12 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola Sampah...
+													Tips dan Trik Efektif Mengelola
+													Sampah...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Tips & Trik - 12 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola Sampah...
+													Tips dan Trik Efektif Mengelola
+													Sampah...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Tips & Trik - 12 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola Sampah...
+													Tips dan Trik Efektif Mengelola
+													Sampah...
 												</a>
 											</h3>
 										</li>
@@ -344,9 +374,9 @@ function Article() {
 					{/* <!-- /container --> */}
 				</main>
 				{/* <!--/main--> */}
+				<Footer />
 			</div>
 			{/* <!-- page --> */}
-			<Footer />
 
 			<div id="toTop"></div>
 			{/* <!-- Back to top button --> */}

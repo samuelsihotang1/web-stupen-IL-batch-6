@@ -1363,9 +1363,9 @@ function Products() {
 					{/* <!-- /container --> */}
 				</main>
 				{/* <!-- /main --> */}
+			<Footer />
 			</div>
 			{/* <!-- page --> */}
-			<Footer />
 
 			<div id="toTop"></div>
 			{/* <!-- Back to top button --> */}

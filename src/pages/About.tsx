@@ -250,8 +250,8 @@ function About() {
 					{/* <!-- /container --> */}
 				</main>
 				{/* <!--/main--> */}
+				<Footer />
 			</div>
-			<Footer />
 
 			<div id="toTop"></div>
 			{/* <!-- Back to top button --> */}
