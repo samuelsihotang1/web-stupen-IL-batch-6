@@ -34,11 +34,11 @@ function Homepage() {
 								className="owl-slide cover"
 								style={{
 									backgroundImage:
-										"url('/real_assets/img/slides/frame1.png')",
+										"url('/real_assets/img/slides/banner.png')",
 								}}>
 								<div
 									className="opacity-mask d-flex align-items-center"
-									data-opacity-mask="rgba(0, 0, 0, 0.25)">
+									data-opacity-mask="rgba(255, 255, 255, 0)">
 									<div className="container">
 										<div className="row justify-content-center justify-content-md-start">
 											<div className="col-lg-6 static">
