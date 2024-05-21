@@ -99,7 +99,7 @@ function Homepage() {
 
 					<div className="container margin_60_35">
 						<div className="main_title">
-							<h2>PRODUK</h2>
+							<h2>PRODUK PILIHAN</h2>
 							<span>UTAMA</span>
 						</div>
 						<div className="row small-gutters">
@@ -410,7 +410,6 @@ function Homepage() {
 										</figcaption>
 									</figure>
 									<ul>
-										<li>by Admin</li>
 										<li>Minggu, 12 Mei 2024</li>
 									</ul>
 									<h4>Solusi untuk membantu melestarikan lingkungan</h4>
@@ -438,8 +437,7 @@ function Homepage() {
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Admin</li>
-										<li>12 Mei 2024</li>
+										<li>Minggu, 12 Mei 2024</li>
 									</ul>
 									<h4>Mengatasi Persoalan Persampahan</h4>
 									<p>
@@ -466,8 +464,7 @@ function Homepage() {
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Admin</li>
-										<li>12 Mei 2024</li>
+										<li>Minggu, 12 Mei 2024</li>
 									</ul>
 									<h4>Ibu-Ibu Rumah Tangga di Sulawesi Tangga</h4>
 									<p>
@@ -494,8 +491,7 @@ function Homepage() {
 										</figcaption>
 									</figure>
 									<ul>
-										<li>By Admin</li>
-										<li>12 Mei 2024</li>
+										<li>Minggu, 12 Mei 2024</li>
 									</ul>
 									<h4>
 										Peran Ganda Ibu Rumah Tangga di Sulawesi dalam
