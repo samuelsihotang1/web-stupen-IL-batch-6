@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import AppJs from './App';
 
 const ScriptLoader = ({ src, onLoad }: { src: string; onLoad: () => void }) => {
 	useEffect(() => {
@@ -33,7 +33,7 @@ const Main = () => {
 					onLoad={handleScriptLoad}
 				/>
 			)}
-			{isScriptLoaded && <App />}
+			{isScriptLoaded && <AppJs />}
 		</>
 	);
 };
