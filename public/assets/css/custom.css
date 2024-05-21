@@ -1,3 +1,7 @@
 .margin_zero {
 	margin: 0 !important;
 }
+
+.no_background_color {
+	background-color: transparent !important;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Article from './pages/Article';
 import Products from './pages/Products';
+import About from './pages/About';
 
 let isScriptLoaded = false;
 
@@ -29,6 +30,7 @@ function App() {
 				<Route path="/" element={<Homepage />} />
 				<Route path="article" element={<Article />} />
 				<Route path="products" element={<Products />} />
+				<Route path="about" element={<About />} />
                 {/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>
