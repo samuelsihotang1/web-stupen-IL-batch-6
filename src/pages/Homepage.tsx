@@ -63,7 +63,7 @@ function Homepage() {
 															Daftar
 														</a>
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button">
 															Belanja
