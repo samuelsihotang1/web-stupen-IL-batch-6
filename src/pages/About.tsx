@@ -106,9 +106,7 @@ function About() {
 								{/* <!-- /grid_item --> */}
 							</div>
 							{/* <!-- /col --> */}
-						</div>
-						{/* <!-- /row --> */}
-						<div className="row small-gutters">
+
 							<div className="col-6 col-md-4 col-xl-4">
 								<div className="grid_item">
 									<figure>
