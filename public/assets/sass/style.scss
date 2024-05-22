@@ -3395,11 +3395,11 @@ header.version_2 .menu ul li ul li ul {
 
 /*-------- 1.5 Top banner --------*/
 .top_banner {
-	height: 250px;
+	height: 100px;
 	overflow: hidden;
 	position: relative;
 	@include mobile {
-		height: 200px;
+		height: 100px;
 	}
 	.breadcrumbs {
 		color: #fff;
