@@ -18,30 +18,12 @@ const ScriptLoader = ({ src, onLoad }: { src: string; onLoad: () => void }) => {
 	return null;
 };
 
-let isMyScriptLoaded = false;
-
 const Main = () => {
 	const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
 	const handleScriptLoad = () => {
 		setIsScriptLoaded(true);
 	};
-
-	useEffect(() => {
-		if (!isMyScriptLoaded) {
-			// Main Scripts
-			const script = document.createElement('script');
-			script.src = '/assets/js/bootstrap.bundle.js';
-			script.async = true;
-			document.body.appendChild(script);
-
-			isMyScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
-	}, []);
 
 	return (
 		<>
