@@ -1,39 +1,17 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { loadScripts } from '../utils/loadScripts.ts';
 import '/public/assets/css/listing.css';
-
-let isStickyScriptLoaded = false;
-let isListingScriptLoaded = false;
 
 function Products() {
 	useEffect(() => {
-		if (!isStickyScriptLoaded) {
-			// Specific Scripts
-			const stickyScript = document.createElement('script');
-			stickyScript.src = '/assets/js/sticky_sidebar.min.js';
-			stickyScript.async = true;
-			document.body.appendChild(stickyScript);
+		const scripts = [
+			'/assets/js/sticky_sidebar.min.js',
+			'/assets/js/specific_listing.js',
+		];
 
-			isStickyScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(stickyScript);
-			};
-		}
-		if (!isListingScriptLoaded) {
-			// Specific Scripts
-			const listingScript = document.createElement('script');
-			listingScript.src = '/assets/js/specific_listing.js';
-			listingScript.async = true;
-			document.body.appendChild(listingScript);
-
-			isListingScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(listingScript);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 	return (
 		<>
@@ -70,10 +48,10 @@ function Products() {
 											</option>
 											<option value="date">
 												Urutkan berdasarkan Terlaris
-                                            </option>
+											</option>
 											<option value="price">
 												Urutkan berdasarkan Harga
-                                            </option>
+											</option>
 										</select>
 									</div>
 								</li>
@@ -125,14 +103,15 @@ function Products() {
 														</li>
 														<li>
 															<label className="container_check">
-																Peralatan <small>11</small>
+																Peralatan{' '}
+																<small>11</small>
 																<input type="checkbox" />
 																<span className="checkmark"></span>
 															</label>
 														</li>
 													</ul>
 													<a href="#0" className="apply_filter">
-													    Terapkan
+														Terapkan
 													</a>
 												</div>
 											</div>
@@ -180,7 +159,7 @@ function Products() {
 														</li>
 													</ul>
 													<a href="#0" className="apply_filter">
-													    Terapkan
+														Terapkan
 													</a>
 												</div>
 											</div>
@@ -194,248 +173,7 @@ function Products() {
 					{/* <!-- /toolbox --> */}
 
 					<div className="container margin_30">
-						
-                        <div className="row small-gutters">
-                                <div className="col-6 col-md-4 col-xl-3">
-                                    <div className="grid_item">
-                                        <figure>
-                                            <a href="product-detail-1.html">
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/tas-botol-plastik-1.png"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/tas-botol-plastik-1.png"
-                                                    alt=""
-                                                />
-                                            </a>
-                                        </figure>
-                                        <div className="rating">
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star"></i>
-                                        </div>
-                                        <a href="product-detail-1.html">
-                                            <h3>Tas Tutup Botol</h3>
-                                        </a>
-                                        <div className="price_box">
-                                            <span className="new_price">Rp. 50.000</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to favorites">
-                                                    <i className="ti-heart"></i>
-                                                    <span>Add to favorites</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to cart">
-                                                    <i className="ti-shopping-cart"></i>
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {/* <!-- /grid_item --> */}
-                                </div>
-                                {/* <!-- /col --> */}
-                                <div className="col-6 col-md-4 col-xl-3">
-                                    <div className="grid_item">
-                                        <figure>
-                                            <a href="product-detail-1.html">
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/gantungan-kunci.png"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/gantungan-kunci.png"
-                                                    alt=""
-                                                />
-                                            </a>
-                                        </figure>
-                                        <div className="rating">
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star"></i>
-                                        </div>
-                                        <a href="product-detail-1.html">
-                                            <h3>Gantungan Kunci</h3>
-                                        </a>
-                                        <div className="price_box">
-                                            <span className="new_price">Rp. 25.000</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to favorites">
-                                                    <i className="ti-heart"></i>
-                                                    <span>Add to favorites</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to cart">
-                                                    <i className="ti-shopping-cart"></i>
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {/* <!-- /grid_item --> */}
-                                </div>
-                                {/* <!-- /col --> */}
-                                <div className="col-6 col-md-4 col-xl-3">
-                                    <div className="grid_item">
-                                        <figure>
-                                            <a href="product-detail-1.html">
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/gaun-kertas.png"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/gaun-kertas.png"
-                                                    alt=""
-                                                />
-                                            </a>
-                                        </figure>
-                                        <div className="rating">
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star"></i>
-                                        </div>
-                                        <a href="product-detail-1.html">
-                                            <h3>Gaun Kertas</h3>
-                                        </a>
-                                        <div className="price_box">
-                                            <span className="new_price">Rp. 150.000</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to favorites">
-                                                    <i className="ti-heart"></i>
-                                                    <span>Add to favorites</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to cart">
-                                                    <i className="ti-shopping-cart"></i>
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {/* <!-- /grid_item --> */}
-                                </div>
-                                {/* <!-- /col --> */}
-                                <div className="col-6 col-md-4 col-xl-3">
-                                    <div className="grid_item">
-                                        <figure>
-                                            <a href="product-detail-1.html">
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    className="img-fluid lazy"
-                                                    src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                    data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
-                                                    alt=""
-                                                />
-                                            </a>
-                                        </figure>
-                                        <div className="rating">
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star voted"></i>
-                                            <i className="icon-star"></i>
-                                        </div>
-                                        <a href="product-detail-1.html">
-                                            <h3>Hiasan Dinding Gantung</h3>
-                                        </a>
-                                        <div className="price_box">
-                                            <span className="new_price">Rp. 20.000</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to favorites">
-                                                    <i className="ti-heart"></i>
-                                                    <span>Add to favorites</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#0"
-                                                    className="tooltip-1"
-                                                    data-bs-toggle="tooltip"
-                                                    data-bs-placement="left"
-                                                    title="Add to cart">
-                                                    <i className="ti-shopping-cart"></i>
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    {/* <!-- /grid_item --> */}
-                                </div>
-                                {/* <!-- /col --> */}
-                            </div>
-                            {/* <!-- /row --> */}
-						
-                    <div className="row small-gutters">
+						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
@@ -674,8 +412,8 @@ function Products() {
 							{/* <!-- /col --> */}
 						</div>
 						{/* <!-- /row --> */}
-						
-                    <div className="row small-gutters">
+
+						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
@@ -914,8 +652,248 @@ function Products() {
 							{/* <!-- /col --> */}
 						</div>
 						{/* <!-- /row --> */}
-						
-                    <div className="row small-gutters">
+
+						<div className="row small-gutters">
+							<div className="col-6 col-md-4 col-xl-3">
+								<div className="grid_item">
+									<figure>
+										<a href="product-detail-1.html">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												alt=""
+											/>
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												alt=""
+											/>
+										</a>
+									</figure>
+									<div className="rating">
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star"></i>
+									</div>
+									<a href="product-detail-1.html">
+										<h3>Tas Tutup Botol</h3>
+									</a>
+									<div className="price_box">
+										<span className="new_price">Rp. 50.000</span>
+									</div>
+									<ul>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to favorites">
+												<i className="ti-heart"></i>
+												<span>Add to favorites</span>
+											</a>
+										</li>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to cart">
+												<i className="ti-shopping-cart"></i>
+												<span>Add to cart</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+							<div className="col-6 col-md-4 col-xl-3">
+								<div className="grid_item">
+									<figure>
+										<a href="product-detail-1.html">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/gantungan-kunci.png"
+												alt=""
+											/>
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/gantungan-kunci.png"
+												alt=""
+											/>
+										</a>
+									</figure>
+									<div className="rating">
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star"></i>
+									</div>
+									<a href="product-detail-1.html">
+										<h3>Gantungan Kunci</h3>
+									</a>
+									<div className="price_box">
+										<span className="new_price">Rp. 25.000</span>
+									</div>
+									<ul>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to favorites">
+												<i className="ti-heart"></i>
+												<span>Add to favorites</span>
+											</a>
+										</li>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to cart">
+												<i className="ti-shopping-cart"></i>
+												<span>Add to cart</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+							<div className="col-6 col-md-4 col-xl-3">
+								<div className="grid_item">
+									<figure>
+										<a href="product-detail-1.html">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/gaun-kertas.png"
+												alt=""
+											/>
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/gaun-kertas.png"
+												alt=""
+											/>
+										</a>
+									</figure>
+									<div className="rating">
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star"></i>
+									</div>
+									<a href="product-detail-1.html">
+										<h3>Gaun Kertas</h3>
+									</a>
+									<div className="price_box">
+										<span className="new_price">Rp. 150.000</span>
+									</div>
+									<ul>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to favorites">
+												<i className="ti-heart"></i>
+												<span>Add to favorites</span>
+											</a>
+										</li>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to cart">
+												<i className="ti-shopping-cart"></i>
+												<span>Add to cart</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+							<div className="col-6 col-md-4 col-xl-3">
+								<div className="grid_item">
+									<figure>
+										<a href="product-detail-1.html">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												alt=""
+											/>
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												alt=""
+											/>
+										</a>
+									</figure>
+									<div className="rating">
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star voted"></i>
+										<i className="icon-star"></i>
+									</div>
+									<a href="product-detail-1.html">
+										<h3>Hiasan Dinding Gantung</h3>
+									</a>
+									<div className="price_box">
+										<span className="new_price">Rp. 20.000</span>
+									</div>
+									<ul>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to favorites">
+												<i className="ti-heart"></i>
+												<span>Add to favorites</span>
+											</a>
+										</li>
+										<li>
+											<a
+												href="#0"
+												className="tooltip-1"
+												data-bs-toggle="tooltip"
+												data-bs-placement="left"
+												title="Add to cart">
+												<i className="ti-shopping-cart"></i>
+												<span>Add to cart</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+						</div>
+						{/* <!-- /row --> */}
+
+						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
@@ -1187,7 +1165,7 @@ function Products() {
 					{/* <!-- /container --> */}
 				</main>
 				{/* <!-- /main --> */}
-			<Footer />
+				<Footer />
 			</div>
 			{/* <!-- page --> */}
 

@@ -1,27 +1,16 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Homepage from './pages/Homepage';
-import Article from './pages/Article';
-import Products from './pages/Products';
 import About from './pages/About';
-
-let isScriptLoaded = false;
+import Article from './pages/Article';
+import Homepage from './pages/Homepage';
+import Products from './pages/Products';
+import { loadScripts } from './utils/loadScripts';
 
 function App() {
 	useEffect(() => {
-		if (!isScriptLoaded) {
-			// Main Scripts
-			const script = document.createElement('script');
-			script.src = '/assets/js/main.js';
-			script.async = true;
-			document.body.appendChild(script);
+		const scripts = ['/assets/js/main.js'];
 
-			isScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 
 	return (
@@ -31,7 +20,7 @@ function App() {
 				<Route path="article" element={<Article />} />
 				<Route path="products" element={<Products />} />
 				<Route path="about" element={<About />} />
-                {/* <Route path="edit/:id" element={<EditUser />} /> */}
+				{/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>
 	);
