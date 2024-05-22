@@ -237,8 +237,7 @@ function About() {
 									<iframe
 										className="map_contact"
 										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15059.828840968452!2d109.08572514391975!3d-6.89762638962415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb988feffa69b%3A0x5027a76e3565cd0!2sSidapurna%2C%20Kec.%20Dukuhturi%2C%20Kabupaten%20Tegal%2C%20Jawa%20Tengah!5e1!3m2!1sid!2sid!4v1716036205766!5m2!1sid!2sid"
-										style={{ height: '390px' }}
-										allowfullscreen></iframe>
+										style={{ height: '390px' }}></iframe>
 								</div>
 							</div>
 							{/* <!-- /row --> */}{' '}
