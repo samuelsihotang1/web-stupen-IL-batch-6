@@ -2636,12 +2636,10 @@ header.version_2 .search_mob_wp .btn_1:hover {
   padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .centering-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.centering-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Submenu styles */
@@ -2947,7 +2945,7 @@ nav a.open_close#close_in > i:hover {
   margin-left: -205px;
 }
 .dropdown-cart .dropdown-menu:before {
-  right: 12.5%;
+  right: 10%;
 }
 .dropdown-cart .dropdown-menu .total_drop {
   font-size: 16px;
@@ -3033,10 +3031,10 @@ nav a.open_close#close_in > i:hover {
 }
 
 .dropdown-access .dropdown-menu {
-  margin-left: -205px;
+  margin-left: -115px;
 }
 .dropdown-access .dropdown-menu:before {
-  right: 12.5%;
+  right: 50%;
 }
 .dropdown-access .dropdown-menu ul {
   margin: 15px -15px -15px -15px;
@@ -3368,7 +3366,7 @@ header.version_2 .menu ul li ul li ul {
 
 /*-------- 1.5 Top banner --------*/
 .top_banner {
-  height: 100px;
+  height: 250px;
   overflow: hidden;
   position: relative;
 }

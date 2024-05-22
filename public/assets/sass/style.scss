@@ -2677,11 +2677,9 @@ header {
 }
 
 .centering-wrapper {
-	@media only screen and (min-width: 768px) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Submenu styles */
@@ -2978,7 +2976,7 @@ nav a.open_close#close_in {
 	margin-left: -205px;
 
 	&:before {
-		right: 12.5%;
+		right: 10%;
 	}
 	.total_drop {
 		@include fontSize(16px);
@@ -3061,10 +3059,10 @@ nav a.open_close#close_in {
 }
 
 .dropdown-access .dropdown-menu {
-	margin-left: -205px;
+	margin-left: -115px;
 
 	&:before {
-		right: 12.5%;
+		right: 50%;
 	}
 
 	ul {
@@ -3397,7 +3395,7 @@ header.version_2 .menu ul li ul li ul {
 
 /*-------- 1.5 Top banner --------*/
 .top_banner {
-	height: 100px;
+	height: 250px;
 	overflow: hidden;
 	position: relative;
 	@include mobile {
