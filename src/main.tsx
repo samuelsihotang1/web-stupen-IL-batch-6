@@ -1,42 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
+import { loadScripts } from './utils/loadScripts.ts';
 
-const ScriptLoader = ({ src, onLoad }: { src: string; onLoad: () => void }) => {
-	useEffect(() => {
-		const script = document.createElement('script');
-		script.src = src;
-		script.async = true;
-		script.onload = onLoad;
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, [src, onLoad]);
-
-	return null;
-};
-
-const Main = () => {
+function Main() {
 	const [isScriptLoaded, setIsScriptLoaded] = useState(false);
 
-	const handleScriptLoad = () => {
-		setIsScriptLoaded(true);
-	};
+	useEffect(() => {
+		const scripts = ['/assets/js/common_scripts.min.js'];
 
-	return (
-		<>
-			{!isScriptLoaded && (
-				<ScriptLoader
-					src="/assets/js/common_scripts.min.js"
-					onLoad={handleScriptLoad}
-				/>
-			)}
-			{isScriptLoaded && <App />}
-		</>
-	);
-};
+		loadScripts(scripts, () => {
+			setIsScriptLoaded(true);
+		});
+	}, []);
+
+	return isScriptLoaded ? <App /> : null;
+}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
