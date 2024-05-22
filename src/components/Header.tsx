@@ -42,11 +42,9 @@ function Header() {
 											<i className="ti-close"></i>
 										</a>
 									</div>
-									<ul>
+									<ul className="centered-menu">
 										<li>
-											<a
-												href="/"
-												className="show-submenu">
+											<a href="/" className="show-submenu">
 												Beranda
 											</a>
 										</li>
@@ -58,16 +56,12 @@ function Header() {
 											</a>
 										</li>
 										<li>
-											<a
-												href="/products"
-												className="show-submenu">
+											<a href="/products" className="show-submenu">
 												Produk
 											</a>
 										</li>
 										<li>
-											<a
-												href="/about"
-												className="show-submenu">
+											<a href="/about" className="show-submenu">
 												Tentang
 											</a>
 										</li>
@@ -121,7 +115,8 @@ function Header() {
 															</figure>
 															<strong>
 																<span>
-																	1x Hiasan Dinding Gantung
+																	1x Hiasan Dinding
+																	Gantung
 																</span>
 																Rp. 20.000
 															</strong>

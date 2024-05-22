@@ -11,3 +11,8 @@
 		display: none !important;
 	}
 }
+
+.centered-menu {
+    display: flex;
+    justify-content: center;
+}
