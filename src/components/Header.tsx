@@ -89,7 +89,7 @@ function Header() {
 															<figure>
 																<img
 																	src="/assets/img/products/product_placeholder_square_small.jpg"
-																	data-src="/assets/img/products/shoes/thumb/1.jpg"
+																	data-src="/real_assets/img/products/tas-botol-plastik-1.png"
 																	alt=""
 																	width="50"
 																	height="50"
@@ -98,9 +98,9 @@ function Header() {
 															</figure>
 															<strong>
 																<span>
-																	1x Armor Air x Fear
+																	1x Tas Tutup Botol
 																</span>
-																$90.00
+																Rp. 50.000
 															</strong>
 														</a>
 														<a href="#0" className="action">
@@ -112,7 +112,7 @@ function Header() {
 															<figure>
 																<img
 																	src="/assets/img/products/product_placeholder_square_small.jpg"
-																	data-src="/assets/img/products/shoes/thumb/2.jpg"
+																	data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
 																	alt=""
 																	width="50"
 																	height="50"
@@ -121,9 +121,9 @@ function Header() {
 															</figure>
 															<strong>
 																<span>
-																	1x Armor Okwahn II
+																	1x Hiasan Dinding Gantung
 																</span>
-																$110.00
+																Rp. 20.000
 															</strong>
 														</a>
 														<a href="0" className="action">
@@ -134,27 +134,22 @@ function Header() {
 												<div className="total_drop">
 													<div className="clearfix">
 														<strong>Total</strong>
-														<span>$200.00</span>
+														<span>Rp. 70.000</span>
 													</div>
 													<a
 														href="cart.html"
 														className="btn_1 outline">
-														View Cart
+														Keranjang
 													</a>
 													<a
 														href="checkout.html"
 														className="btn_1">
-														Checkout
+														Bayar
 													</a>
 												</div>
 											</div>
 										</div>
 										{/* <!-- /dropdown-cart--> */}{' '}
-									</li>
-									<li>
-										<a href="#0" className="wishlist">
-											<span>Wishlist</span>
-										</a>
 									</li>
 									<li>
 										<div className="dropdown dropdown-access">
@@ -165,31 +160,31 @@ function Header() {
 											</a>
 											<div className="dropdown-menu">
 												<a href="account.html" className="btn_1">
-													Sign In or Sign Up
+													Sign In
 												</a>
 												<ul>
 													<li>
 														<a href="track-order.html">
 															<i className="ti-truck"></i>
-															Track your Order
+															Lacak Pesanan
 														</a>
 													</li>
 													<li>
 														<a href="account.html">
 															<i className="ti-package"></i>
-															My Orders
+															Pesanan Anda
 														</a>
 													</li>
 													<li>
 														<a href="account.html">
 															<i className="ti-user"></i>My
-															Profile
+															Profil
 														</a>
 													</li>
 													<li>
 														<a href="help.html">
 															<i className="ti-help-alt"></i>
-															Help and Faq
+															Bantuan
 														</a>
 													</li>
 												</ul>
@@ -218,12 +213,12 @@ function Header() {
 					<a href="#0" className="btn_close_top_panel">
 						<i className="ti-close"></i>
 					</a>
-					<small>What are you looking for?</small>
+					<small>Apa yang kamu cari ?</small>
 				</div>
 				{/* <!-- /header_panel --> */}
 				<div className="container">
 					<div className="search-input">
-						<input type="text" placeholder="Search over 10.000 products..." />
+						<input type="text" placeholder="Cari produk di sini..." />
 						<button type="submit">
 							<i className="ti-search"></i>
 						</button>
