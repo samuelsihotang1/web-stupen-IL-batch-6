@@ -1,10 +1,10 @@
-function Header() {
+function Header({ isSticky = true }: { isSticky?: boolean }) {
 	return (
 		<>
 			<header className="version_2">
 				<div className="layer"></div>
 				{/* <!-- Mobile menu overlay mask --> */}{' '}
-				<div className="main_header Sticky">
+				<div className={`main_header ${isSticky ? 'Sticky' : ''}`}>
 					<div className="container">
 						<div className="row small-gutters">
 							<div className="col-xl-3 col-lg-3 d-lg-flex align-items-center">

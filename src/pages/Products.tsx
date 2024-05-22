@@ -16,7 +16,7 @@ function Products() {
 	return (
 		<>
 			<div id="page">
-				<Header />
+            <Header isSticky={false} />
 
 				<main>
 					<div className="top_banner version_2">
