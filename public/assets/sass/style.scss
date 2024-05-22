@@ -1821,7 +1821,7 @@ hr {
 	p {
 		@include fontSize(23px);
 		font-weight: 300;
-		padding: 0 15%;
+		padding: 0 1%;
 		position: relative;
 		z-index: 2;
 		@include mobile {
