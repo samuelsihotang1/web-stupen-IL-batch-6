@@ -1,21 +1,17 @@
 function Header() {
 	return (
 		<>
-			<header className="version_1">
+			<header className="version_2">
 				<div className="layer"></div>
-				{/* <!-- Mobile menu overlay mask --> */}
-
-				{/* <!-- /main_header --> */}
-
-				<div className="main_nav Sticky">
+				{/* <!-- Mobile menu overlay mask --> */}{' '}
+				<div className="main_header Sticky">
 					<div className="container">
 						<div className="row small-gutters">
-							<div className="col-xl-1 col-lg-1 d-lg-flex align-items-center">
+							<div className="col-xl-3 col-lg-3 d-lg-flex align-items-center">
 								<div id="logo">
 									<a href="index.html">
 										<img
-											className="for-logo"
-											src="/real_assets/img/logo.png"
+											src="/assets/img/logo_black.svg"
 											alt=""
 											width="100"
 											height="35"
@@ -23,17 +19,16 @@ function Header() {
 									</a>
 								</div>
 							</div>
-
 							<nav className="col-xl-6 col-lg-7">
-								<a className="open_close" href="##">
+								<a className="open_close" href="javascript:void(0);">
 									<div className="hamburger hamburger--spin">
 										<div className="hamburger-box">
 											<div className="hamburger-inner"></div>
 										</div>
 									</div>
 								</a>
-								{/* <!-- Mobile menu button --> */}
-								<div className="main-menu centering-wrapper">
+								{/* <!-- Mobile menu button --> */}{' '}
+								<div className="main-menu">
 									<div id="header_menu">
 										<a href="index.html">
 											<img
@@ -48,85 +43,40 @@ function Header() {
 										</a>
 									</div>
 									<ul>
-										<li className="submenu">
-											<a href="##" className="show-submenu">
-												Home
+										<li>
+											<a
+												href="/"
+												className="show-submenu">
+												Beranda
 											</a>
 										</li>
-										<li className="megamenu submenu">
-											<a href="##" className="show-submenu-mega">
+										<li>
+											<a
+												href="/article"
+												className="show-submenu-mega">
 												Artikel
 											</a>
-											{/* <!-- /menu-wrapper --> */}
 										</li>
-										<li className="submenu">
-											<a href="##" className="show-submenu">
+										<li>
+											<a
+												href="/products"
+												className="show-submenu">
 												Produk
 											</a>
 										</li>
 										<li>
-											<a href="blog.html">Tentang</a>
+											<a
+												href="/about"
+												className="show-submenu">
+												Tentang
+											</a>
 										</li>
 									</ul>
 								</div>
-								{/* <!--/main-menu --> */}
+								{/* <!--/main-menu --> */}{' '}
 							</nav>
-							<div className="col-xl-3 col-lg-5 col-md-6 d-none d-md-block">
-								<div className="custom-search-input">
-									<input
-										type="text"
-										placeholder="Cari produk..."
-									/>
-									<button type="submit">
-										<i className="header-icon_search_custom"></i>
-									</button>
-								</div>
-							</div>
-							<div className="col-xl-2 col-lg-2 col-md-3">
+							<div className="col-xl-3 col-lg-2 d-lg-flex align-items-center justify-content-end text-end view-only-desktop">
 								<ul className="top_tools">
-									{/* <li></li> */}
-									<li>
-										<div className="dropdown dropdown-access">
-											<a
-												href="account.html"
-												className="access_link">
-												<span>Account</span>
-											</a>
-											<div className="dropdown-menu">
-												<a href="account.html" className="btn_1">
-													Sign In
-												</a>
-												<ul>
-													<li>
-														<a href="track-order.html">
-															<i className="ti-truck"></i>
-															Lacak Pesanan Saya
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-package"></i>
-															Pesanan Saya
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-user"></i>
-															Profil Saya
-														</a>
-													</li>
-													<li>
-														<a href="help.html">
-															<i className="ti-help-alt"></i>
-															Bantuan
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										{/* <!-- /dropdown-access--> */}
-									</li>
-
 									<li>
 										<div className="dropdown dropdown-cart">
 											<a href="cart.html" className="cart_bt">
@@ -139,7 +89,7 @@ function Header() {
 															<figure>
 																<img
 																	src="/assets/img/products/product_placeholder_square_small.jpg"
-																	data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+																	data-src="/assets/img/products/shoes/thumb/1.jpg"
 																	alt=""
 																	width="50"
 																	height="50"
@@ -148,9 +98,9 @@ function Header() {
 															</figure>
 															<strong>
 																<span>
-                                                                1x Tas Tutup Botol
+																	1x Armor Air x Fear
 																</span>
-																Rp. 50.000
+																$90.00
 															</strong>
 														</a>
 														<a href="#0" className="action">
@@ -162,7 +112,7 @@ function Header() {
 															<figure>
 																<img
 																	src="/assets/img/products/product_placeholder_square_small.jpg"
-																	data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+																	data-src="/assets/img/products/shoes/thumb/2.jpg"
 																	alt=""
 																	width="50"
 																	height="50"
@@ -171,9 +121,9 @@ function Header() {
 															</figure>
 															<strong>
 																<span>
-																	1x Hiasan Dinding Gantung
+																	1x Armor Okwahn II
 																</span>
-																Rp. 20.000
+																$110.00
 															</strong>
 														</a>
 														<a href="0" className="action">
@@ -184,53 +134,104 @@ function Header() {
 												<div className="total_drop">
 													<div className="clearfix">
 														<strong>Total</strong>
-														<span>Rp. 70.000</span>
+														<span>$200.00</span>
 													</div>
 													<a
 														href="cart.html"
 														className="btn_1 outline">
-														Keranjang
+														View Cart
 													</a>
 													<a
 														href="checkout.html"
 														className="btn_1">
-														Bayar
+														Checkout
 													</a>
 												</div>
 											</div>
 										</div>
-										{/* <!-- /dropdown-cart--> */}
+										{/* <!-- /dropdown-cart--> */}{' '}
 									</li>
 									<li>
-										<div className="dropdown hidden-for-web">
-											<a href="##" className="btn_search_mob">
-												<span>Search</span>
+										<a href="#0" className="wishlist">
+											<span>Wishlist</span>
+										</a>
+									</li>
+									<li>
+										<div className="dropdown dropdown-access">
+											<a
+												href="account.html"
+												className="access_link">
+												<span>Account</span>
 											</a>
+											<div className="dropdown-menu">
+												<a href="account.html" className="btn_1">
+													Sign In or Sign Up
+												</a>
+												<ul>
+													<li>
+														<a href="track-order.html">
+															<i className="ti-truck"></i>
+															Track your Order
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-package"></i>
+															My Orders
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-user"></i>My
+															Profile
+														</a>
+													</li>
+													<li>
+														<a href="help.html">
+															<i className="ti-help-alt"></i>
+															Help and Faq
+														</a>
+													</li>
+												</ul>
+											</div>
 										</div>
+										{/* <!-- /dropdown-access--> */}{' '}
+									</li>
+									<li>
+										<a
+											href="javascript:void(0);"
+											className="search_panel">
+											<span>Search</span>
+										</a>
 									</li>
 								</ul>
 							</div>
 						</div>
-						{/* <!-- /row --> */}
+						{/* <!-- /row --> */}{' '}
 					</div>
-
-					<div className="search_mob_wp">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari produk..."
-						/>
-						<input
-							type="submit"
-							className="btn_1 full-width"
-							value="Search"
-						/>
-					</div>
-					{/* <!-- /search_mobile --> */}
 				</div>
-				{/* <!-- /main_nav --> */}
+				{/* <!-- /main_header --> */}{' '}
 			</header>
 			{/* <!-- /header --> */}
+			<div className="top_panel">
+				<div className="container header_panel">
+					<a href="#0" className="btn_close_top_panel">
+						<i className="ti-close"></i>
+					</a>
+					<small>What are you looking for?</small>
+				</div>
+				{/* <!-- /header_panel --> */}
+				<div className="container">
+					<div className="search-input">
+						<input type="text" placeholder="Search over 10.000 products..." />
+						<button type="submit">
+							<i className="ti-search"></i>
+						</button>
+					</div>
+				</div>
+				{/* <!-- /related --> */}{' '}
+			</div>
+			{/* <!-- /search_panel --> */}{' '}
 		</>
 	);
 }

@@ -5,3 +5,9 @@
 .no_background_color {
 	background-color: transparent !important;
 }
+
+@media (max-width: 992px) {
+	.view-only-desktop {
+		display: none !important;
+	}
+}
