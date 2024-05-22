@@ -11,7 +11,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 								<div id="logo">
 									<a href="index.html">
 										<img
-											src="/assets/img/logo_black.svg"
+											src="/real_assets/img/logo.png"
 											alt=""
 											width="100"
 											height="35"
