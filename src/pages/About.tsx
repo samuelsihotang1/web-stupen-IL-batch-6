@@ -120,7 +120,8 @@ function About() {
 					{/* <!-- /container --> */}
 					<div className="container margin_60">
 						<div className="main_title">
-							<h2>Tim Kami</h2>
+							<h2>TEAM</h2>
+							<span>KAMI</span>
 						</div>
 						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-4">
@@ -244,7 +245,8 @@ function About() {
 					{/* <!-- /container --> */}
 					<div className="container margin_60">
 						<div className="main_title">
-							<h2>Hubungi Kami</h2>
+							<h2>HUBUNGI</h2>
+							<span>KAMI</span>
 						</div>
 						<div className="row justify-content-center">
 							<div className="col-lg-4">
