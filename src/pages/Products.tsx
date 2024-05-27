@@ -1,37 +1,91 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '/public/assets/css/home_1.css';
 import { loadScripts } from '../utils/loadScripts.ts';
+let isScriptLoaded = false;
 import '/public/assets/css/listing.css';
 
 function Products() {
 	useEffect(() => {
-		const scripts = [
-			'/assets/js/sticky_sidebar.min.js',
-			'/assets/js/specific_listing.js',
-		];
+		if (!isScriptLoaded) {
+			// Specific Scripts
+			const script = document.createElement('script');
+            const scripts = [
+                '/assets/js/sticky_sidebar.min.js',
+                '/assets/js/specific_listing.js',
+            ];
+			script.src = '/assets/js/carousel-home.min.js';
+			script.async = true;
+			document.body.appendChild(script);
 
-		loadScripts(scripts);
+			isScriptLoaded = true;
+            loadScripts(scripts);
+
+			return () => {
+				document.body.removeChild(script);
+			};
+		}
 	}, []);
+
 	return (
 		<>
 			<div id="page">
             <Header isSticky={false} />
 
 				<main>
-					<div className="top_banner version_2">
-						<div
-							className="opacity-mask d-flex align-items-center"
-							data-opacity-mask="rgba(20, 170, 180, 0.33)">
-							<div className="container">
-								<div className="d-flex justify-content-center">
-									<h1 className="margin_zero">PRODUK</h1>
+					<div id="carousel-home">
+						<div className="owl-carousel owl-theme">
+							{/* <!--/owl-slide--> */}
+							<div
+								className="owl-slide cover"
+								style={{
+									backgroundImage:
+										"url('/real_assets/img/slides/banner.png')",
+								}}>
+								<div
+									className="opacity-mask d-flex align-items-center"
+									data-opacity-mask="rgba(255, 255, 255, 0)">
+									<div className="container">
+										<div className="row justify-content-center justify-content-md-start">
+											<div className="col-lg-6 static">
+												<div className="slide-text white">
+													<h2 className="owl-slide-animated owl-slide-title">
+														JAGALAH LINGKUNGAN!
+													</h2>
+													<p className="owl-slide-animated owl-slide-subtitle">
+														Mengubah plastik menjadi peluang:
+														<br />
+														"Satu langkah kecil untuk planet
+														yang lebih hijau."
+													</p>
+													<div className="owl-slide-animated owl-slide-cta">
+														<a
+															className="btn_1"
+															href="listing-grid-1-full.html"
+															role="button"
+															style={{
+																marginRight: '1vw',
+															}}>
+															Daftar
+														</a>
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button">
+															Belanja
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						{/* <img src="/real_assets/img/slides/frame1.png" className="img-fluid" alt="" /> */}
+						<div id="icon_drag_mobile"></div>
 					</div>
-					{/* <!-- /top_banner --> */}
+					{/* <!--/carousel--> */}
 
 					<div id="stick_here"></div>
 					<div className="toolbox elemento_stick">

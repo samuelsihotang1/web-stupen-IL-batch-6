@@ -4,6 +4,7 @@ import About from './pages/About';
 import Article from './pages/Article';
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import { loadScripts } from './utils/loadScripts';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 				<Route path="article" element={<Article />} />
 				<Route path="products" element={<Products />} />
 				<Route path="about" element={<About />} />
+				<Route path="productdetail" element={<ProductDetail />} />
 				{/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>

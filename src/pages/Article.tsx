@@ -1,13 +1,86 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '/public/assets/css/home_1.css';
 import '/public/assets/css/blog.css';
 
+let isScriptLoaded = false;
+
 function Article() {
+	useEffect(() => {
+		if (!isScriptLoaded) {
+			// Specific Scripts
+			const script = document.createElement('script');
+			script.src = '/assets/js/carousel-home.min.js';
+			script.async = true;
+			document.body.appendChild(script);
+
+			isScriptLoaded = true;
+
+			return () => {
+				document.body.removeChild(script);
+			};
+		}
+	}, []);
+
 	return (
 		<>
 			<div id="page">
 				<Header />
-				<main className="bg_gray">
+				<main>
+					<div id="carousel-home">
+						<div className="owl-carousel owl-theme">
+							{/* <!--/owl-slide--> */}
+							<div
+								className="owl-slide cover"
+								style={{
+									backgroundImage:
+										"url('/real_assets/img/slides/banner.png')",
+								}}>
+								<div
+									className="opacity-mask d-flex align-items-center"
+									data-opacity-mask="rgba(255, 255, 255, 0)">
+									<div className="container">
+										<div className="row justify-content-center justify-content-md-start">
+											<div className="col-lg-6 static">
+												<div className="slide-text white">
+													<h2 className="owl-slide-animated owl-slide-title">
+														JAGALAH LINGKUNGAN!
+													</h2>
+													<p className="owl-slide-animated owl-slide-subtitle">
+														Mengubah plastik menjadi peluang:
+														<br />
+														"Satu langkah kecil untuk planet
+														yang lebih hijau."
+													</p>
+													<div className="owl-slide-animated owl-slide-cta">
+														<a
+															className="btn_1"
+															href="listing-grid-1-full.html"
+															role="button"
+															style={{
+																marginRight: '1vw',
+															}}>
+															Daftar
+														</a>
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button">
+															Belanja
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="icon_drag_mobile"></div>
+					</div>
+					{/* <!--/carousel--> */}
+
 					<div className="container margin_30">
 						<div className="page_header">
 							<div className="breadcrumbs">
