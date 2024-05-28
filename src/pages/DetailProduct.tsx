@@ -476,7 +476,7 @@ function DetailProduct() {
                                 <div className="grid_item">
                                     <span className="ribbon new">New</span>
                                     <figure>
-                                        <a href="product-detail-1.html">
+                                        <a href="/detailproduct">
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -492,7 +492,7 @@ function DetailProduct() {
                                         <i className="icon-star voted" />
                                         <i className="icon-star" />
                                     </div>
-                                    <a href="product-detail-1.html">
+                                    <a href="/detailproduct">
                                         <h3>Tas Tutup Botol</h3>
                                     </a>
                                     <div className="price_box">
@@ -544,7 +544,7 @@ function DetailProduct() {
                                 <div className="grid_item">
                                     <span className="ribbon new">New</span>
                                     <figure>
-                                        <a href="product-detail-1.html">
+                                        <a href="/detailproduct">
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -560,7 +560,7 @@ function DetailProduct() {
                                         <i className="icon-star voted" />
                                         <i className="icon-star" />
                                     </div>
-                                    <a href="product-detail-1.html">
+                                    <a href="/detailproduct">
                                         <h3>Gantungan Kunci</h3>
                                     </a>
                                     <div className="price_box">
@@ -612,7 +612,7 @@ function DetailProduct() {
                                 <div className="grid_item">
                                     <span className="ribbon hot">Hot</span>
                                     <figure>
-                                        <a href="product-detail-1.html">
+                                        <a href="/detailproduct">
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -628,7 +628,7 @@ function DetailProduct() {
                                         <i className="icon-star voted" />
                                         <i className="icon-star" />
                                     </div>
-                                    <a href="product-detail-1.html">
+                                    <a href="/detailproduct">
                                         <h3>Gaun Kertas</h3>
                                     </a>
                                     <div className="price_box">
@@ -680,7 +680,7 @@ function DetailProduct() {
                                 <div className="grid_item">
                                     <span className="ribbon off">-30%</span>
                                     <figure>
-                                        <a href="product-detail-1.html">
+                                        <a href="/detailproduct">
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -696,8 +696,8 @@ function DetailProduct() {
                                         <i className="icon-star voted" />
                                         <i className="icon-star" />
                                     </div>
-                                    <a href="product-detail-1.html">
-                                        <h3>Hiasan Dinding Gantung</h3>
+                                    <a href="/detailproduct">
+                                        <h3>Vas Bunga</h3>
                                     </a>
                                     <div className="price_box">
                                         <span className="new_price">Rp. 20.000</span>
@@ -749,11 +749,11 @@ function DetailProduct() {
                                 <div className="grid_item">
                                     <span className="ribbon off">-50%</span>
                                     <figure>
-                                        <a href="product-detail-1.html">
+                                        <a href="/detailproduct">
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/rompi-rajut.png"
                                                 alt=""
                                             />
                                         </a>
@@ -765,12 +765,11 @@ function DetailProduct() {
                                         <i className="icon-star voted" />
                                         <i className="icon-star" />
                                     </div>
-                                    <a href="product-detail-1.html">
-                                        <h3>Hiasan Dinding Gantung</h3>
+                                    <a href="/detailproduct">
+                                        <h3>Rompi Rajut</h3>
                                     </a>
                                     <div className="price_box">
-                                        <span className="new_price">Rp. 20.000</span>
-                                        <span className="old_price">Rp. 35.000</span>
+                                        <span className="new_price">Rp. 150.000</span>
                                     </div>
                                     <ul>
                                         <li>
