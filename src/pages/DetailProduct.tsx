@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-function ProductDetail() {
+function DetailProduct() {
 
     return (
         <>
@@ -17,4 +17,4 @@ function ProductDetail() {
         </>
     );
 }
-export default ProductDetail;
+export default DetailProduct;
