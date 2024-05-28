@@ -11,16 +11,16 @@ function Products() {
 		if (!isScriptLoaded) {
 			// Specific Scripts
 			const script = document.createElement('script');
-            const scripts = [
-                '/assets/js/sticky_sidebar.min.js',
-                '/assets/js/specific_listing.js',
-            ];
+			const scripts = [
+				'/assets/js/sticky_sidebar.min.js',
+				'/assets/js/specific_listing.js',
+			];
 			script.src = '/assets/js/carousel-home.min.js';
 			script.async = true;
 			document.body.appendChild(script);
 
 			isScriptLoaded = true;
-            loadScripts(scripts);
+			loadScripts(scripts);
 
 			return () => {
 				document.body.removeChild(script);
@@ -31,7 +31,7 @@ function Products() {
 	return (
 		<>
 			<div id="page">
-            <Header isSticky={false} />
+				<Header isSticky={false} />
 
 				<main>
 					<div id="carousel-home">
@@ -61,7 +61,7 @@ function Products() {
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button"
 															style={{

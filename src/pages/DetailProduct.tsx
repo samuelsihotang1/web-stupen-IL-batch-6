@@ -889,7 +889,7 @@ function DetailProduct() {
                                     </div>
                                 </div>
                                 <div className="col-md-5 btn_panel">
-                                    <a href="cart.html" className="btn_1 outline">
+                                    <a href="/cart" className="btn_1 outline">
                                         View cart
                                     </a>{" "}
                                     <a href="checkout.html" className="btn_1">

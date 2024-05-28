@@ -51,16 +51,16 @@ function Footer() {
 								id="collapse_2">
 								<ul>
 									<li>
-										<a href="listing-grid-1-full.html">Edukasi</a>
+										<a href="/article">Edukasi</a>
 									</li>
 									<li>
-										<a href="listing-grid-2-full.html">Produk</a>
+										<a href="/products">Produk</a>
 									</li>
 									<li>
-										<a href="listing-grid-1-full.html">Tentang</a>
+										<a href="/about">Tentang</a>
 									</li>
 									<li>
-										<a href="listing-grid-3.html">Kontak</a>
+										<a href="/about">Kontak</a>
 									</li>
 								</ul>
 							</div>

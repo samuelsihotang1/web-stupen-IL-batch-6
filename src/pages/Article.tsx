@@ -55,7 +55,7 @@ function Article() {
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button"
 															style={{
@@ -118,7 +118,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -131,7 +131,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -149,7 +149,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -162,7 +162,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -180,7 +180,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -193,7 +193,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -211,7 +211,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -224,7 +224,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -242,7 +242,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -255,7 +255,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -273,7 +273,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -286,7 +286,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -366,51 +366,39 @@ function Article() {
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img
-														src="/real_assets/img/news/bank-sampah.png"
-														alt=""
-													/>
+													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Edukasi - 12 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+													Mengatasi Persoalan Sam...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img
-														src="/real_assets/img/news/bank-sampah.png"
-														alt=""
-													/>
+													<img src="/real_assets/img/news/persoalan-persampahan.png" alt="" />
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Tips & Trik - 19 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+													Ibu-ibu Rumah Tangga di...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
 												<a href="#0">
-													<img
-														src="/real_assets/img/news/bank-sampah.png"
-														alt=""
-													/>
+													<img src="/real_assets/img/news/ibu-rumah-tangga.webp" alt="" />
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Berita - 24 Mei 2024</small>
 											<h3>
 												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+													Peran Ganda Ibu-ibu...
 												</a>
 											</h3>
 										</li>

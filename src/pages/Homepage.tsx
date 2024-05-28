@@ -54,7 +54,7 @@ function Homepage() {
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button"
 															style={{
@@ -351,7 +351,7 @@ function Homepage() {
 						</div>
 						<div className="row">
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -378,7 +378,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -405,7 +405,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -432,7 +432,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"

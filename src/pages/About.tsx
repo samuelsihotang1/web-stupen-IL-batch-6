@@ -58,7 +58,7 @@ function About() {
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button"
 															style={{
