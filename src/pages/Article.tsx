@@ -365,39 +365,39 @@ function Article() {
 									<ul className="comments-list">
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
 												</a>
 											</div>
 											<small>Edukasi - 12 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
+												<a href="/detailartikel" title="">
 													Mengatasi Persoalan Sam...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img src="/real_assets/img/news/persoalan-persampahan.png" alt="" />
 												</a>
 											</div>
 											<small>Tips & Trik - 19 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
+												<a href="/detailartikel" title="">
 													Ibu-ibu Rumah Tangga di...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img src="/real_assets/img/news/ibu-rumah-tangga.webp" alt="" />
 												</a>
 											</div>
 											<small>Berita - 24 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
+												<a href="/detailartikel" title="">
 													Peran Ganda Ibu-ibu...
 												</a>
 											</h3>

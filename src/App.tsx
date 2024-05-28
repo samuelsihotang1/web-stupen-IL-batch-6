@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import DetailProduct from './pages/DetailProduct';
 import DetailArtikel from './pages/DetailArtikel';
 import Cart from './pages/Cart';
+import Favorite from './pages/Favorite';
 import { loadScripts } from './utils/loadScripts';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 				<Route path="detailproduct" element={<DetailProduct />} />
 				<Route path="detailartikel" element={<DetailArtikel />} />
 				<Route path="cart" element={<Cart />} />
+				<Route path="favorite" element={<Favorite />} />
 				{/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>
