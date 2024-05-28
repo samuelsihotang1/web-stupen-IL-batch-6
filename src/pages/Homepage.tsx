@@ -106,7 +106,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -128,7 +128,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Tas Tutup Botol</h3>
 									</a>
 									<div className="price_box">
@@ -165,7 +165,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -187,7 +187,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Gantungan Kunci</h3>
 									</a>
 									<div className="price_box">
@@ -224,7 +224,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -246,7 +246,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Gaun Kertas</h3>
 									</a>
 									<div className="price_box">
@@ -283,7 +283,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -305,7 +305,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Hiasan Dinding Gantung</h3>
 									</a>
 									<div className="price_box">
