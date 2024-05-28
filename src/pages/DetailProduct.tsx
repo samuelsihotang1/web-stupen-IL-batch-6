@@ -875,16 +875,14 @@ function DetailProduct() {
                                         <figure>
                                             <img
                                                 src="img/products/product_placeholder_square_small.jpg"
-                                                data-src="public/assets/img/products/shoes/1.jpg"
+                                                data-src="/real_assets/img/products/rompi-rajut.png"
                                                 className="lazy"
                                                 alt=""
                                             />
                                         </figure>
-                                        <h4>1x Armor Air X Fear</h4>
+                                        <h4>Rompi Rajut</h4>
                                         <div className="price_panel">
-                                            <span className="new_price">$148.00</span>
-                                            <span className="percentage">-20%</span>{" "}
-                                            <span className="old_price">$160.00</span>
+                                            <span className="new_price">Rp. 120.000</span>
                                         </div>
                                     </div>
                                 </div>
@@ -909,17 +907,17 @@ function DetailProduct() {
                                         <figure>
                                             <img
                                                 src="img/products/product_placeholder_square_small.jpg"
-                                                data-src="public/assets/img/products/shoes/2.jpg"
+                                                data-src="/real_assets/img/products/tas-botol-plastik-1.png"
                                                 alt=""
-                                                className="lazy"
+                                                className="img-fluid lazy"
                                             />
                                         </figure>
                                     </a>
                                     <a href="#0">
-                                        <h5>Armor Okwahn II</h5>
+                                        <h5>Tas Tutup Botol</h5>
                                     </a>
                                     <div className="price_panel">
-                                        <span className="new_price">$90.00</span>
+                                        <span className="new_price">Rp. 50.000</span>
                                     </div>
                                 </div>
                             </div>
@@ -929,19 +927,17 @@ function DetailProduct() {
                                         <figure>
                                             <img
                                                 src="img/products/product_placeholder_square_small.jpg"
-                                                data-src="public/assets/img/products/shoes/3.jpg"
+                                                data-src="/real_assets/img/products/gantungan-kunci.png"
                                                 alt=""
-                                                className="lazy"
+                                                className="img-fluid lazy"
                                             />
                                         </figure>
                                     </a>
                                     <a href="#0">
-                                        <h5>Armor Air Wildwood ACG</h5>
+                                        <h5>Gantungan Kunci</h5>
                                     </a>
                                     <div className="price_panel">
-                                        <span className="new_price">$75.00</span>
-                                        <span className="percentage">-20%</span>{" "}
-                                        <span className="old_price">$155.00</span>
+                                        <span className="new_price">Rp. 15.000</span>
                                     </div>
                                 </div>
                             </div>
@@ -951,17 +947,17 @@ function DetailProduct() {
                                         <figure>
                                             <img
                                                 src="img/products/product_placeholder_square_small.jpg"
-                                                data-src="public/assets/img/products/shoes/4.jpg"
+                                                data-src="/real_assets/img/products/gaun-kertas.png"
                                                 alt=""
-                                                className="lazy"
+                                                className="img-fluid lazy"
                                             />
                                         </figure>
                                     </a>
                                     <a href="#0">
-                                        <h5>Armor ACG React Terra</h5>
+                                        <h5>Gaun Kertas</h5>
                                     </a>
                                     <div className="price_panel">
-                                        <span className="new_price">$110.00</span>
+                                        <span className="new_price">Rp. 150.000</span>
                                     </div>
                                 </div>
                             </div>
