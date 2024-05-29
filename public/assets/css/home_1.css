@@ -512,7 +512,7 @@ a.box_news figure img {
   }
 }
 a.box_news figure figcaption {
-  background-color: #FFC107;
+  background-color: #325326;
   text-align: center;
   position: absolute;
   right: 0;
@@ -548,7 +548,7 @@ a.box_news:hover img {
   transform: translate(-50%, -50%) scale(1);
 }
 a.box_news:hover h4 {
-  color: #004dda;
+  color: #325326;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;

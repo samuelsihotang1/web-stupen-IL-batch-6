@@ -96,8 +96,8 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 														</a>
 													</li>
 													<li>
-														<a href="account.html">
-															<i className="ti-wishlist"></i>
+														<a href="/favorite">
+															<i className="ti-heart"></i>
 															Barang Favorit
 														</a>
 													</li>
