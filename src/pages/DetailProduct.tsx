@@ -469,7 +469,6 @@ function DetailProduct() {
                         <div className="main_title">
                             <h2>PRODUK</h2>
                             <span>LAINNYA</span>
-
                         </div>
                         <div className="owl-carousel owl-theme products_carousel">
                             <div className="item">
