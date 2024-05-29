@@ -72,6 +72,53 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 							<div className="col-xl-3 col-lg-2 d-lg-flex align-items-center justify-content-end text-end view-only-desktop">
 								<ul className="top_tools">
 									<li>
+										<div className="dropdown dropdown-access">
+											<a
+												href="account.html"
+												className="access_link">
+												<span>Account</span>
+											</a>
+											<div className="dropdown-menu">
+												<a href="account.html" className="btn_1">
+													Sign In
+												</a>
+												<ul>
+													<li>
+														<a href="track-order.html">
+															<i className="ti-truck"></i>
+															Lacak Pesanan
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-package"></i>
+															Pesanan Anda
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-wishlist"></i>
+															Barang Favorit
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-user"></i>My
+															Profil
+														</a>
+													</li>
+													<li>
+														<a href="help.html">
+															<i className="ti-help-alt"></i>
+															Bantuan
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										{/* <!-- /dropdown-access--> */}{' '}
+									</li>
+									<li>
 										<div className="dropdown dropdown-cart">
 											<a href="/cart" className="cart_bt">
 												<strong>2</strong>
@@ -145,47 +192,6 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 											</div>
 										</div>
 										{/* <!-- /dropdown-cart--> */}{' '}
-									</li>
-									<li>
-										<div className="dropdown dropdown-access">
-											<a
-												href="account.html"
-												className="access_link">
-												<span>Account</span>
-											</a>
-											<div className="dropdown-menu">
-												<a href="account.html" className="btn_1">
-													Sign In
-												</a>
-												<ul>
-													<li>
-														<a href="track-order.html">
-															<i className="ti-truck"></i>
-															Lacak Pesanan
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-package"></i>
-															Pesanan Anda
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-user"></i>My
-															Profil
-														</a>
-													</li>
-													<li>
-														<a href="help.html">
-															<i className="ti-help-alt"></i>
-															Bantuan
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										{/* <!-- /dropdown-access--> */}{' '}
 									</li>
 									<li>
 										<a

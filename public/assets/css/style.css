@@ -740,6 +740,10 @@ Author URI: http://themeforest.net/user/Ansonika/
   content: "\e687";
 }
 
+.ti-wishlist:before {
+  content: "A";
+}
+
 .ti-music:before {
   content: "\e688";
 }
