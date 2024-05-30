@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import CategoriesDropdown from '../utils/CategoriesDropdown'; // Correct import
+import { useEffect } from 'react';
+import Footer from '../components/Footer.tsx';
+import Header from '../components/Header.tsx';
 import '/public/assets/css/home_1.css';
-import { loadScripts } from '../utils/loadScripts';
+import CategoriesDropdown from '../utils/CategoriesDropdown.tsx'; 
+
+import { loadScripts } from '../utils/loadScripts.ts';
+let isScriptLoaded = false;
 import '/public/assets/css/listing.css';
 
-let isScriptLoaded = false;
 
-const Products: React.FC = () => {
+function AlatSekolah() {
 	useEffect(() => {
 		if (!isScriptLoaded) {
 			// Specific Scripts
@@ -29,59 +30,12 @@ const Products: React.FC = () => {
 			};
 		}
 	}, []);
-
+	
 	return (
 		<>
 			<div id="page">
 				<Header isSticky={false} />
-				<main>
-					<div id="carousel-home">
-						<div className="owl-carousel owl-theme">
-							<div
-								className="owl-slide cover"
-								style={{
-									backgroundImage: "url('/real_assets/img/slides/banner.png')",
-								}}>
-								<div
-									className="opacity-mask d-flex align-items-center"
-									data-opacity-mask="rgba(255, 255, 255, 0)">
-									<div className="container">
-										<div className="row justify-content-center justify-content-md-start">
-											<div className="col-lg-6 static">
-												<div className="slide-text white">
-													<h2 className="owl-slide-animated owl-slide-title">
-														JAGALAH LINGKUNGAN!
-													</h2>
-													<p className="owl-slide-animated owl-slide-subtitle">
-														Mengubah plastik menjadi peluang:
-														<br />
-														"Satu langkah kecil untuk planet yang lebih hijau."
-													</p>
-													<div className="owl-slide-animated owl-slide-cta">
-														<a
-															className="btn_1 gray"
-															href="listing-grid-1-full.html"
-															role="button"
-															style={{ marginRight: '1vw' }}>
-															Daftar
-														</a>
-														<a
-															className="btn_1 gray"
-															href="listing-grid-1-full.html"
-															role="button">
-															Belanja
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="icon_drag_mobile"></div>
-					</div>
-
+				<main> 
 					<div id="stick_here"></div>
 					<div className="toolbox elemento_stick">
 						<div className="container">
@@ -92,9 +46,15 @@ const Products: React.FC = () => {
 											<option value="popularity" selected>
 												Urutkan berdasarkan Terbaru
 											</option>
-											<option value="rating">Urutkan berdasarkan Terkait</option>
-											<option value="date">Urutkan berdasarkan Terlaris</option>
-											<option value="price">Urutkan berdasarkan Harga</option>
+											<option value="rating">
+												Urutkan berdasarkan Terkait
+											</option>
+											<option value="date">
+												Urutkan berdasarkan Terlaris
+											</option>
+											<option value="price">
+												Urutkan berdasarkan Harga
+											</option>
 										</select>
 									</div>
 								</li>
@@ -114,10 +74,9 @@ const Products: React.FC = () => {
 								<div className="row small-gutters filters_listing_1">
 									<div className="col-lg-6 col-md-6 col-sm-6">
 										<div className="dropdown">
-
 											<CategoriesDropdown />
-
 										</div>
+										{/* <!-- /dropdown --> */}
 									</div>
 									<div className="col-lg-6 col-md-6 col-sm-6">
 										<div className="dropdown">
@@ -159,12 +118,10 @@ const Products: React.FC = () => {
 															</label>
 														</li>
 													</ul>
-													<a href="#0" className="apply_filter">
-														Terapkan
-													</a>
 												</div>
 											</div>
 										</div>
+										{/* <!-- /dropdown --> */}
 									</div>
 								</div>
 							</div>
@@ -181,13 +138,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 										</a>
@@ -200,7 +157,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Tas Tutup Botol</h3>
+										<h3>Ransel Kain Perca</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 50.000</span>
@@ -240,13 +197,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 										</a>
@@ -259,7 +216,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gantungan Kunci</h3>
+										<h3>Tempat Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 25.000</span>
@@ -299,13 +256,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 										</a>
@@ -318,7 +275,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gaun Kertas</h3>
+										<h3>Kotak Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 150.000</span>
@@ -358,13 +315,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 										</a>
@@ -377,7 +334,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Hiasan Dinding Gantung</h3>
+										<h3>Buku Tulis</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 20.000</span>
@@ -421,13 +378,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 										</a>
@@ -440,7 +397,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Tas Tutup Botol</h3>
+										<h3>Ransel Kain Perca</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 50.000</span>
@@ -480,13 +437,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 										</a>
@@ -499,7 +456,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gantungan Kunci</h3>
+										<h3>Tempat Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 25.000</span>
@@ -539,13 +496,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 										</a>
@@ -558,7 +515,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gaun Kertas</h3>
+										<h3>Kotak Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 150.000</span>
@@ -598,13 +555,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 										</a>
@@ -617,7 +574,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Hiasan Dinding Gantung</h3>
+										<h3>Buku Tulis</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 20.000</span>
@@ -661,13 +618,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 										</a>
@@ -720,13 +677,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 										</a>
@@ -739,7 +696,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gantungan Kunci</h3>
+										<h3>Tempat Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 25.000</span>
@@ -779,13 +736,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 										</a>
@@ -798,7 +755,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gaun Kertas</h3>
+										<h3>Kotak Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 150.000</span>
@@ -838,13 +795,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 										</a>
@@ -857,7 +814,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Hiasan Dinding Gantung</h3>
+										<h3>Buku Tulis</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 20.000</span>
@@ -901,13 +858,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+												data-src="public\real_assets\img\alat-sekolah\tas.png"
 												alt=""
 											/>
 										</a>
@@ -920,7 +877,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Tas Tutup Botol</h3>
+										<h3>Ransel Kain Perca</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 50.000</span>
@@ -960,13 +917,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gantungan-kunci.png"
+												data-src="public\real_assets\img\alat-sekolah\TempatPensil.png"
 												alt=""
 											/>
 										</a>
@@ -979,7 +936,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gantungan Kunci</h3>
+										<h3>Tempat Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 25.000</span>
@@ -1019,13 +976,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/gaun-kertas.png"
+												data-src="public\real_assets\img\alat-sekolah\kotakpensil.png"
 												alt=""
 											/>
 										</a>
@@ -1038,7 +995,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Gaun Kertas</h3>
+										<h3>Kotak Pensil</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 150.000</span>
@@ -1078,13 +1035,13 @@ const Products: React.FC = () => {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="public\real_assets\img\alat-sekolah\BukuTulis.png"
 												alt=""
 											/>
 										</a>
@@ -1097,7 +1054,7 @@ const Products: React.FC = () => {
 										<i className="icon-star"></i>
 									</div>
 									<a href="/detailproduct">
-										<h3>Hiasan Dinding Gantung</h3>
+										<h3>Buku Tulis</h3>
 									</a>
 									<div className="price_box">
 										<span className="new_price">Rp. 20.000</span>
@@ -1132,36 +1089,6 @@ const Products: React.FC = () => {
 							{/* <!-- /col --> */}
 						</div>
 						{/* <!-- /row --> */}
-
-						<div className="pagination__wrapper">
-							<ul className="pagination">
-								<li>
-									<a href="#0" className="prev" title="previous page">
-										&#10094;
-									</a>
-								</li>
-								<li>
-									<a href="#0" className="active">
-										1
-									</a>
-								</li>
-								<li>
-									<a href="#0">2</a>
-								</li>
-
-								<li>
-									<a href="#0">3</a>
-								</li>
-								<li>
-									<a href="#0">4</a>
-								</li>
-								<li>
-									<a href="#0" className="next" title="next page">
-										&#10095;
-									</a>
-								</li>
-							</ul>
-						</div>
 					</div>
 					{/* <!-- /container --> */}
 				</main>
@@ -1175,4 +1102,6 @@ const Products: React.FC = () => {
 		</>
 	);
 }
-export default Products;
+
+
+export default AlatSekolah;
