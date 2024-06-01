@@ -1,26 +1,15 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '/public/assets/css/home_1.css';
+import { loadScripts } from '../utils/loadScripts';
 import '/public/assets/css/blog.css';
-
-let isScriptLoaded = false;
+import '/public/assets/css/home_1.css';
 
 function Article() {
 	useEffect(() => {
-		if (!isScriptLoaded) {
-			// Specific Scripts
-			const script = document.createElement('script');
-			script.src = '/assets/js/carousel-home.min.js';
-			script.async = true;
-			document.body.appendChild(script);
+		const scripts = ['/assets/js/carousel-home.min.js'];
 
-			isScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 
 	return (
@@ -366,7 +355,10 @@ function Article() {
 										<li>
 											<div className="alignleft">
 												<a href="/detailartikel">
-													<img src="/real_assets/img/news/bank-sampah.png" alt="" />
+													<img
+														src="/real_assets/img/news/bank-sampah.png"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Edukasi - 12 Mei 2024</small>
@@ -379,7 +371,10 @@ function Article() {
 										<li>
 											<div className="alignleft">
 												<a href="/detailartikel">
-													<img src="/real_assets/img/news/persoalan-persampahan.png" alt="" />
+													<img
+														src="/real_assets/img/news/persoalan-persampahan.png"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Tips & Trik - 19 Mei 2024</small>
@@ -392,7 +387,10 @@ function Article() {
 										<li>
 											<div className="alignleft">
 												<a href="/detailartikel">
-													<img src="/real_assets/img/news/ibu-rumah-tangga.webp" alt="" />
+													<img
+														src="/real_assets/img/news/ibu-rumah-tangga.webp"
+														alt=""
+													/>
 												</a>
 											</div>
 											<small>Berita - 24 Mei 2024</small>

@@ -1,31 +1,19 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '/public/assets/css/home_1.css';
 import { loadScripts } from '../utils/loadScripts.ts';
-let isScriptLoaded = false;
+import '/public/assets/css/home_1.css';
 import '/public/assets/css/listing.css';
 
 function Products() {
 	useEffect(() => {
-		if (!isScriptLoaded) {
-			// Specific Scripts
-			const script = document.createElement('script');
-			const scripts = [
-				'/assets/js/sticky_sidebar.min.js',
-				'/assets/js/specific_listing.js',
-			];
-			script.src = '/assets/js/carousel-home.min.js';
-			script.async = true;
-			document.body.appendChild(script);
+		const scripts = [
+			'/assets/js/sticky_sidebar.min.js',
+			'/assets/js/specific_listing.js',
+			'/assets/js/carousel-home.min.js',
+		];
 
-			isScriptLoaded = true;
-			loadScripts(scripts);
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 
 	return (

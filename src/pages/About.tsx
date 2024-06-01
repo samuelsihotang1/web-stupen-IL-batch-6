@@ -1,28 +1,16 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '/public/assets/css/home_1.css';
+import { loadScripts } from '../utils/loadScripts';
 import '/public/assets/css/about.css';
 import '/public/assets/css/contact.css';
-
-
-let isScriptLoaded = false;
+import '/public/assets/css/home_1.css';
 
 function About() {
 	useEffect(() => {
-		if (!isScriptLoaded) {
-			// Specific Scripts
-			const script = document.createElement('script');
-			script.src = '/assets/js/carousel-home.min.js';
-			script.async = true;
-			document.body.appendChild(script);
+		const scripts = ['/assets/js/carousel-home.min.js'];
 
-			isScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 
 	return (
@@ -83,7 +71,6 @@ function About() {
 						<div id="icon_drag_mobile"></div>
 					</div>
 					{/* <!--/carousel--> */}
-
 					<div className="container margin_60_35 add_bottom_30">
 						{/* <!-- /row --> */}
 						<div className="row justify-content-center align-items-center">
