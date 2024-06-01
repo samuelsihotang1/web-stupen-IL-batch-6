@@ -194,12 +194,6 @@ function DetailProduct() {
                                                 <span>Add to Wishlist</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to Compare</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                                 {/* /product_actions */}
@@ -516,18 +510,6 @@ function DetailProduct() {
                                                 className="tooltip-1"
                                                 data-bs-toggle="tooltip"
                                                 data-bs-placement="left"
-                                                title="Add to compare"
-                                            >
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to compare</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#0"
-                                                className="tooltip-1"
-                                                data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
                                                 title="Add to cart"
                                             >
                                                 <i className="ti-shopping-cart" />
@@ -578,18 +560,7 @@ function DetailProduct() {
                                                 <span>Add to favorites</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a
-                                                href="#0"
-                                                className="tooltip-1"
-                                                data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
-                                                title="Add to compare"
-                                            >
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to compare</span>
-                                            </a>
-                                        </li>
+
                                         <li>
                                             <a
                                                 href="#0"
@@ -646,18 +617,7 @@ function DetailProduct() {
                                                 <span>Add to favorites</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a
-                                                href="#0"
-                                                className="tooltip-1"
-                                                data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
-                                                title="Add to compare"
-                                            >
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to compare</span>
-                                            </a>
-                                        </li>
+
                                         <li>
                                             <a
                                                 href="#0"
@@ -715,18 +675,7 @@ function DetailProduct() {
                                                 <span>Add to favorites</span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a
-                                                href="#0"
-                                                className="tooltip-1"
-                                                data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
-                                                title="Add to compare"
-                                            >
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to compare</span>
-                                            </a>
-                                        </li>
+
                                         <li>
                                             <a
                                                 href="#0"
@@ -781,18 +730,6 @@ function DetailProduct() {
                                             >
                                                 <i className="ti-heart" />
                                                 <span>Add to favorites</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#0"
-                                                className="tooltip-1"
-                                                data-bs-toggle="tooltip"
-                                                data-bs-placement="left"
-                                                title="Add to compare"
-                                            >
-                                                <i className="ti-control-shuffle" />
-                                                <span>Add to compare</span>
                                             </a>
                                         </li>
                                         <li>
