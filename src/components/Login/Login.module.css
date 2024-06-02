@@ -1,0 +1,202 @@
+
+
+/* Root styles */
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Rectangle styles */
+.rectangle146 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 102%;
+  background-image: linear-gradient(180deg, #69af50ff 0%, #2e4d23ff 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* Frame styles */
+.frame1000006052 {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 50%;
+  max-width: 90%;
+  height: auto;
+  transform: translate(-45%, -50%);
+}
+
+/* Common text styles */
+.common-text {
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Login styles */
+.logIn {
+  font-family: inherit;
+  font-size: 38px; /* Increased font size */
+  font-weight: 600;
+  position: absolute;
+  right: 20px; /* Positioned to the right */
+  bottom: 90px; /* Positioned upwards */
+  white-space: nowrap;
+  flex-direction: column;
+  left: 88%; /* Initially centered relative to the container */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Styles for input wrapper */
+.inputWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Underline styles */
+.underLine {
+  top: 158px;
+  width: 50%; /* Adjusted for responsiveness */
+}
+
+.underLine2 {
+  top: 230px;
+  width: 50%; /* Adjusted for responsiveness */
+}
+
+.logoEcoWarriors21 {
+  position: absolute;
+  left: 35px;
+  top: calc(60% - 0.5px);
+  width: 600px;
+  height: 580px;
+  background-image: url('real_assets/img/big-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-70%);
+}
+
+@media (max-width: 1200px) {
+  .logoEcoWarriors21 {
+    max-width: 400px;
+    max-height: 390px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logoEcoWarriors21 {
+    max-width: 350px;
+    max-height: 345px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logoEcoWarriors21 {
+    max-width: 290px;
+    max-height: 245px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoEcoWarriors21 {
+    max-width: 200px;
+    max-height: 194px;
+    left: 3px;
+  }
+}
+
+/* Styles for input wrapper */
+.inputWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Styles for username input */
+.usernameInput, .passwordInput {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: calc(50% - 20px); /* Adjusted for responsiveness */
+  padding: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  position: absolute;
+  left: calc(60% + 50px); /* Adjusted for responsiveness */
+}
+
+.usernameInput {
+  top: -10px;
+}
+
+.passwordInput {
+  top: 80px;
+}
+
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  position: absolute;
+  left: calc(60% + 50px); /* Adjusted for responsiveness */
+  top: 210px;
+  width: calc(50% - 20px); /* Adjusted for responsiveness */
+  max-width: 90%;
+  height: min-content;
+  place-content: center;
+  padding: 16px 48px;
+  border-radius: 4px;
+  background-color: #69af50;
+}
+
+/* Forget password styles */
+.forgetPassword {
+  font-family: inherit;
+  font-size: inherit;
+  color: #0175b2;
+  position: absolute;
+  top: 300px;
+  width: 300px;
+  max-width: 90%;
+  height: min-content;
+  text-align: center; /* Center text horizontally */
+  left: 89%; /* Initially centered relative to the container */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 576px) {
+  .forgetPassword {
+    top: 250px; /* Adjusted top position for smaller screens */
+    font-size: 14px; /* Smaller font size for readability */
+  }
+}
+
+@media (max-width: 992px) {
+  .signInContainer {
+    left: calc(52%); /* Adjusted for smaller screens */
+    top: 130px; /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .signInContainer {
+    left: calc(50%); /* Adjusted for smaller screens */
+    top: 120px; /* Adjusted for smaller screens */
+  }
+}

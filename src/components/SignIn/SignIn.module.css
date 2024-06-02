@@ -1,0 +1,190 @@
+/* Rectangle styles */
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+.rectangle146 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 102%;
+  background-image: linear-gradient(180deg, #69af50ff 0%, #2e4d23ff 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.common-text {
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.logoEcoWarriors21 {
+  position: absolute;
+  left: 35px;
+  top: calc(60% - 0.5px);
+  width: 600px;
+  height: 580px;
+  background-image: url('real_assets/img/big-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-70%);
+}
+
+@media (max-width: 1200px) {
+  .logoEcoWarriors21 {
+    max-width: 400px;
+    max-height: 390px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logoEcoWarriors21 {
+    max-width: 350px;
+    max-height: 345px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logoEcoWarriors21 {
+    max-width: 290px;
+    max-height: 245px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoEcoWarriors21 {
+    max-width: 200px;
+    max-height: 194px;
+    left: 3px;
+  }
+}
+
+/* Responsiveness for Create an Account section */
+.signInContainer {
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 600px; /* Increased max-width */
+  margin: auto;
+  padding: 40px; /* Increased padding */
+  border-radius: 10px; /* Increased border radius */
+  box-sizing: border-box;
+  position: relative;
+  width: calc(50% - 20px); /* Adjusted for responsiveness */
+  position: absolute;
+  left: calc(55%); /* Adjusted for responsiveness */
+  top: 150px; /* Adjusted for responsiveness */
+}
+
+.title {
+  font-family: inherit;
+  font-size: 28px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  margin-bottom: 20px; /* Increased margin-bottom */
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 10px; /* Increased margin-bottom */
+  font-size: 16px; /* Increased font size */
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Increased font size */
+}
+
+.createAccountButton {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  background-color: #69af50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.createAccountButton:hover {
+  background-color: #5a993e; /* Slightly darker color on hover */
+}
+
+.signInLink {
+  margin-top: 20px; /* Increased margin-top */
+  text-align: center;
+  font-size: inherit;
+}
+
+.signInText {
+  font-family: inherit;
+  font-size: inherit;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.signInText:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Sign in with Google button */
+.signInWithGoogleContainer {
+  text-align: center;
+  margin-top: 30px; /* Increased margin-top */
+}
+
+.signInWithGoogleButton {
+  font-family: inherit;
+  font-size: inherit;
+  width: auto;
+  padding: 15px 30px; /* Increased padding */
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.signInWithGoogleButton:hover {
+  background-color: #f0f0f0;
+}
+
+.googleLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px; /* Added margin-right */
+  fill: #4285f4;
+}
+
+/* Center align for small screens */
+@media (max-width: 576px) {
+  .signInContainer {
+    max-width: none;
+    left: 50%; /* Center relative to the screen */
+    transform: translateX(-50%);
+    top: 100px; /* Move up slightly */
+  }
+}
