@@ -84,58 +84,58 @@
   }
 }
 
-/* Responsiveness for Create an Account section */
+
 .signInContainer {
   font-family: inherit;
   font-size: inherit;
-  max-width: 600px; /* Increased max-width */
+  max-width: 600px; 
   margin: auto;
-  padding: 40px; /* Increased padding */
-  border-radius: 10px; /* Increased border radius */
+  padding: 40px;
+  border-radius: 10px; 
   box-sizing: border-box;
   position: relative;
-  width: calc(50% - 20px); /* Adjusted for responsiveness */
+  width: calc(50% - 20px);
   position: absolute;
-  left: calc(55%); /* Adjusted for responsiveness */
-  top: 150px; /* Adjusted for responsiveness */
+  left: calc(55%);
+  top: 150px; 
 }
 
 .title {
  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-  font-size: 30px; /* Increased font size */
+  font-size: 30px; 
   font-weight: 400;
   position: absolute;
-  right: 20px; /* Positioned to the right */
+  right: 20px;
   white-space: nowrap;
   flex-direction: column;
-  left: 28%; /* Initially centered relative to the container */
-  transform: translateX(-10%); /* Center horizontally */
+  left: 28%; 
+  transform: translateX(-10%);
   top : -25px;
 }
 
 .inputWrapper {
-  margin-bottom: 20px; /* Increased margin-bottom */
+  margin-bottom: 20px;
 }
 
 .inputLabel {
   display: block;
-  margin-bottom: 10px; /* Increased margin-bottom */
-  font-size: 16px; /* Increased font size */
+  margin-bottom: 10px; 
+  font-size: 16px; 
 }
 
 .inputField {
   width: 100%;
-  padding: 12px; /* Increased padding */
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
 }
 
 .createAccountButton {
   font-family: inherit;
   font-size: inherit;
   width: 100%;
-  padding: 15px; /* Increased padding */
+  padding: 15px; 
   background-color: #69af50;
   color: #fff;
   border: none;
@@ -145,11 +145,11 @@
 }
 
 .createAccountButton:hover {
-  background-color: #5a993e; /* Slightly darker color on hover */
+  background-color: #5a993e; 
 }
 
 .signInLink {
-  margin-top: 20px; /* Increased margin-top */
+  margin-top: 20px; 
   text-align: center;
   font-size: inherit;
 }
@@ -165,17 +165,16 @@
   text-decoration: underline;
 }
 
-/* Styles for Sign in with Google button */
 .signInWithGoogleContainer {
   text-align: center;
-  margin-top: 30px; /* Increased margin-top */
+  margin-top: 30px; 
 }
 
 .signInWithGoogleButton {
   font-family: inherit;
   font-size: inherit;
   width: auto;
-  padding: 15px 30px; /* Increased padding */
+  padding: 15px 30px;
   background-color: #fff;
   color: #000;
   border: 1px solid #ccc;
@@ -192,16 +191,15 @@
 .googleLogo {
   width: 24px;
   height: 24px;
-  margin-right: 8px; /* Added margin-right */
+  margin-right: 8px; 
   fill: #4285f4;
 }
 
-/* Center align for small screens */
 @media (max-width: 576px) {
   .signInContainer {
     max-width: none;
-    left: 50%; /* Center relative to the screen */
+    left: 50%;
     transform: translateX(-50%);
-    top: 100px; /* Move up slightly */
+    top: 100px; 
   }
 }
