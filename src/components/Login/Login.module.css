@@ -1,0 +1,196 @@
+
+
+/* Root styles */
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Rectangle styles */
+.rectangle146 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 102%;
+  background-image: linear-gradient(180deg, #69af50ff 0%, #2e4d23ff 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* Frame styles */
+.frame1000006052 {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 50%;
+  max-width: 90%;
+  height: auto;
+  transform: translate(-45%, -50%);
+}
+
+
+/* Login styles */
+.logIn {
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-size: 38px; 
+  font-weight: 400;
+  position: absolute;
+  right: 20px;
+  bottom: 90px;
+  white-space: nowrap;
+  flex-direction: column;
+  left: 88%; 
+  transform: translateX(-50%);
+}
+
+/* Styles for input wrapper */
+.inputWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+
+.logoEcoWarriors21 {
+  position: absolute;
+  left: 35px;
+  top: calc(60% - 0.5px);
+  width: 600px;
+  height: 580px;
+  background-image: url('real_assets/img/big-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-70%);
+}
+
+@media (max-width: 1200px) {
+  .logoEcoWarriors21 {
+    max-width: 400px;
+    max-height: 390px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logoEcoWarriors21 {
+    max-width: 350px;
+    max-height: 345px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logoEcoWarriors21 {
+    max-width: 290px;
+    max-height: 245px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoEcoWarriors21 {
+    max-width: 200px;
+    max-height: 194px;
+    left: 3px;
+  }
+}
+
+/* Styles for input wrapper */
+.inputWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Styles for username input */
+.usernameInput, .passwordInput {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: calc(50% - 20px); 
+  padding: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  position: absolute;
+  left: calc(60% + 50px); 
+}
+
+.usernameInput {
+  top: -10px;
+}
+
+.passwordInput {
+  top: 80px;
+}
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  position: absolute;
+  left: calc(60% + 50px); 
+  top: 210px;
+  width: calc(50% - 20px);
+  max-width: 90%;
+  height: min-content;
+  place-content: center;
+  padding: 16px 48px;
+  border-radius: 4px;
+  background-color: #69af50;
+  border: none; 
+  outline: none; 
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #69af50; 
+}
+.font{
+  font-family: inherit;
+  font-size: inherit;
+
+  color: #fff;
+}
+
+/* Forget password styles */
+.forgetPassword {
+  font-family: inherit;
+  font-size: inherit;
+  color: #0175b2;
+  position: absolute;
+  top: 300px;
+  width: 300px;
+  max-width: 90%;
+  height: min-content;
+  text-align: center;
+  left: 89%; 
+  transform: translateX(-50%); 
+}
+@media (max-width: 576px) {
+  .forgetPassword {
+    top: 250px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .signInContainer {
+    left: calc(52%);
+    top: 130px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .signInContainer {
+    left: calc(50%); 
+    top: 120px; 
+  }
+}
