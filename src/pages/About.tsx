@@ -56,52 +56,34 @@ function About() {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/profiles/aniec.png"
-												alt=""
-												height="390"
-											/>
-										</a>
-									</figure>
-									<h4>Aniec Anafisah P</h4>
-									<p className="lead">Designer</p>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-4">
-								<div className="grid_item">
-									<figure>
-										<a href="#">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/profiles/aqila.png"
-												alt=""
-												height="390"
-											/>
-										</a>
-									</figure>
-									<h4>Aqillah Cahya N</h4>
-									<p className="lead">Hacker</p>
-								</div>
-								{/* <!-- /grid_item --> */}
-							</div>
-							{/* <!-- /col --> */}
-							<div className="col-6 col-md-4 col-xl-4">
-								<div className="grid_item">
-									<figure>
-										<a href="#">
-											<img
-												className="img-fluid lazy"
-												src="/assets/img/products/product_placeholder_square_medium.jpg"
 												data-src="/real_assets/img/profiles/lamria.png"
 												alt=""
 												height="390"
 											/>
 										</a>
 									</figure>
-									<h4>Lamria Magdalena</h4>
+									<h4>Lamria Magdalena Tampubolon</h4>
 									<p className="lead">Project Manager</p>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+							<div className="col-6 col-md-4 col-xl-4">
+								<div className="grid_item">
+									<figure>
+										<a href="#">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/profiles/aniec.png"
+												alt=""
+												height="390"
+											/>
+										</a>
+									</figure>
+									
+									<h4>Aniec Anafisah</h4>
+									<p className="lead">Designer</p>
 								</div>
 								{/* <!-- /grid_item --> */}
 							</div>
@@ -140,6 +122,25 @@ function About() {
 										</a>
 									</figure>
 									<h4>Musyaffa Afiful U</h4>
+									<p className="lead">Hacker</p>
+								</div>
+								{/* <!-- /grid_item --> */}
+							</div>
+							{/* <!-- /col --> */}
+							<div className="col-6 col-md-4 col-xl-4">
+								<div className="grid_item">
+									<figure>
+										<a href="#">
+											<img
+												className="img-fluid lazy"
+												src="/assets/img/products/product_placeholder_square_medium.jpg"
+												data-src="/real_assets/img/profiles/aqila.png"
+												alt=""
+												height="390"
+											/>
+										</a>
+									</figure>
+									<h4>Aqillah Cahya N</h4>
 									<p className="lead">Hacker</p>
 								</div>
 								{/* <!-- /grid_item --> */}
