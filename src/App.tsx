@@ -4,6 +4,10 @@ import About from './pages/About';
 import Article from './pages/Article';
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
+import DetailProduct from './pages/DetailProduct';
+import DetailArtikel from './pages/DetailArtikel';
+import Cart from './pages/Cart';
+import Favorite from './pages/Favorite';
 import { loadScripts } from './utils/loadScripts';
 
 function App() {
@@ -20,6 +24,10 @@ function App() {
 				<Route path="article" element={<Article />} />
 				<Route path="products" element={<Products />} />
 				<Route path="about" element={<About />} />
+				<Route path="detailproduct" element={<DetailProduct />} />
+				<Route path="detailartikel" element={<DetailArtikel />} />
+				<Route path="cart" element={<Cart />} />
+				<Route path="favorite" element={<Favorite />} />
 				{/* <Route path="edit/:id" element={<EditUser />} /> */}
 			</Routes>
 		</BrowserRouter>

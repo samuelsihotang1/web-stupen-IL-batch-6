@@ -1,15 +1,76 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { loadScripts } from '../utils/loadScripts';
 import '/public/assets/css/about.css';
 import '/public/assets/css/contact.css';
+import '/public/assets/css/home_1.css';
 
 function About() {
+	useEffect(() => {
+		const scripts = ['/assets/js/carousel-home.min.js'];
+
+		loadScripts(scripts);
+	}, []);
+
 	return (
 		<>
 			<div id="page">
 				<Header />
 
 				<main className="bg_white">
+					<div id="carousel-home">
+						<div className="owl-carousel owl-theme">
+							{/* <!--/owl-slide--> */}
+							<div
+								className="owl-slide cover"
+								style={{
+									backgroundImage:
+										"url('/real_assets/img/slides/banner.png')",
+								}}>
+								<div
+									className="opacity-mask d-flex align-items-center"
+									data-opacity-mask="rgba(255, 255, 255, 0)">
+									<div className="container">
+										<div className="row justify-content-center justify-content-md-start">
+											<div className="col-lg-6 static">
+												<div className="slide-text white">
+													<h2 className="owl-slide-animated owl-slide-title">
+														JAGALAH LINGKUNGAN!
+													</h2>
+													<p className="owl-slide-animated owl-slide-subtitle">
+														Mengubah plastik menjadi peluang:
+														<br />
+														"Satu langkah kecil untuk planet
+														yang lebih hijau."
+													</p>
+													<div className="owl-slide-animated owl-slide-cta">
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button"
+															style={{
+																marginRight: '1vw',
+															}}>
+															Daftar
+														</a>
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button">
+															Belanja
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="icon_drag_mobile"></div>
+					</div>
+					{/* <!--/carousel--> */}
 					<div className="container margin_60_35 add_bottom_30">
 						{/* <!-- /row --> */}
 						<div className="row justify-content-center align-items-center">
@@ -46,7 +107,8 @@ function About() {
 					{/* <!-- /container --> */}
 					<div className="container margin_60">
 						<div className="main_title">
-							<h2>Tim Kami</h2>
+							<h2>TEAM</h2>
+							<span>KAMI</span>
 						</div>
 						<div className="row small-gutters">
 							<div className="col-6 col-md-4 col-xl-4">
@@ -171,7 +233,8 @@ function About() {
 					{/* <!-- /container --> */}
 					<div className="container margin_60">
 						<div className="main_title">
-							<h2>Hubungi Kami</h2>
+							<h2>HUBUNGI</h2>
+							<span>KAMI</span>
 						</div>
 						<div className="row justify-content-center">
 							<div className="col-lg-4">

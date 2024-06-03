@@ -1,25 +1,14 @@
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { loadScripts } from '../utils/loadScripts';
 import '/public/assets/css/home_1.css';
-
-let isScriptLoaded = false;
 
 function Homepage() {
 	useEffect(() => {
-		if (!isScriptLoaded) {
-			// Specific Scripts
-			const script = document.createElement('script');
-			script.src = '/assets/js/carousel-home.min.js';
-			script.async = true;
-			document.body.appendChild(script);
+		const scripts = ['/assets/js/carousel-home.min.js'];
 
-			isScriptLoaded = true;
-
-			return () => {
-				document.body.removeChild(script);
-			};
-		}
+		loadScripts(scripts);
 	}, []);
 
 	return (
@@ -54,7 +43,7 @@ function Homepage() {
 													</p>
 													<div className="owl-slide-animated owl-slide-cta">
 														<a
-															className="btn_1"
+															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button"
 															style={{
@@ -106,7 +95,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -128,7 +117,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Tas Tutup Botol</h3>
 									</a>
 									<div className="price_box">
@@ -165,7 +154,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -187,7 +176,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Gantungan Kunci</h3>
 									</a>
 									<div className="price_box">
@@ -224,7 +213,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -246,7 +235,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Gaun Kertas</h3>
 									</a>
 									<div className="price_box">
@@ -283,7 +272,7 @@ function Homepage() {
 							<div className="col-6 col-md-4 col-xl-3">
 								<div className="grid_item">
 									<figure>
-										<a href="product-detail-1.html">
+										<a href="/detailproduct">
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
@@ -305,7 +294,7 @@ function Homepage() {
 										<i className="icon-star voted"></i>
 										<i className="icon-star"></i>
 									</div>
-									<a href="product-detail-1.html">
+									<a href="/detailproduct">
 										<h3>Hiasan Dinding Gantung</h3>
 									</a>
 									<div className="price_box">
@@ -351,7 +340,7 @@ function Homepage() {
 						</div>
 						<div className="row">
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -378,7 +367,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -405,7 +394,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"
@@ -432,7 +421,7 @@ function Homepage() {
 							</div>
 							{/* <!-- /box_news --> */}
 							<div className="col-lg-6">
-								<a className="box_news" href="blog.html">
+								<a className="box_news" href="/detailartikel">
 									<figure>
 										<img
 											src="/assets/img/blog-thumb-placeholder.jpg"

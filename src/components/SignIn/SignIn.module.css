@@ -1,0 +1,205 @@
+/* Rectangle styles */
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logoImage {
+  max-width: 20%;
+  height: auto;
+}
+
+.rectangle146 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 102%;
+  background-image: linear-gradient(180deg, #69af50ff 0%, #2e4d23ff 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.common-text {
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.logoEcoWarriors21 {
+  position: absolute;
+  left: 35px;
+  top: calc(60% - 0.5px);
+  width: 600px;
+  height: 580px;
+  background-image: url('real_assets/img/big-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-70%);
+}
+
+@media (max-width: 1200px) {
+  .logoEcoWarriors21 {
+    max-width: 400px;
+    max-height: 390px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logoEcoWarriors21 {
+    max-width: 350px;
+    max-height: 345px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logoEcoWarriors21 {
+    max-width: 290px;
+    max-height: 245px;
+    left: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoEcoWarriors21 {
+    max-width: 200px;
+    max-height: 194px;
+    left: 3px;
+  }
+}
+
+
+.signInContainer {
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 600px; 
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px; 
+  box-sizing: border-box;
+  position: relative;
+  width: calc(50% - 20px);
+  position: absolute;
+  left: calc(55%);
+  top: 150px; 
+}
+
+.title {
+ font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-size: 30px; 
+  font-weight: 400;
+  position: absolute;
+  right: 20px;
+  white-space: nowrap;
+  flex-direction: column;
+  left: 28%; 
+  transform: translateX(-10%);
+  top : -25px;
+}
+
+.inputWrapper {
+  margin-bottom: 20px;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 10px; 
+  font-size: 16px; 
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.createAccountButton {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding: 15px; 
+  background-color: #69af50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.createAccountButton:hover {
+  background-color: #5a993e; 
+}
+
+.signInLink {
+  margin-top: 20px; 
+  text-align: center;
+  font-size: inherit;
+}
+
+.signInText {
+  font-family: inherit;
+  font-size: inherit;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.signInText:hover {
+  text-decoration: underline;
+}
+
+.signInWithGoogleContainer {
+  text-align: center;
+  margin-top: 30px; 
+}
+
+.signInWithGoogleButton {
+  font-family: inherit;
+  font-size: inherit;
+  width: auto;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.signInWithGoogleButton:hover {
+  background-color: #f0f0f0;
+}
+
+.googleLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px; 
+  fill: #4285f4;
+}
+
+@media (max-width: 576px) {
+  .signInContainer {
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px; 
+  }
+}

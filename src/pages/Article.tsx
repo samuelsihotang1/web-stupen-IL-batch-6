@@ -1,13 +1,75 @@
+import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import { loadScripts } from '../utils/loadScripts';
 import '/public/assets/css/blog.css';
+import '/public/assets/css/home_1.css';
 
 function Article() {
+	useEffect(() => {
+		const scripts = ['/assets/js/carousel-home.min.js'];
+
+		loadScripts(scripts);
+	}, []);
+
 	return (
 		<>
 			<div id="page">
 				<Header />
-				<main className="bg_gray">
+				<main>
+					<div id="carousel-home">
+						<div className="owl-carousel owl-theme">
+							{/* <!--/owl-slide--> */}
+							<div
+								className="owl-slide cover"
+								style={{
+									backgroundImage:
+										"url('/real_assets/img/slides/banner.png')",
+								}}>
+								<div
+									className="opacity-mask d-flex align-items-center"
+									data-opacity-mask="rgba(255, 255, 255, 0)">
+									<div className="container">
+										<div className="row justify-content-center justify-content-md-start">
+											<div className="col-lg-6 static">
+												<div className="slide-text white">
+													<h2 className="owl-slide-animated owl-slide-title">
+														JAGALAH LINGKUNGAN!
+													</h2>
+													<p className="owl-slide-animated owl-slide-subtitle">
+														Mengubah plastik menjadi peluang:
+														<br />
+														"Satu langkah kecil untuk planet
+														yang lebih hijau."
+													</p>
+													<div className="owl-slide-animated owl-slide-cta">
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button"
+															style={{
+																marginRight: '1vw',
+															}}>
+															Daftar
+														</a>
+														<a
+															className="btn_1 gray"
+															href="listing-grid-1-full.html"
+															role="button">
+															Belanja
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="icon_drag_mobile"></div>
+					</div>
+					{/* <!--/carousel--> */}
+
 					<div className="container margin_30">
 						<div className="page_header">
 							<div className="breadcrumbs">
@@ -45,7 +107,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -58,7 +120,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -76,7 +138,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -89,7 +151,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -107,7 +169,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -120,7 +182,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -138,7 +200,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -151,7 +213,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -169,7 +231,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -182,7 +244,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -200,7 +262,7 @@ function Article() {
 									<div className="col-md-6">
 										<article className="blog">
 											<figure>
-												<a href="blog-post.html">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
@@ -213,7 +275,7 @@ function Article() {
 											<div className="post_info">
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
-													<a href="blog-post.html">
+													<a href="/detailartikel">
 														Tips dan Trik Efektif Mengelola
 														Sampah Rumah Tangga
 													</a>
@@ -292,52 +354,49 @@ function Article() {
 									<ul className="comments-list">
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img
 														src="/real_assets/img/news/bank-sampah.png"
 														alt=""
 													/>
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Edukasi - 12 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+												<a href="/detailartikel" title="">
+													Mengatasi Persoalan Sam...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/persoalan-persampahan.png"
 														alt=""
 													/>
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Tips & Trik - 19 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+												<a href="/detailartikel" title="">
+													Ibu-ibu Rumah Tangga di...
 												</a>
 											</h3>
 										</li>
 										<li>
 											<div className="alignleft">
-												<a href="#0">
+												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/ibu-rumah-tangga.webp"
 														alt=""
 													/>
 												</a>
 											</div>
-											<small>Tips & Trik - 12 Mei 2024</small>
+											<small>Berita - 24 Mei 2024</small>
 											<h3>
-												<a href="#" title="">
-													Tips dan Trik Efektif Mengelola
-													Sampah...
+												<a href="/detailartikel" title="">
+													Peran Ganda Ibu-ibu...
 												</a>
 											</h3>
 										</li>

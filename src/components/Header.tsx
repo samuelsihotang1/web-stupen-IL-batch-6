@@ -9,7 +9,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 						<div className="row small-gutters">
 							<div className="col-xl-3 col-lg-3 d-lg-flex align-items-center">
 								<div id="logo">
-									<a href="index.html">
+									<a href="/">
 										<img
 											src="/real_assets/img/logo.png"
 											alt=""
@@ -30,7 +30,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 								{/* <!-- Mobile menu button --> */}{' '}
 								<div className="main-menu">
 									<div id="header_menu">
-										<a href="index.html">
+										<a href="/">
 											<img
 												src="/assets/img/logo_black.svg"
 												alt=""
@@ -38,7 +38,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 												height="35"
 											/>
 										</a>
-										<a href="#" className="open_close" id="close_in">
+										<a href="/" className="open_close" id="close_in">
 											<i className="ti-close"></i>
 										</a>
 									</div>
@@ -52,7 +52,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 											<a
 												href="/article"
 												className="show-submenu-mega">
-												Artikel
+												Edukasi
 											</a>
 										</li>
 										<li>
@@ -72,8 +72,55 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 							<div className="col-xl-3 col-lg-2 d-lg-flex align-items-center justify-content-end text-end view-only-desktop">
 								<ul className="top_tools">
 									<li>
+										<div className="dropdown dropdown-access">
+											<a
+												href="account.html"
+												className="access_link">
+												<span>Account</span>
+											</a>
+											<div className="dropdown-menu">
+												<a href="account.html" className="btn_1">
+													Sign In
+												</a>
+												<ul>
+													<li>
+														<a href="track-order.html">
+															<i className="ti-truck"></i>
+															Lacak Pesanan
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-package"></i>
+															Pesanan Anda
+														</a>
+													</li>
+													<li>
+														<a href="/favorite">
+															<i className="ti-heart"></i>
+															Barang Favorit
+														</a>
+													</li>
+													<li>
+														<a href="account.html">
+															<i className="ti-user"></i>My
+															Profil
+														</a>
+													</li>
+													<li>
+														<a href="help.html">
+															<i className="ti-help-alt"></i>
+															Bantuan
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										{/* <!-- /dropdown-access--> */}{' '}
+									</li>
+									<li>
 										<div className="dropdown dropdown-cart">
-											<a href="cart.html" className="cart_bt">
+											<a href="/cart" className="cart_bt">
 												<strong>2</strong>
 											</a>
 											<div className="dropdown-menu">
@@ -132,7 +179,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 														<span>Rp. 70.000</span>
 													</div>
 													<a
-														href="cart.html"
+														href="/cart"
 														className="btn_1 outline">
 														Keranjang
 													</a>
@@ -145,47 +192,6 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 											</div>
 										</div>
 										{/* <!-- /dropdown-cart--> */}{' '}
-									</li>
-									<li>
-										<div className="dropdown dropdown-access">
-											<a
-												href="account.html"
-												className="access_link">
-												<span>Account</span>
-											</a>
-											<div className="dropdown-menu">
-												<a href="account.html" className="btn_1">
-													Sign In
-												</a>
-												<ul>
-													<li>
-														<a href="track-order.html">
-															<i className="ti-truck"></i>
-															Lacak Pesanan
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-package"></i>
-															Pesanan Anda
-														</a>
-													</li>
-													<li>
-														<a href="account.html">
-															<i className="ti-user"></i>My
-															Profil
-														</a>
-													</li>
-													<li>
-														<a href="help.html">
-															<i className="ti-help-alt"></i>
-															Bantuan
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										{/* <!-- /dropdown-access--> */}{' '}
 									</li>
 									<li>
 										<a
