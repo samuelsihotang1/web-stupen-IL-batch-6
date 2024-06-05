@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-// import '/public/assets/css/dropdown.css';
+import '/public/assets/css/dropdown.css';
 import '/public/assets/css/listing.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CategoriesDropdown = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
-  // Membaca status terakhir dari localStorage saat komponen dimuat
+  // Read last selected category from localStorage on component mount
   useEffect(() => {
     const lastSelectedCategory = localStorage.getItem('selectedCategory');
     if (lastSelectedCategory) {
@@ -14,20 +15,17 @@ const CategoriesDropdown = () => {
   }, []);
 
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
-  };
-
-  const applyFilter = () => {
-    if (selectedCategory === 'Alat Sekolah') {
-      window.location.href = '/AlatSekolah';
-    } else if (selectedCategory === 'Souvenir') {
-      window.location.href = '/Souvenir';
-    } else {
-      // Kategori Lainnya
+    // Update selectedCategory only if it's different
+    if (category !== selectedCategory) {
+      setSelectedCategory(category);
     }
+
+    // Navigate to the corresponding page using useNavigate
+    const navigate = useNavigate();
+    navigate(`/${category}`);
   };
 
-  // Menyimpan status terakhir kategori yang dipilih ke localStorage
+  // Save selected category to localStorage on change
   useEffect(() => {
     localStorage.setItem('selectedCategory', selectedCategory);
   }, [selectedCategory]);
@@ -41,24 +39,19 @@ const CategoriesDropdown = () => {
         <div className="filter_type">
           <ul>
             <li onClick={() => handleCategoryChange('Alat Sekolah')}>
-              <label className="container_check">Alat Sekolah
-                <input type="checkbox" checked={selectedCategory === 'Alat Sekolah'} />
-                <span className="checkmark"></span>
-              </label>
+              <Link to="/AlatSekolah">Alat Sekolah</Link>
             </li>
             <li onClick={() => handleCategoryChange('Souvenir')}>
-              <label className="container_check">Souvenir
-                <input type="checkbox" checked={selectedCategory === 'Souvenir'} />
-                <span className="checkmark"></span>
-              </label>
+              <Link to="/Souvenir">Souvenir</Link>
+            </li>
+            <li onClick={() => handleCategoryChange('Hiasan')}>
+              <Link to="/Hiasan">Hiasan</Link>
+            </li>
+            <li onClick={() => handleCategoryChange('Pupuk')}>
+              <Link to="/Pupuk">Pupuk</Link>
             </li>
             {/* Add other category options here */}
           </ul>
-          {selectedCategory && (
-            <a href="#0" className="apply_filter" onClick={applyFilter}>
-              Terapkan
-            </a>
-          )}
         </div>
       </div>
     </div>
