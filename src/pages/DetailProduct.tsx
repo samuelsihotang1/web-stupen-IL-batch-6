@@ -643,7 +643,7 @@ function DetailProduct() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/hiasan-dinding.png"
                                                 alt=""
                                             />
                                         </a>
@@ -656,7 +656,7 @@ function DetailProduct() {
                                         <i className="icon-star" />
                                     </div>
                                     <a href="/detailproduct">
-                                        <h3>Vas Bunga</h3>
+                                        <h3>Hiasan Dinding</h3>
                                     </a>
                                     <div className="price_box">
                                         <span className="new_price">Rp. 20.000</span>

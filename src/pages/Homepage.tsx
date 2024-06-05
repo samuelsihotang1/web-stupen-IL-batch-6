@@ -276,13 +276,13 @@ function Homepage() {
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="/real_assets/img/products/hiasan-dinding.png"
 												alt=""
 											/>
 											<img
 												className="img-fluid lazy"
 												src="/assets/img/products/product_placeholder_square_medium.jpg"
-												data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+												data-src="/real_assets/img/products/hiasan-dinding.png"
 												alt=""
 											/>
 										</a>
