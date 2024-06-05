@@ -21,11 +21,10 @@ const getArtikelById = async (req, res) => {
 
 const addArtikel = async (req, res) => {
   console.log(req.body);
-  const { judul_artikel, tanggal_artikel, detail_artikel } = req.body;
+  const { judul_artikel, detail_artikel } = req.body;
   try {
-    await query("INSERT INTO artikel (judul_artikel, tanggal_artikel, detail_artikel) VALUES (?, ?, ?)", [
+    await query("INSERT INTO artikel (judul_artikel, detail_artikel) VALUES (?, ?)", [
       judul_artikel,
-      tanggal_artikel,
       detail_artikel
     ]);
     return res.status(200).json({
@@ -40,12 +39,11 @@ const addArtikel = async (req, res) => {
 };
 
 const updateArtikel = async (req, res) => {
-  const { judul_artikel, tanggal_artikel, detail_artikel } = req.body;
+  const { judul_artikel, detail_artikel } = req.body;
   const { id_artikel } = req.params;
   try {
-    await query("UPDATE artikel SET judul_artikel = ?, tanggal_artikel = ?, detail_artikel = ? where id_artikel = ?", [
+    await query("UPDATE artikel SET judul_artikel = ?, detail_artikel = ? where id_artikel = ?", [
       judul_artikel,
-      tanggal_artikel,
       detail_artikel,
       id_artikel
     ]);
