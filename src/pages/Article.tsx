@@ -140,7 +140,7 @@ function Article() {
 											<figure>
 												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/3r.jpg"
 														alt=""
 													/>
 													<div className="preview">
@@ -152,14 +152,11 @@ function Article() {
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
 													<a href="/detailartikel">
-														Tips dan Trik Efektif Mengelola
-														Sampah Rumah Tangga
+														3R, Cara Efektif Pangkas Penggunaan Plastik di Dapur
 													</a>
 												</h2>
 												<p>
-													Dalam artikel ini, kami akan membahas
-													sepuluh tips dan trik efektif untuk
-													mengelola sampah rumah tangga...
+													Salah satu penghasil sampah plastik terbesar adalah dari perlengkapan dapur. Dengan masifnya penggunaan...
 												</p>
 											</div>
 										</article>
@@ -171,7 +168,7 @@ function Article() {
 											<figure>
 												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/cara-mengelola-sampah.jpg"
 														alt=""
 													/>
 													<div className="preview">
@@ -183,14 +180,11 @@ function Article() {
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
 													<a href="/detailartikel">
-														Tips dan Trik Efektif Mengelola
-														Sampah Rumah Tangga
+														Apa yang Harus Dilakukan untuk Mengelola Sampah?
 													</a>
 												</h2>
 												<p>
-													Dalam artikel ini, kami akan membahas
-													sepuluh tips dan trik efektif untuk
-													mengelola sampah rumah tangga...
+													Sampah harus dikelola dengan baik agar tidak menimbulkan kerusakan lingkungan, seperti pemanasan global, dan perubahan iklim.
 												</p>
 											</div>
 										</article>
@@ -202,7 +196,7 @@ function Article() {
 											<figure>
 												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/sampah-tiap-hari.jpg"
 														alt=""
 													/>
 													<div className="preview">
@@ -214,14 +208,11 @@ function Article() {
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
 													<a href="/detailartikel">
-														Tips dan Trik Efektif Mengelola
-														Sampah Rumah Tangga
+														Ada 3 Cara Mengolah Sampah yang Bisa Dilakukan Setiap Hari
 													</a>
 												</h2>
 												<p>
-													Dalam artikel ini, kami akan membahas
-													sepuluh tips dan trik efektif untuk
-													mengelola sampah rumah tangga...
+													Berdasarkan data Direktorat Penanganan Sampah Kementerian Lingkungan Hidup dan Kehutanan, pada tahun 2021 terdapat 23,040,652.28 ton...
 												</p>
 											</div>
 										</article>
@@ -233,7 +224,7 @@ function Article() {
 											<figure>
 												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/ubah-plastik.jpeg"
 														alt=""
 													/>
 													<div className="preview">
@@ -245,14 +236,11 @@ function Article() {
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
 													<a href="/detailartikel">
-														Tips dan Trik Efektif Mengelola
-														Sampah Rumah Tangga
+														Kelola Sampah Plastik Jadi Sumber Daya
 													</a>
 												</h2>
 												<p>
-													Dalam artikel ini, kami akan membahas
-													sepuluh tips dan trik efektif untuk
-													mengelola sampah rumah tangga...
+													Permasalahan sampah sudah timbul sejak lama. Jika tidak dikelola dengan baik, sampah tentu menimbulkan berbagai dampak negatif.
 												</p>
 											</div>
 										</article>
@@ -264,7 +252,7 @@ function Article() {
 											<figure>
 												<a href="/detailartikel">
 													<img
-														src="/real_assets/img/news/bank-sampah.png"
+														src="/real_assets/img/news/cara-dosen.jpg"
 														alt=""
 													/>
 													<div className="preview">
@@ -276,14 +264,11 @@ function Article() {
 												<small>Tips&Trik - 1 Mei 2017</small>
 												<h2>
 													<a href="/detailartikel">
-														Tips dan Trik Efektif Mengelola
-														Sampah Rumah Tangga
+														Ini Cara Dosen Itera Olah Sampah Organik Jadi Bermanfaat
 													</a>
 												</h2>
 												<p>
-													Dalam artikel ini, kami akan membahas
-													sepuluh tips dan trik efektif untuk
-													mengelola sampah rumah tangga...
+													Salah satu upaya yang bisa dilakukan untuk menjaga bumi tetap lestari yakni melakukan pengelolaan sampah dengan baik..
 												</p>
 											</div>
 										</article>
