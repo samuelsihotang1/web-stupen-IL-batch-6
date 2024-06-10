@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header({ isSticky = true }: { isSticky?: boolean }) {
 	return (
 		<>
@@ -74,14 +76,14 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 									<li>
 										<div className="dropdown dropdown-access">
 											<a
-												href="account.html"
+												href="/Account"
 												className="access_link">
 												<span>Account</span>
 											</a>
 											<div className="dropdown-menu">
-												<a href="account.html" className="btn_1">
-													Sign In
-												</a>
+											<Link to="/signIn" className="btn_1">													
+											Sign In
+											</Link>
 												<ul>
 													<li>
 														<a href="track-order.html">
