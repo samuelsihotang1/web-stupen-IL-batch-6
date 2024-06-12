@@ -54,6 +54,7 @@ const AddArtikel = () => {
             <button type="submit" className="button is-success">
               Save
             </button>
+            <a href="/listArtikel" className="button is-danger ml-3">Kembali</a>
           </div>
         </form>
       </div>
