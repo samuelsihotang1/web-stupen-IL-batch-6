@@ -1,16 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
+import Homepage from "./pages/home/Homepage.js";
 // User 
-import UserList from "./components/user/UserList";
-import AddUser from "./components/AddUser";
-import EditUser from "./components/EditUser";
+import UserList from "./pages/user/UserList.js";
+// import AddUser from "./components/AddUser";
+// import EditUser from "./components/EditUser";
 // Produk
-import ProdukList from "./components/produk/ProdukList";
-import AddProduk from "./components/produk/AddProduk";
-import EditProduk from "./components/produk/EditProduk";
+import ProdukList from "./pages/produk/ProdukList.js";
+import AddProduk from "./pages/produk/AddProduk.js";
+import EditProduk from "./pages/produk/EditProduk.js";
 // Artikel
-import ArtikelList from "./components/artikel/ArtikelList";
-import AddArtikel from "./components/artikel/AddArtikel";
+import ArtikelList from "./pages/artikel/ArtikelList.js";
+import AddArtikel from "./pages/artikel/AddArtikel.js";
+import EditArtikel from "./pages/artikel/EditArtikel.js";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/listUser" element={<UserList />} />
-        <Route path="/addUser" element={<AddUser />} />
-        <Route path="edit/:id" element={<EditUser />} />
+        {/* <Route path="/addUser" element={<AddUser />} />
+        <Route path="edit/:id" element={<EditUser />} /> */}
         {/* Produk */}
         <Route path="/listProduk" element={<ProdukList />} />
         <Route path="/addProduk" element={<AddProduk />} />
@@ -27,6 +28,7 @@ function App() {
         {/* Artikel */}
         <Route path="/listArtikel" element={<ArtikelList />} />
         <Route path="/addArtikel" element={<AddArtikel />} />
+        <Route path="/editArtikel/:id_artikel" element={<EditArtikel />} />
       </Routes>
     </BrowserRouter>
   );

@@ -25,11 +25,7 @@ const addProduk = async (req, res) => {
   console.log(req.body);
   const { nama_produk, harga_produk, deskripsi_produk } = req.body;
   try {
-    await query("INSERT INTO produk (nama_produk, harga_produk, deskripsi_produk) VALUES (?, ?, ?)", [
-      nama_produk,
-      harga_produk,
-      deskripsi_produk
-    ]);
+    await query("INSERT INTO produk (nama_produk, harga_produk, deskripsi_produk) VALUES (?, ?, ?)", [nama_produk, harga_produk, deskripsi_produk]);
     return res.status(200).json({
       pesan: "penambahan Produk berhasil",
       data: {
@@ -45,12 +41,7 @@ const updateProduk = async (req, res) => {
   const { nama_produk, harga_produk, deskripsi_produk } = req.body;
   const { id_produk } = req.params;
   try {
-    await query("UPDATE produk SET nama_produk = ?, harga_produk = ?, deskripsi_produk = ? where id_produk = ?", [
-      nama_produk,
-      harga_produk,
-      deskripsi_produk,
-      id_produk
-    ]);
+    await query("UPDATE produk SET nama_produk = ?, harga_produk = ?, deskripsi_produk = ? where id_produk = ?", [nama_produk, harga_produk, deskripsi_produk, id_produk]);
     return res.status(200).json({
       pesan: "perubahan Produk berhasil",
       data: {
