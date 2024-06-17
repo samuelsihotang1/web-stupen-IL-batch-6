@@ -26,7 +26,7 @@ const UserList = () => {
   return (
     <div className="columns mt-5">
       <div className="column is-half">
-        <Link to={`add`} className="button is-success">
+        <Link to={`/user/add`} className="button is-success">
           Add New
         </Link>
         <table className="table is-striped is-fullwidth">
@@ -54,7 +54,7 @@ const UserList = () => {
                 <td>{user.updated_at}</td>
                 <td>
                   <Link
-                    to={`edit/${user.id}`}
+                    to={`/user/edit/${user.id}`}
                     className="button is-small is-info mr-2"
                   >
                     Edit
