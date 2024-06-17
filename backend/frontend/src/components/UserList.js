@@ -24,7 +24,7 @@ const UserList = () => {
   };
 
   return (
-    <div className="columns mt-5 is-centered">
+    <div className="columns mt-5">
       <div className="column is-half">
         <Link to={`add`} className="button is-success">
           Add New
@@ -35,7 +35,10 @@ const UserList = () => {
               <th>No</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Gender</th>
+              <th>Adress</th>
+              <th>Phone</th>
+              <th>CreatedAt</th>
+              <th>UpdatedAt</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -45,7 +48,10 @@ const UserList = () => {
                 <td>{index + 1}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>{user.gender}</td>
+                <td>{user.address}</td>
+                <td>{user.phone}</td>
+                <td>{user.created_at}</td>
+                <td>{user.updated_at}</td>
                 <td>
                   <Link
                     to={`edit/${user.id}`}
