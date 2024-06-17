@@ -27,7 +27,10 @@ const UserList = () => {
 		<div className="columns mt-5">
 			<div className="column is-half">
 				<Link to={`/user/add`} className="button is-success">
-					Add New
+					Add New User
+				</Link>
+				<Link to={`/product`} className="button is-success">
+					Product
 				</Link>
 				<table className="table is-striped is-fullwidth">
 					<thead>

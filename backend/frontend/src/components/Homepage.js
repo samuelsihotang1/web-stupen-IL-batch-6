@@ -8,6 +8,9 @@ const Homepage = () => {
 				<Link to={`/user`} className="button is-success">
 					User
 				</Link>
+				<Link to={`/product`} className="button is-success">
+					Product
+				</Link>
 			</div>
 		</div>
 	);
