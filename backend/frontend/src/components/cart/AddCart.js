@@ -1,17 +1,20 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddCart = () => {
 	const [idProduct, setIdProduct] = useState('');
 	const [idUser, setIdUser] = useState('');
 	const [quantity, setQuantity] = useState(1);
 	const navigate = useNavigate();
+	const [id, setId] = useState(uuidv4());
 
 	const saveCart = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/cart', {
+			await axios.post('http://localhost:5000/carts', {
+                id,
 				id_product: idProduct,
 				id_user: idUser,
 				quantity,

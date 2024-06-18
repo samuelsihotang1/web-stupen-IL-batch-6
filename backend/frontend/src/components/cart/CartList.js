@@ -10,13 +10,13 @@ const CartList = () => {
     }, []);
 
     const getCarts = async () => {
-        const response = await axios.get('http://localhost:5000/cart');
+        const response = await axios.get('http://localhost:5000/carts');
         setCarts(response.data);
     };
 
     const deleteCart = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/cart/${id}`);
+            await axios.delete(`http://localhost:5000/carts/${id}`);
             getCarts();
         } catch (error) {
             console.log(error);
@@ -74,7 +74,7 @@ const CartList = () => {
                     </thead>
                     <tbody>
                         {carts.map((cart, index) => (
-                            <tr key={`${cart.id_product}-${cart.id_user}`}>
+                            <tr key={`${cart.id}`}>
                                 <td>{index + 1}</td>
                                 <td>{cart.id_product}</td>
                                 <td>{cart.id_user}</td>
@@ -83,12 +83,12 @@ const CartList = () => {
                                 <td>{cart.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/cart/edit/${cart.id_product}/${cart.id_user}`}
+                                        to={`/cart/edit/${cart.id}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteCart(`${cart.id_product}-${cart.id_user}`)}
+                                        onClick={() => deleteCart(`${cart.id}`)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>
