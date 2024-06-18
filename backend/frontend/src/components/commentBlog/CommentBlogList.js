@@ -2,22 +2,22 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ImageProductList = () => {
-    const [images, setImages] = useState([]);
+const CommentBlogList = () => {
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        getImages();
+        getComments();
     }, []);
 
-    const getImages = async () => {
-        const response = await axios.get('http://localhost:5000/image_product');
-        setImages(response.data);
+    const getComments = async () => {
+        const response = await axios.get('http://localhost:5000/comment_blog');
+        setComments(response.data);
     };
 
-    const deleteImage = async (id) => {
+    const deleteComment = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/image_product/${id}`);
-            getImages();
+            await axios.delete(`http://localhost:5000/comment_blog/${id}`);
+            getComments();
         } catch (error) {
             console.log(error);
         }
@@ -26,8 +26,8 @@ const ImageProductList = () => {
     return (
         <div className="columns mt-5">
             <div className="column is-half">
-                <Link to={`/image/add`} className="button is-success">
-                    Add New Image
+                <Link to={`/comment/add`} className="button is-success">
+                    Add New Comment
                 </Link>
                 
 				<Link to="/" className="button is-success">
@@ -38,6 +38,9 @@ const ImageProductList = () => {
 				</Link>
 				<Link to="/product" className="button is-success">
 					Product
+				</Link>
+				<Link to="/image-product" className="button is-success">
+					Image Product
 				</Link>
 				<Link to="/category-product" className="button is-success">
 					Category Product
@@ -57,36 +60,35 @@ const ImageProductList = () => {
 				<Link to="/category-blog" className="button is-success">
 					Category Blog
 				</Link>
-				<Link to="/comment-blog" className="button is-success">
-					Comment Blog
-				</Link>
                 <table className="table is-striped is-fullwidth">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID Product</th>
-                            <th>Image</th>
+                            <th>ID Blog</th>
+                            <th>ID User</th>
+                            <th>Description</th>
                             <th>CreatedAt</th>
                             <th>UpdatedAt</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {images.map((image, index) => (
-                            <tr key={image.id_product}>
+                        {comments.map((comment, index) => (
+                            <tr key={`${comment.id_blog}-${comment.id_user}`}>
                                 <td>{index + 1}</td>
-                                <td>{image.id_product}</td>
-                                <td>{image.image}</td>
-                                <td>{image.created_at}</td>
-                                <td>{image.updated_at}</td>
+                                <td>{comment.id_blog}</td>
+                                <td>{comment.id_user}</td>
+                                <td>{comment.description}</td>
+                                <td>{comment.created_at}</td>
+                                <td>{comment.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/image/edit/${image.id_product}`}
+                                        to={`/comment/edit/${comment.id_blog}/${comment.id_user}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteImage(image.id_product)}
+                                        onClick={() => deleteComment(`${comment.id_blog}-${comment.id_user}`)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>
@@ -100,4 +102,4 @@ const ImageProductList = () => {
     );
 };
 
-export default ImageProductList;
+export default CommentBlogList;

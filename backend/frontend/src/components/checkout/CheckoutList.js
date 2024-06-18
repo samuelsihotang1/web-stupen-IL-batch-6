@@ -2,22 +2,22 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ImageProductList = () => {
-    const [images, setImages] = useState([]);
+const CheckoutList = () => {
+    const [checkouts, setCheckouts] = useState([]);
 
     useEffect(() => {
-        getImages();
+        getCheckouts();
     }, []);
 
-    const getImages = async () => {
-        const response = await axios.get('http://localhost:5000/image_product');
-        setImages(response.data);
+    const getCheckouts = async () => {
+        const response = await axios.get('http://localhost:5000/checkout');
+        setCheckouts(response.data);
     };
 
-    const deleteImage = async (id) => {
+    const deleteCheckout = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/image_product/${id}`);
-            getImages();
+            await axios.delete(`http://localhost:5000/checkout/${id}`);
+            getCheckouts();
         } catch (error) {
             console.log(error);
         }
@@ -26,8 +26,8 @@ const ImageProductList = () => {
     return (
         <div className="columns mt-5">
             <div className="column is-half">
-                <Link to={`/image/add`} className="button is-success">
-                    Add New Image
+                <Link to={`/checkout/add`} className="button is-success">
+                    Add New Checkout
                 </Link>
                 
 				<Link to="/" className="button is-success">
@@ -39,6 +39,9 @@ const ImageProductList = () => {
 				<Link to="/product" className="button is-success">
 					Product
 				</Link>
+				<Link to="/image-product" className="button is-success">
+					Image Product
+				</Link>
 				<Link to="/category-product" className="button is-success">
 					Category Product
 				</Link>
@@ -47,9 +50,6 @@ const ImageProductList = () => {
 				</Link>
 				<Link to="/cart" className="button is-success">
 					Cart
-				</Link>
-				<Link to="/checkout" className="button is-success">
-					Checkout
 				</Link>
 				<Link to="/blog" className="button is-success">
 					Blog
@@ -64,29 +64,33 @@ const ImageProductList = () => {
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID Product</th>
-                            <th>Image</th>
+                            <th>ID</th>
+                            <th>ID User</th>
+                            <th>ID Carts</th>
+                            <th>Total Price</th>
                             <th>CreatedAt</th>
                             <th>UpdatedAt</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {images.map((image, index) => (
-                            <tr key={image.id_product}>
+                        {checkouts.map((checkout, index) => (
+                            <tr key={checkout.id}>
                                 <td>{index + 1}</td>
-                                <td>{image.id_product}</td>
-                                <td>{image.image}</td>
-                                <td>{image.created_at}</td>
-                                <td>{image.updated_at}</td>
+                                <td>{checkout.id}</td>
+                                <td>{checkout.id_user}</td>
+                                <td>{checkout.id_carts}</td>
+                                <td>{checkout.total_price}</td>
+                                <td>{checkout.created_at}</td>
+                                <td>{checkout.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/image/edit/${image.id_product}`}
+                                        to={`/checkout/edit/${checkout.id}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteImage(image.id_product)}
+                                        onClick={() => deleteCheckout(checkout.id)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>
@@ -100,4 +104,4 @@ const ImageProductList = () => {
     );
 };
 
-export default ImageProductList;
+export default CheckoutList;

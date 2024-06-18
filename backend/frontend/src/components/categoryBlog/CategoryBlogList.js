@@ -2,22 +2,22 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ImageProductList = () => {
-    const [images, setImages] = useState([]);
+const CategoryBlogList = () => {
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        getImages();
+        getCategories();
     }, []);
 
-    const getImages = async () => {
-        const response = await axios.get('http://localhost:5000/image_product');
-        setImages(response.data);
+    const getCategories = async () => {
+        const response = await axios.get('http://localhost:5000/category_blog');
+        setCategories(response.data);
     };
 
-    const deleteImage = async (id) => {
+    const deleteCategory = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/image_product/${id}`);
-            getImages();
+            await axios.delete(`http://localhost:5000/category_blog/${id}`);
+            getCategories();
         } catch (error) {
             console.log(error);
         }
@@ -26,8 +26,8 @@ const ImageProductList = () => {
     return (
         <div className="columns mt-5">
             <div className="column is-half">
-                <Link to={`/image/add`} className="button is-success">
-                    Add New Image
+                <Link to={`/category_blog/add`} className="button is-success">
+                    Add New Category
                 </Link>
                 
 				<Link to="/" className="button is-success">
@@ -38,6 +38,9 @@ const ImageProductList = () => {
 				</Link>
 				<Link to="/product" className="button is-success">
 					Product
+				</Link>
+				<Link to="/image-product" className="button is-success">
+					Image Product
 				</Link>
 				<Link to="/category-product" className="button is-success">
 					Category Product
@@ -54,9 +57,6 @@ const ImageProductList = () => {
 				<Link to="/blog" className="button is-success">
 					Blog
 				</Link>
-				<Link to="/category-blog" className="button is-success">
-					Category Blog
-				</Link>
 				<Link to="/comment-blog" className="button is-success">
 					Comment Blog
 				</Link>
@@ -64,29 +64,29 @@ const ImageProductList = () => {
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID Product</th>
-                            <th>Image</th>
+                            <th>ID Blog</th>
+                            <th>Category</th>
                             <th>CreatedAt</th>
                             <th>UpdatedAt</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {images.map((image, index) => (
-                            <tr key={image.id_product}>
+                        {categories.map((category, index) => (
+                            <tr key={category.id_blog}>
                                 <td>{index + 1}</td>
-                                <td>{image.id_product}</td>
-                                <td>{image.image}</td>
-                                <td>{image.created_at}</td>
-                                <td>{image.updated_at}</td>
+                                <td>{category.id_blog}</td>
+                                <td>{category.category}</td>
+                                <td>{category.created_at}</td>
+                                <td>{category.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/image/edit/${image.id_product}`}
+                                        to={`/category_blog/edit/${category.id_blog}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteImage(image.id_product)}
+                                        onClick={() => deleteCategory(category.id_blog)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>
@@ -100,4 +100,4 @@ const ImageProductList = () => {
     );
 };
 
-export default ImageProductList;
+export default CategoryBlogList;
