@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const EditImageProduct = () => {
 	const [image, setImage] = useState('');
+	const [id_product, setIdProduct] = useState('');
 	const navigate = useNavigate();
 	const { id } = useParams();
 
@@ -14,7 +15,7 @@ const EditImageProduct = () => {
 	const updateImageProduct = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.patch(`http://localhost:5000/image_products/${id}`, { image });
+			await axios.patch(`http://localhost:5000/image_products/${id}`, { image, id_product });
 			navigate('/');
 		} catch (error) {
 			console.log(error);
@@ -23,8 +24,11 @@ const EditImageProduct = () => {
 
 	const getImageProductById = async () => {
 		try {
-			const response = await axios.get(`http://localhost:5000/image_products/${id}`);
+			const response = await axios.get(
+				`http://localhost:5000/image_products/${id}`
+			);
 			setImage(response.data.image);
+			setIdProduct(response.data.id_product);
 		} catch (error) {
 			console.log(error);
 		}
@@ -34,6 +38,18 @@ const EditImageProduct = () => {
 		<div className="columns mt-5 is-centered">
 			<div className="column is-half">
 				<form onSubmit={updateImageProduct}>
+					<div className="field">
+						<label className="label">Image</label>
+						<div className="control">
+							<input
+								type="text"
+								className="input"
+								value={id_product}
+								onChange={(e) => setIdProduct(e.target.value)}
+								placeholder="Id Product"
+							/>
+						</div>
+					</div>
 					<div className="field">
 						<label className="label">Image</label>
 						<div className="control">
