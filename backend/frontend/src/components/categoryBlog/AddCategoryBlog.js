@@ -1,16 +1,19 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddCategoryBlog = () => {
 	const [idBlog, setIdBlog] = useState('');
 	const [category, setCategory] = useState('');
 	const navigate = useNavigate();
+	const [id, setId] = useState(uuidv4());
 
 	const saveCategoryBlog = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/category_blog', {
+			await axios.post('http://localhost:5000/category-blogs', {
+				id,
 				id_blog: idBlog,
 				category,
 			});

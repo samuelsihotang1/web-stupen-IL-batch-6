@@ -10,13 +10,13 @@ const CategoryBlogList = () => {
 	}, []);
 
 	const getCategories = async () => {
-		const response = await axios.get('http://localhost:5000/category_blog');
+		const response = await axios.get('http://localhost:5000/category-blogs');
 		setCategories(response.data);
 	};
 
 	const deleteCategory = async (id) => {
 		try {
-			await axios.delete(`http://localhost:5000/category_blog/${id}`);
+			await axios.delete(`http://localhost:5000/category-blogs/${id}`);
 			getCategories();
 		} catch (error) {
 			console.log(error);
@@ -26,7 +26,7 @@ const CategoryBlogList = () => {
 	return (
 		<div className="columns mt-5">
 			<div className="column is-half">
-				<Link to={`/category_blog/add`} className="button is-success">
+				<Link to={`/category-blog/add`} className="button is-success">
 					Add New Category
 				</Link>
 
@@ -84,12 +84,12 @@ const CategoryBlogList = () => {
 								<td>{category.updated_at}</td>
 								<td>
 									<Link
-										to={`/category_blog/edit/${category.id_blog}`}
+										to={`/category-blog/edit/${category.id}`}
 										className="button is-small is-info mr-2">
 										Edit
 									</Link>
 									<button
-										onClick={() => deleteCategory(category.id_blog)}
+										onClick={() => deleteCategory(category.id)}
 										className="button is-small is-danger">
 										Delete
 									</button>
