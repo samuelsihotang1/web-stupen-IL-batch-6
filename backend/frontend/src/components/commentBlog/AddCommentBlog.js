@@ -1,17 +1,20 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddCommentBlog = () => {
 	const [idBlog, setIdBlog] = useState('');
 	const [idUser, setIdUser] = useState('');
 	const [description, setDescription] = useState('');
+	const [id, setId] = useState(uuidv4());
 	const navigate = useNavigate();
 
 	const saveCommentBlog = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/comment_blog', {
+			await axios.post('http://localhost:5000/comment-blogs', {
+                id,
 				id_blog: idBlog,
 				id_user: idUser,
 				description,

@@ -10,13 +10,13 @@ const CommentBlogList = () => {
 	}, []);
 
 	const getComments = async () => {
-		const response = await axios.get('http://localhost:5000/comment_blog');
+		const response = await axios.get('http://localhost:5000/comment-blogs');
 		setComments(response.data);
 	};
 
 	const deleteComment = async (id) => {
 		try {
-			await axios.delete(`http://localhost:5000/comment_blog/${id}`);
+			await axios.delete(`http://localhost:5000/comment-blogs/${id}`);
 			getComments();
 		} catch (error) {
 			console.log(error);
@@ -26,7 +26,7 @@ const CommentBlogList = () => {
 	return (
 		<div className="columns mt-5">
 			<div className="column is-half">
-				<Link to={`/comment/add`} className="button is-success">
+				<Link to={`/comment-blog/add`} className="button is-success">
 					Add New Comment
 				</Link>
 
@@ -86,14 +86,14 @@ const CommentBlogList = () => {
 								<td>{comment.updated_at}</td>
 								<td>
 									<Link
-										to={`/comment/edit/${comment.id_blog}/${comment.id_user}`}
+										to={`/comment-blog/edit/${comment.id}`}
 										className="button is-small is-info mr-2">
 										Edit
 									</Link>
 									<button
 										onClick={() =>
 											deleteComment(
-												`${comment.id_blog}-${comment.id_user}`
+												`${comment.id}`
 											)
 										}
 										className="button is-small is-danger">

@@ -10,9 +10,9 @@ import {
 const router = express.Router();
 
 router.get('/comment-blogs', getCommentBlogs);
-router.get('/comment-blogs/:blogId/:userId', getCommentBlogById); // Assuming composite key route
+router.get('/comment-blogs/:id', getCommentBlogById);
 router.post('/comment-blogs', createCommentBlog);
-router.patch('/comment-blogs/:blogId/:userId', updateCommentBlog); // Assuming composite key route
-router.delete('/comment-blogs/:blogId/:userId', deleteCommentBlog); // Assuming composite key route
+router.patch('/comment-blogs/:id', updateCommentBlog);
+router.delete('/comment-blogs/:id', deleteCommentBlog);
 
 export default router;
