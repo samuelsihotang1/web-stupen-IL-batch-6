@@ -3,33 +3,33 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ImageProductList = () => {
-    const [images, setImages] = useState([]);
+	const [images, setImages] = useState([]);
 
-    useEffect(() => {
-        getImages();
-    }, []);
+	useEffect(() => {
+		getImages();
+	}, []);
 
-    const getImages = async () => {
-        const response = await axios.get('http://localhost:5000/image_product');
-        setImages(response.data);
-    };
+	const getImages = async () => {
+		const response = await axios.get('http://localhost:5000/image_products');
+		setImages(response.data);
+	};
 
-    const deleteImage = async (id) => {
-        try {
-            await axios.delete(`http://localhost:5000/image_product/${id}`);
-            getImages();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+	const deleteImage = async (id) => {
+		try {
+			await axios.delete(`http://localhost:5000/image_products/${id}`);
+			getImages();
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    return (
-        <div className="columns mt-5">
-            <div className="column is-half">
-                <Link to={`/image/add`} className="button is-success">
-                    Add New Image
-                </Link>
-                
+	return (
+		<div className="columns mt-5">
+			<div className="column is-half">
+				<Link to={`/image-product/add`} className="button is-success">
+					Add New Image
+				</Link>
+
 				<Link to="/" className="button is-success">
 					Home
 				</Link>
@@ -60,44 +60,46 @@ const ImageProductList = () => {
 				<Link to="/comment-blog" className="button is-success">
 					Comment Blog
 				</Link>
-                <table className="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>ID Product</th>
-                            <th>Image</th>
-                            <th>CreatedAt</th>
-                            <th>UpdatedAt</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {images.map((image, index) => (
-                            <tr key={image.id_product}>
-                                <td>{index + 1}</td>
-                                <td>{image.id_product}</td>
-                                <td>{image.image}</td>
-                                <td>{image.created_at}</td>
-                                <td>{image.updated_at}</td>
-                                <td>
-                                    <Link
-                                        to={`/image/edit/${image.id_product}`}
-                                        className="button is-small is-info mr-2">
-                                        Edit
-                                    </Link>
-                                    <button
-                                        onClick={() => deleteImage(image.id_product)}
-                                        className="button is-small is-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+				<table className="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>ID</th>
+							<th>ID Product</th>
+							<th>Image</th>
+							<th>CreatedAt</th>
+							<th>UpdatedAt</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{images.map((image, index) => (
+							<tr key={image.id_product}>
+								<td>{index + 1}</td>
+								<td>{image.id}</td>
+								<td>{image.id_product}</td>
+								<td>{image.image}</td>
+								<td>{image.created_at}</td>
+								<td>{image.updated_at}</td>
+								<td>
+									<Link
+										to={`/image-product/edit/${image.id}`}
+										className="button is-small is-info mr-2">
+										Edit
+									</Link>
+									<button
+										onClick={() => deleteImage(image.id)}
+										className="button is-small is-danger">
+										Delete
+									</button>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default ImageProductList;

@@ -1,16 +1,19 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddImageProduct = () => {
 	const [idProduct, setIdProduct] = useState('');
 	const [image, setImage] = useState('');
 	const navigate = useNavigate();
+	const [id, setId] = useState(uuidv4());
 
 	const saveImageProduct = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/image_product', {
+			await axios.post('http://localhost:5000/image_products', {
+                id: id,
 				id_product: idProduct,
 				image,
 			});

@@ -14,7 +14,7 @@ export const getImageProductById = async (req, res) => {
     try {
         const response = await ImageProduct.findOne({
             where: {
-                id_product: req.params.id,
+                id: req.params.id,
             },
         });
         res.status(200).json(response);
@@ -36,7 +36,7 @@ export const updateImageProduct = async (req, res) => {
     try {
         await ImageProduct.update(req.body, {
             where: {
-                id_product: req.params.id,
+                id: req.params.id,
             },
         });
         res.status(200).json({ msg: 'Image Product Updated' });
@@ -49,7 +49,7 @@ export const deleteImageProduct = async (req, res) => {
     try {
         await ImageProduct.destroy({
             where: {
-                id_product: req.params.id,
+                id: req.params.id,
             },
         });
         res.status(200).json({ msg: 'Image Product Deleted' });

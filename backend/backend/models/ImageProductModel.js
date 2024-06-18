@@ -5,10 +5,15 @@ const { DataTypes } = Sequelize;
 const ImageProduct = db.define(
 	'image_product',
 	{
-		id_product: {
+		id: {
 			type: DataTypes.CHAR(36),
 			allowNull: false,
 			primaryKey: true,
+			defaultValue: Sequelize.UUIDV4,
+		},
+		id_product: {
+			type: DataTypes.CHAR(36),
+			allowNull: false,
 			references: {
 				model: 'products',
 				key: 'id',
@@ -24,9 +29,8 @@ const ImageProduct = db.define(
 		},
 		updated_at: {
 			type: DataTypes.DATE,
-			defaultValue: Sequelize.literal(
-				'CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
-			),
+			defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+			onUpdate: Sequelize.literal('CURRENT_TIMESTAMP'),
 		},
 	},
 	{

@@ -1,18 +1,18 @@
-import express from "express";
+import express from 'express';
 import {
-    getUsers, 
-    getUserById,
-    createUser,
-    updateUser,
-    deleteUser
-} from "../controllers/UserController.js";
+    getImageProducts,
+    getImageProductById,
+    createImageProduct,
+    updateImageProduct,
+    deleteImageProduct
+} from '../controllers/ImageProductController.js';
 
 const router = express.Router();
 
-router.get('/users', getUsers);
-router.get('/users/:id', getUserById);
-router.post('/users', createUser);
-router.patch('/users/:id', updateUser);
-router.delete('/users/:id', deleteUser);
+router.get('/image_products', getImageProducts);
+router.get('/image_products/:id', getImageProductById);
+router.post('/image_products', createImageProduct);
+router.patch('/image_products/:id', updateImageProduct);
+router.delete('/image_products/:id', deleteImageProduct);
 
 export default router;

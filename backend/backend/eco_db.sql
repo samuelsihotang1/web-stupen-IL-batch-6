@@ -24,6 +24,7 @@ CREATE TABLE products (
 );
 
 CREATE TABLE image_product (
+    id CHAR(36) PRIMARY KEY,
     id_product CHAR(36),
     image TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -123,12 +124,12 @@ INSERT INTO products (id, sku, title, slug, description, price, size, weight, st
 (UUID(), 'SKU005', 'Product 5', 'product-5', 'Description for product 5', 50.00, 'XXL', 1.5, 60, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for image_product
-INSERT INTO image_product (id_product, image, created_at, updated_at) VALUES
-((SELECT id FROM products WHERE sku = 'SKU001'), 'image1.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU002'), 'image2.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU003'), 'image3.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU004'), 'image4.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU005'), 'image5.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO image_product (id, id_product, image, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU001'), 'image1.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU002'), 'image2.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), 'image3.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU004'), 'image4.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), 'image5.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for category_product
 INSERT INTO category_product (id_product, category, created_at, updated_at) VALUES

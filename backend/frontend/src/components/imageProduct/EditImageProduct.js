@@ -14,7 +14,7 @@ const EditImageProduct = () => {
 	const updateImageProduct = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.patch(`http://localhost:5000/image_product/${id}`, { image });
+			await axios.patch(`http://localhost:5000/image_products/${id}`, { image });
 			navigate('/');
 		} catch (error) {
 			console.log(error);
@@ -23,7 +23,7 @@ const EditImageProduct = () => {
 
 	const getImageProductById = async () => {
 		try {
-			const response = await axios.get(`http://localhost:5000/image_product/${id}`);
+			const response = await axios.get(`http://localhost:5000/image_products/${id}`);
 			setImage(response.data.image);
 		} catch (error) {
 			console.log(error);
