@@ -5,19 +5,17 @@ import { v4 as uuidv4 } from 'uuid';
 
 const AddCheckoutCart = () => {
 	const [id, setId] = useState(uuidv4());
-	const [idUser, setIdUser] = useState('');
-	const [idCarts, setIdCarts] = useState('');
-	const [totalPrice, setTotalPrice] = useState('');
+	const [idCart, setIdCart] = useState('');
+    const [idCheckout, setIdCheckout] = useState('');
 	const navigate = useNavigate();
 
 	const saveCheckout = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/checkout', {
+			await axios.post('http://localhost:5000/checkout_carts', {
 				id,
-				id_user: idUser,
-				id_carts: JSON.parse(idCarts),
-				total_price: totalPrice,
+                id_cart: idCart,
+                id_checkout: idCheckout,
 			});
 			navigate('/');
 		} catch (error) {
@@ -30,39 +28,26 @@ const AddCheckoutCart = () => {
 			<div className="column is-half">
 				<form onSubmit={saveCheckout}>
 					<div className="field">
-						<label className="label">User ID</label>
+						<label className="label">ID Cart</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
-								value={idUser}
-								onChange={(e) => setIdUser(e.target.value)}
-								placeholder="User ID"
+								value={idCart}
+								onChange={(e) => setIdCart(e.target.value)}
+								placeholder="ID Cart"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">Cart IDs (JSON)</label>
+						<label className="label">ID Checkout</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
-								value={idCarts}
-								onChange={(e) => setIdCarts(e.target.value)}
-								placeholder='["cart_id1", "cart_id2"]'
-							/>
-						</div>
-					</div>
-					<div className="field">
-						<label className="label">Total Price</label>
-						<div className="control">
-							<input
-								type="number"
-								step="0.01"
-								className="input"
-								value={totalPrice}
-								onChange={(e) => setTotalPrice(e.target.value)}
-								placeholder="Total Price"
+								value={idCheckout}
+								onChange={(e) => setIdCheckout(e.target.value)}
+								placeholder="ID Checkout"
 							/>
 						</div>
 					</div>

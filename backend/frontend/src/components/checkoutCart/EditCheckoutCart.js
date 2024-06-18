@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const EditCheckoutCart = () => {
-	const [idCarts, setIdCarts] = useState('');
-	const [totalPrice, setTotalPrice] = useState('');
+	const [idCart, setIdCart] = useState('');
+	const [idCheckout, setIdCheckout] = useState('');
 	const navigate = useNavigate();
 	const { id } = useParams();
 
@@ -15,9 +15,9 @@ const EditCheckoutCart = () => {
 	const updateCheckout = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.patch(`http://localhost:5000/checkout/${id}`, {
-				id_carts: idCarts,
-				total_price: totalPrice,
+			await axios.patch(`http://localhost:5000/checkout_carts/${id}`, {
+				id_cart: idCart,
+				id_checkout: idCheckout,
 			});
 			navigate('/');
 		} catch (error) {
@@ -27,9 +27,11 @@ const EditCheckoutCart = () => {
 
 	const getCheckoutById = async () => {
 		try {
-			const response = await axios.get(`http://localhost:5000/checkout/${id}`);
-			setIdCarts(response.data.id_carts);
-			setTotalPrice(response.data.total_price);
+			const response = await axios.get(
+				`http://localhost:5000/checkout_carts/${id}`
+			);
+			setIdCart(response.data.id_cart);
+			setIdCheckout(response.data.id_checkout);
 		} catch (error) {
 			console.log(error);
 		}
@@ -40,28 +42,26 @@ const EditCheckoutCart = () => {
 			<div className="column is-half">
 				<form onSubmit={updateCheckout}>
 					<div className="field">
-						<label className="label">Carts</label>
+						<label className="label">ID Cart</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
-								value={idCarts}
-								onChange={(e) => setIdCarts(e.target.value)}
-								placeholder="Carts IDs (JSON format)"
+								value={idCart}
+								onChange={(e) => setIdCart(e.target.value)}
+								placeholder="ID Cart"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">Total Price</label>
+						<label className="label">ID Checkout</label>
 						<div className="control">
 							<input
-								type="number"
+								type="text"
 								className="input"
-								value={totalPrice}
-								onChange={(e) => setTotalPrice(e.target.value)}
-								placeholder="Total Price"
-								min="0"
-								step="0.01"
+								value={idCheckout}
+								onChange={(e) => setIdCheckout(e.target.value)}
+								placeholder="ID Checkout"
 							/>
 						</div>
 					</div>

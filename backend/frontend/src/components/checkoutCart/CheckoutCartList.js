@@ -3,21 +3,21 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CheckoutListCart = () => {
-	const [checkouts, setCheckouts] = useState([]);
+	const [checkout_carts, setCheckoutCart] = useState([]);
 
 	useEffect(() => {
-		getCheckouts();
+		getCheckoutCart();
 	}, []);
 
-	const getCheckouts = async () => {
-		const response = await axios.get('http://localhost:5000/checkouts');
-		setCheckouts(response.data);
+	const getCheckoutCart = async () => {
+		const response = await axios.get('http://localhost:5000/checkout_carts');
+		setCheckoutCart(response.data);
 	};
 
-	const deleteCheckout = async (id) => {
+	const deleteCheckoutCart = async (id) => {
 		try {
-			await axios.delete(`http://localhost:5000/checkouts/${id}`);
-			getCheckouts();
+			await axios.delete(`http://localhost:5000/checkout_carts/${id}`);
+			getCheckoutCart();
 		} catch (error) {
 			console.log(error);
 		}
@@ -26,8 +26,8 @@ const CheckoutListCart = () => {
 	return (
 		<div className="columns mt-5">
 			<div className="column is-half">
-				<Link to={`/checkout/add`} className="button is-success">
-					Add New Checkout
+				<Link to={`/checkout-cart/add`} className="button is-success">
+					Add New Checkout Cart
 				</Link>
 
 				<Link to="/" className="button is-success">
@@ -71,32 +71,30 @@ const CheckoutListCart = () => {
 						<tr>
 							<th>No</th>
 							<th>ID</th>
-							<th>ID User</th>
 							<th>ID Carts</th>
-							<th>Total Price</th>
+							<th>ID Checkout</th>
 							<th>CreatedAt</th>
 							<th>UpdatedAt</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
-						{checkouts.map((checkout, index) => (
-							<tr key={checkout.id}>
+						{checkout_carts.map((checkout_cart, index) => (
+							<tr key={checkout_cart.id}>
 								<td>{index + 1}</td>
-								<td>{checkout.id}</td>
-								<td>{checkout.id_user}</td>
-								<td>{checkout.id_carts}</td>
-								<td>{checkout.total_price}</td>
-								<td>{checkout.created_at}</td>
-								<td>{checkout.updated_at}</td>
+								<td>{checkout_cart.id}</td>
+								<td>{checkout_cart.id_cart}</td>
+								<td>{checkout_cart.id_checkout}</td>
+								<td>{checkout_cart.created_at}</td>
+								<td>{checkout_cart.updated_at}</td>
 								<td>
 									<Link
-										to={`/checkout/edit/${checkout.id}`}
+										to={`/checkout-cart/edit/${checkout_cart.id}`}
 										className="button is-small is-info mr-2">
 										Edit
 									</Link>
 									<button
-										onClick={() => deleteCheckout(checkout.id)}
+										onClick={() => deleteCheckoutCart(checkout_cart.id)}
 										className="button is-small is-danger">
 										Delete
 									</button>

@@ -1,8 +1,5 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import Cart from "./Cart.js"; // Pastikan Anda sudah memiliki model Cart
-import Checkout from "./Checkout.js"; // Pastikan Anda sudah memiliki model Checkout
-
 const { DataTypes } = Sequelize;
 
 const CheckoutCart = db.define('checkout_cart', {
@@ -15,7 +12,7 @@ const CheckoutCart = db.define('checkout_cart', {
         type: DataTypes.CHAR(36),
         allowNull: false,
         references: {
-            model: Cart,
+            model: 'cart',
             key: 'id'
         }
     },
@@ -23,7 +20,7 @@ const CheckoutCart = db.define('checkout_cart', {
         type: DataTypes.CHAR(36),
         allowNull: false,
         references: {
-            model: Checkout,
+            model: 'checkout',
             key: 'id'
         }
     },

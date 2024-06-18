@@ -7,6 +7,7 @@ import CategoryProductRoute from './routes/CategoryProductRoute.js';
 import ReviewRoute from './routes/ReviewRoute.js';
 import CartRoute from './routes/CartRoute.js';
 import CheckoutRoute from './routes/CheckoutRoute.js';
+import CheckoutCartRoute from './routes/CheckoutCartRoute.js';
 import BlogRoute from './routes/BlogRoute.js';
 import CategoryBlogRoute from './routes/CategoryBlogRoute.js';
 import CommentBlogRoute from './routes/CommentBlogRoute.js';
@@ -24,5 +25,6 @@ app.use(CheckoutRoute);
 app.use(BlogRoute);
 app.use(CategoryBlogRoute);
 app.use(CommentBlogRoute);
+app.use(CheckoutCartRoute);
 
 app.listen(5000, () => console.log('Server up and running...'));
