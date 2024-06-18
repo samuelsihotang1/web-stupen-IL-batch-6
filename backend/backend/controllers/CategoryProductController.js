@@ -13,9 +13,9 @@ export const getCategoryProducts = async (req, res) => {
 export const getCategoryProductById = async (req, res) => {
     try {
         const response = await CategoryProduct.findOne({
-            where: {
-                id_product: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json(response);
     } catch (error) {
@@ -35,9 +35,9 @@ export const createCategoryProduct = async (req, res) => {
 export const updateCategoryProduct = async (req, res) => {
     try {
         await CategoryProduct.update(req.body, {
-            where: {
-                id_product: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Category Product Updated' });
     } catch (error) {
@@ -48,9 +48,9 @@ export const updateCategoryProduct = async (req, res) => {
 export const deleteCategoryProduct = async (req, res) => {
     try {
         await CategoryProduct.destroy({
-            where: {
-                id_product: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Category Product Deleted' });
     } catch (error) {

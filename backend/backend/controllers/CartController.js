@@ -13,10 +13,9 @@ export const getCarts = async (req, res) => {
 export const getCartById = async (req, res) => {
     try {
         const response = await Cart.findOne({
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json(response);
     } catch (error) {
@@ -36,10 +35,9 @@ export const createCart = async (req, res) => {
 export const updateCart = async (req, res) => {
     try {
         await Cart.update(req.body, {
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Cart Updated' });
     } catch (error) {
@@ -50,10 +48,9 @@ export const updateCart = async (req, res) => {
 export const deleteCart = async (req, res) => {
     try {
         await Cart.destroy({
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Cart Deleted' });
     } catch (error) {

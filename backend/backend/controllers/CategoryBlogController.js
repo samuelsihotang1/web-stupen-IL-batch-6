@@ -13,9 +13,9 @@ export const getCategoryBlogs = async (req, res) => {
 export const getCategoryBlogById = async (req, res) => {
     try {
         const response = await CategoryBlog.findOne({
-            where: {
-                id_blog: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json(response);
     } catch (error) {
@@ -35,9 +35,9 @@ export const createCategoryBlog = async (req, res) => {
 export const updateCategoryBlog = async (req, res) => {
     try {
         await CategoryBlog.update(req.body, {
-            where: {
-                id_blog: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Category Blog Updated' });
     } catch (error) {
@@ -48,9 +48,9 @@ export const updateCategoryBlog = async (req, res) => {
 export const deleteCategoryBlog = async (req, res) => {
     try {
         await CategoryBlog.destroy({
-            where: {
-                id_blog: req.params.id,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Category Blog Deleted' });
     } catch (error) {

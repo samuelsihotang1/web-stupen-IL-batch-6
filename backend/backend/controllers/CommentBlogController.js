@@ -13,10 +13,9 @@ export const getCommentBlogs = async (req, res) => {
 export const getCommentBlogById = async (req, res) => {
     try {
         const response = await CommentBlog.findOne({
-            where: {
-                id_blog: req.params.blogId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json(response);
     } catch (error) {
@@ -36,10 +35,9 @@ export const createCommentBlog = async (req, res) => {
 export const updateCommentBlog = async (req, res) => {
     try {
         await CommentBlog.update(req.body, {
-            where: {
-                id_blog: req.params.blogId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Comment Blog Updated' });
     } catch (error) {
@@ -50,10 +48,9 @@ export const updateCommentBlog = async (req, res) => {
 export const deleteCommentBlog = async (req, res) => {
     try {
         await CommentBlog.destroy({
-            where: {
-                id_blog: req.params.blogId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Comment Blog Deleted' });
     } catch (error) {

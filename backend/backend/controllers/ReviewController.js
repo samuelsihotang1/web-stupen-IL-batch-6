@@ -13,10 +13,9 @@ export const getReviews = async (req, res) => {
 export const getReviewById = async (req, res) => {
     try {
         const response = await Review.findOne({
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json(response);
     } catch (error) {
@@ -36,10 +35,9 @@ export const createReview = async (req, res) => {
 export const updateReview = async (req, res) => {
     try {
         await Review.update(req.body, {
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Review Updated' });
     } catch (error) {
@@ -50,10 +48,9 @@ export const updateReview = async (req, res) => {
 export const deleteReview = async (req, res) => {
     try {
         await Review.destroy({
-            where: {
-                id_product: req.params.productId,
-                id_user: req.params.userId,
-            },
+			where: {
+				id: req.params.id,
+			},
         });
         res.status(200).json({ msg: 'Review Deleted' });
     } catch (error) {
