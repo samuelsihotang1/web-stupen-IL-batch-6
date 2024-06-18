@@ -67,11 +67,19 @@ CREATE TABLE cart (
 CREATE TABLE checkout (
     id CHAR(36) PRIMARY KEY,
     id_user CHAR(36),
-    id_carts JSON,
-    total_price DECIMAL(10, 2) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE checkout_cart (
+    id CHAR(36) PRIMARY KEY,
+    id_cart CHAR(36),
+    id_checkout CHAR(36),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_cart) REFERENCES cart(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_checkout) REFERENCES checkout(id) ON DELETE CASCADE
 );
 
 CREATE TABLE blog (
@@ -103,9 +111,6 @@ CREATE TABLE comment_blog (
     FOREIGN KEY (id_blog) REFERENCES blog(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
-
-
-
 
 -- Dummy data
 -- Insert dummy data for users
@@ -152,17 +157,25 @@ INSERT INTO reviews (id, id_product, id_user, rate, description, created_at, upd
 INSERT INTO cart (id, id_product, id_user, quantity, created_at, updated_at) VALUES
 (UUID(), (SELECT id FROM products WHERE sku = 'SKU001'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (UUID(), (SELECT id FROM products WHERE sku = 'SKU002'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 4, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
 (UUID(), (SELECT id FROM products WHERE sku = 'SKU004'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for checkout
-INSERT INTO checkout (id, id_user, id_carts, total_price, created_at, updated_at) VALUES
-(UUID(), (SELECT id FROM users WHERE email = 'john.doe@example.com'), JSON_ARRAY((SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU001') AND id_user = (SELECT id FROM users WHERE email = 'john.doe@example.com'))), 10.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), JSON_ARRAY((SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU002') AND id_user = (SELECT id FROM users WHERE email = 'jane.smith@example.com'))), 40.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), JSON_ARRAY((SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU003') AND id_user = (SELECT id FROM users WHERE email = 'alice.jones@example.com'))), 30.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), JSON_ARRAY((SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU004') AND id_user = (SELECT id FROM users WHERE email = 'bob.brown@example.com'))), 120.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-(UUID(), (SELECT id FROM users WHERE email = 'carol.white@example.com'), JSON_ARRAY((SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU005') AND id_user = (SELECT id FROM users WHERE email = 'carol.white@example.com'))), 50.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO checkout (id, id_user, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM users WHERE email = 'john.doe@example.com'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM users WHERE email = 'carol.white@example.com'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- Insert dummy data for checkout_cart
+INSERT INTO checkout_cart (id, id_cart, id_checkout, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU001') AND id_user = (SELECT id FROM users WHERE email = 'john.doe@example.com')), (SELECT id FROM checkout WHERE id_user = (SELECT id FROM users WHERE email = 'john.doe@example.com')), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU002') AND id_user = (SELECT id FROM users WHERE email = 'jane.smith@example.com')), (SELECT id FROM checkout WHERE id_user = (SELECT id FROM users WHERE email = 'jane.smith@example.com')), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU003') AND id_user = (SELECT id FROM users WHERE email = 'alice.jones@example.com')), (SELECT id FROM checkout WHERE id_user = (SELECT id FROM users WHERE email = 'alice.jones@example.com')), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU004') AND id_user = (SELECT id FROM users WHERE email = 'bob.brown@example.com')), (SELECT id FROM checkout WHERE id_user = (SELECT id FROM users WHERE email = 'bob.brown@example.com')), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM cart WHERE id_product = (SELECT id FROM products WHERE sku = 'SKU005') AND id_user = (SELECT id FROM users WHERE email = 'carol.white@example.com')), (SELECT id FROM checkout WHERE id_user = (SELECT id FROM users WHERE email = 'carol.white@example.com')), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for blog
 INSERT INTO blog (id, title, slug, description, image, created_at, updated_at) VALUES
