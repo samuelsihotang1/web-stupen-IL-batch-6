@@ -64,6 +64,7 @@ const ReviewList = () => {
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>ID</th>
                             <th>ID Product</th>
                             <th>ID User</th>
                             <th>Rate</th>
@@ -75,8 +76,9 @@ const ReviewList = () => {
                     </thead>
                     <tbody>
                         {reviews.map((review, index) => (
-                            <tr key={`${review.id_product}-${review.id_user}`}>
+                            <tr key={`${review.id}`}>
                                 <td>{index + 1}</td>
+                                <td>{review.id}</td>
                                 <td>{review.id_product}</td>
                                 <td>{review.id_user}</td>
                                 <td>{review.rate}</td>
@@ -85,12 +87,12 @@ const ReviewList = () => {
                                 <td>{review.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/review/edit/${review.id_product}/${review.id_user}`}
+                                        to={`/review/edit/${review.id}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteReview(`${review.id_product}-${review.id_user}`)}
+                                        onClick={() => deleteReview(`${review.id}`)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>

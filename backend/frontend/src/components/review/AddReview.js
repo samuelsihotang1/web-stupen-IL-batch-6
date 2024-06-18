@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddReview = () => {
 	const [idProduct, setIdProduct] = useState('');
@@ -8,11 +9,13 @@ const AddReview = () => {
 	const [rate, setRate] = useState(1);
 	const [description, setDescription] = useState('');
 	const navigate = useNavigate();
+	const [id, setId] = useState(uuidv4());
 
 	const saveReview = async (e) => {
 		e.preventDefault();
 		try {
 			await axios.post('http://localhost:5000/reviews', {
+                id,
 				id_product: idProduct,
 				id_user: idUser,
 				rate,

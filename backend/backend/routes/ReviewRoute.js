@@ -10,9 +10,9 @@ import {
 const router = express.Router();
 
 router.get('/reviews', getReviews);
-router.get('/reviews/:productId/:userId', getReviewById); // Assuming composite key route
+router.get('/reviews/:id', getReviewById);
 router.post('/reviews', createReview);
-router.patch('/reviews/:productId/:userId', updateReview); // Assuming composite key route
-router.delete('/reviews/:productId/:userId', deleteReview); // Assuming composite key route
+router.patch('/reviews/:id', updateReview);
+router.delete('/reviews/:id', deleteReview);
 
 export default router;
