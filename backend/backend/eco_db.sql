@@ -49,7 +49,6 @@ CREATE TABLE reviews (
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (id_product, id_user),
     FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -61,7 +60,6 @@ CREATE TABLE cart (
     quantity INT DEFAULT 1 NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (id_product, id_user),
     FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -102,11 +100,9 @@ CREATE TABLE comment_blog (
     description TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (id_blog, id_user),
     FOREIGN KEY (id_blog) REFERENCES blog(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
-
 
 
 
@@ -137,28 +133,28 @@ INSERT INTO image_product (id, id_product, image, created_at, updated_at) VALUES
 (UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), 'image5.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for category_product
-INSERT INTO category_product (id_product, category, created_at, updated_at) VALUES
-((SELECT id FROM products WHERE sku = 'SKU001'), 'Category 1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU002'), 'Category 2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU003'), 'Category 1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU004'), 'Category 3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU005'), 'Category 2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO category_product (id, id_product, category, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU001'), 'Category 1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU002'), 'Category 2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), 'Category 1', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU004'), 'Category 3', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), 'Category 2', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for reviews
-INSERT INTO reviews (id_product, id_user, rate, description, created_at, updated_at) VALUES
-((SELECT id FROM products WHERE sku = 'SKU001'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 5, 'Excellent product!', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU002'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 4, 'Very good product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 3, 'Average product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU004'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 2, 'Not great.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 1, 'Terrible product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO reviews (id, id_product, id_user, rate, description, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU001'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 5, 'Excellent product!', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU002'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 4, 'Very good product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 3, 'Average product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU004'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 2, 'Not great.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 1, 'Terrible product.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for cart
-INSERT INTO cart (id_product, id_user, quantity, created_at, updated_at) VALUES
-((SELECT id FROM products WHERE sku = 'SKU001'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU002'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU004'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO cart (id, id_product, id_user, quantity, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU001'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU002'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU003'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU004'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM products WHERE sku = 'SKU005'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for checkout
 INSERT INTO checkout (id, id_user, id_carts, total_price, created_at, updated_at) VALUES
@@ -177,17 +173,17 @@ INSERT INTO blog (id, title, slug, description, image, created_at, updated_at) V
 (UUID(), 'Blog Post 5', 'blog-post-5', 'Description for blog post 5', 'blog5.jpg', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for category_blog
-INSERT INTO category_blog (id_blog, category, created_at, updated_at) VALUES
-((SELECT id FROM blog WHERE slug = 'blog-post-1'), 'Category A', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-2'), 'Category B', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-3'), 'Category A', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-4'), 'Category C', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-5'), 'Category B', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO category_blog (id, id_blog, category, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-1'), 'Category A', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-2'), 'Category B', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-3'), 'Category A', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-4'), 'Category C', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-5'), 'Category B', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert dummy data for comment_blog
-INSERT INTO comment_blog (id_blog, id_user, description, created_at, updated_at) VALUES
-((SELECT id FROM blog WHERE slug = 'blog-post-1'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 'Great post!', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-2'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 'Very informative.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-3'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 'Interesting read.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-4'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 'Good article.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-((SELECT id FROM blog WHERE slug = 'blog-post-5'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 'Nice write-up.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO comment_blog (id, id_blog, id_user, description, created_at, updated_at) VALUES
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-1'), (SELECT id FROM users WHERE email = 'john.doe@example.com'), 'Great post!', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-2'), (SELECT id FROM users WHERE email = 'jane.smith@example.com'), 'Very informative.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-3'), (SELECT id FROM users WHERE email = 'alice.jones@example.com'), 'Interesting read.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-4'), (SELECT id FROM users WHERE email = 'bob.brown@example.com'), 'Good article.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+(UUID(), (SELECT id FROM blog WHERE slug = 'blog-post-5'), (SELECT id FROM users WHERE email = 'carol.white@example.com'), 'Nice write-up.', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
