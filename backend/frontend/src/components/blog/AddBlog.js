@@ -14,7 +14,7 @@ const AddBlog = () => {
 	const saveBlog = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/blog', {
+			await axios.post('http://localhost:5000/blogs', {
 				id,
 				title,
 				slug,

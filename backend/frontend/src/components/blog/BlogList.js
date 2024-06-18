@@ -10,13 +10,13 @@ const BlogList = () => {
 	}, []);
 
 	const getBlogs = async () => {
-		const response = await axios.get('http://localhost:5000/blog');
+		const response = await axios.get('http://localhost:5000/blogs');
 		setBlogs(response.data);
 	};
 
 	const deleteBlog = async (id) => {
 		try {
-			await axios.delete(`http://localhost:5000/blog/${id}`);
+			await axios.delete(`http://localhost:5000/blogs/${id}`);
 			getBlogs();
 		} catch (error) {
 			console.log(error);

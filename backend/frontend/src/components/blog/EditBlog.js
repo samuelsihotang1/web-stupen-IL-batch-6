@@ -17,7 +17,7 @@ const EditBlog = () => {
 	const updateBlog = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.patch(`http://localhost:5000/blog/${id}`, {
+			await axios.patch(`http://localhost:5000/blogs/${id}`, {
 				title,
 				slug,
 				description,
@@ -31,7 +31,7 @@ const EditBlog = () => {
 
 	const getBlogById = async () => {
 		try {
-			const response = await axios.get(`http://localhost:5000/blog/${id}`);
+			const response = await axios.get(`http://localhost:5000/blogs/${id}`);
 			setTitle(response.data.title);
 			setSlug(response.data.slug);
 			setDescription(response.data.description);
