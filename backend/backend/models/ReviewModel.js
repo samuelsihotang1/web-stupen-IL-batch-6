@@ -3,6 +3,11 @@ import db from '../config/Database.js';
 const { DataTypes } = Sequelize;
 
 const Review = db.define('reviews', {
+    id: {
+        type: DataTypes.CHAR(36),
+        primaryKey: true,
+        allowNull: false
+    },
     id_product: {
         type: DataTypes.CHAR(36),
         allowNull: false,

@@ -33,6 +33,7 @@ CREATE TABLE image_product (
 );
 
 CREATE TABLE category_product (
+    id CHAR(36) PRIMARY KEY,
     id_product CHAR(36),
     category VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -41,6 +42,7 @@ CREATE TABLE category_product (
 );
 
 CREATE TABLE reviews (
+    id CHAR(36) PRIMARY KEY,
     id_product CHAR(36),
     id_user CHAR(36),
     rate INT NOT NULL CHECK (rate IN (1, 2, 3, 4, 5)),
@@ -53,6 +55,7 @@ CREATE TABLE reviews (
 );
 
 CREATE TABLE cart (
+    id CHAR(36) PRIMARY KEY,
     id_product CHAR(36),
     id_user CHAR(36),
     quantity INT DEFAULT 1 NOT NULL,
@@ -84,6 +87,7 @@ CREATE TABLE blog (
 );
 
 CREATE TABLE category_blog (
+    id CHAR(36) PRIMARY KEY,
     id_blog CHAR(36),
     category VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -92,6 +96,7 @@ CREATE TABLE category_blog (
 );
 
 CREATE TABLE comment_blog (
+    id CHAR(36) PRIMARY KEY,
     id_blog CHAR(36),
     id_user CHAR(36),
     description TEXT NOT NULL,

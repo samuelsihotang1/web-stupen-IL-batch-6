@@ -3,6 +3,11 @@ import db from '../config/Database.js';
 const { DataTypes } = Sequelize;
 
 const CommentBlog = db.define('comment_blog', {
+    id: {
+        type: DataTypes.CHAR(36),
+        primaryKey: true,
+        allowNull: false
+    },
     id_blog: {
         type: DataTypes.CHAR(36),
         allowNull: false,

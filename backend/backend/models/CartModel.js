@@ -3,6 +3,11 @@ import db from '../config/Database.js';
 const { DataTypes } = Sequelize;
 
 const Cart = db.define('cart', {
+    id: {
+        type: DataTypes.CHAR(36),
+        primaryKey: true,
+        allowNull: false
+    },
     id_product: {
         type: DataTypes.CHAR(36),
         allowNull: false,
