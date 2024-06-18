@@ -3,35 +3,38 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogList = () => {
-    const [blogs, setBlogs] = useState([]);
+	const [blogs, setBlogs] = useState([]);
 
-    useEffect(() => {
-        getBlogs();
-    }, []);
+	useEffect(() => {
+		getBlogs();
+	}, []);
 
-    const getBlogs = async () => {
-        const response = await axios.get('http://localhost:5000/blog');
-        setBlogs(response.data);
-    };
+	const getBlogs = async () => {
+		const response = await axios.get('http://localhost:5000/blog');
+		setBlogs(response.data);
+	};
 
-    const deleteBlog = async (id) => {
-        try {
-            await axios.delete(`http://localhost:5000/blog/${id}`);
-            getBlogs();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+	const deleteBlog = async (id) => {
+		try {
+			await axios.delete(`http://localhost:5000/blog/${id}`);
+			getBlogs();
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    return (
-        <div className="columns mt-5">
-            <div className="column is-half">
-                <Link to={`/blog/add`} className="button is-success">
-                    Add New Blog
-                </Link>
-                
+	return (
+		<div className="columns mt-5">
+			<div className="column is-half">
+				<Link to={`/blog/add`} className="button is-success">
+					Add New Blog
+				</Link>
+
 				<Link to="/" className="button is-success">
 					Home
+				</Link>
+				<Link to="/checkout-cart" className="button is-success">
+					Checkout Cart
 				</Link>
 				<Link to="/user" className="button is-success">
 					User
@@ -60,50 +63,50 @@ const BlogList = () => {
 				<Link to="/comment-blog" className="button is-success">
 					Comment Blog
 				</Link>
-                <table className="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Slug</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                            <th>CreatedAt</th>
-                            <th>UpdatedAt</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {blogs.map((blog, index) => (
-                            <tr key={blog.id}>
-                                <td>{index + 1}</td>
-                                <td>{blog.id}</td>
-                                <td>{blog.title}</td>
-                                <td>{blog.slug}</td>
-                                <td>{blog.description}</td>
-                                <td>{blog.image}</td>
-                                <td>{blog.created_at}</td>
-                                <td>{blog.updated_at}</td>
-                                <td>
-                                    <Link
-                                        to={`/blog/edit/${blog.id}`}
-                                        className="button is-small is-info mr-2">
-                                        Edit
-                                    </Link>
-                                    <button
-                                        onClick={() => deleteBlog(blog.id)}
-                                        className="button is-small is-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+				<table className="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>ID</th>
+							<th>Title</th>
+							<th>Slug</th>
+							<th>Description</th>
+							<th>Image</th>
+							<th>CreatedAt</th>
+							<th>UpdatedAt</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{blogs.map((blog, index) => (
+							<tr key={blog.id}>
+								<td>{index + 1}</td>
+								<td>{blog.id}</td>
+								<td>{blog.title}</td>
+								<td>{blog.slug}</td>
+								<td>{blog.description}</td>
+								<td>{blog.image}</td>
+								<td>{blog.created_at}</td>
+								<td>{blog.updated_at}</td>
+								<td>
+									<Link
+										to={`/blog/edit/${blog.id}`}
+										className="button is-small is-info mr-2">
+										Edit
+									</Link>
+									<button
+										onClick={() => deleteBlog(blog.id)}
+										className="button is-small is-danger">
+										Delete
+									</button>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default BlogList;

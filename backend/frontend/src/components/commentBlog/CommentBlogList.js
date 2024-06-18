@@ -3,35 +3,38 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CommentBlogList = () => {
-    const [comments, setComments] = useState([]);
+	const [comments, setComments] = useState([]);
 
-    useEffect(() => {
-        getComments();
-    }, []);
+	useEffect(() => {
+		getComments();
+	}, []);
 
-    const getComments = async () => {
-        const response = await axios.get('http://localhost:5000/comment_blog');
-        setComments(response.data);
-    };
+	const getComments = async () => {
+		const response = await axios.get('http://localhost:5000/comment_blog');
+		setComments(response.data);
+	};
 
-    const deleteComment = async (id) => {
-        try {
-            await axios.delete(`http://localhost:5000/comment_blog/${id}`);
-            getComments();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+	const deleteComment = async (id) => {
+		try {
+			await axios.delete(`http://localhost:5000/comment_blog/${id}`);
+			getComments();
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    return (
-        <div className="columns mt-5">
-            <div className="column is-half">
-                <Link to={`/comment/add`} className="button is-success">
-                    Add New Comment
-                </Link>
-                
+	return (
+		<div className="columns mt-5">
+			<div className="column is-half">
+				<Link to={`/comment/add`} className="button is-success">
+					Add New Comment
+				</Link>
+
 				<Link to="/" className="button is-success">
 					Home
+				</Link>
+				<Link to="/checkout-cart" className="button is-success">
+					Checkout Cart
 				</Link>
 				<Link to="/user" className="button is-success">
 					User
@@ -60,46 +63,50 @@ const CommentBlogList = () => {
 				<Link to="/category-blog" className="button is-success">
 					Category Blog
 				</Link>
-                <table className="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>ID Blog</th>
-                            <th>ID User</th>
-                            <th>Description</th>
-                            <th>CreatedAt</th>
-                            <th>UpdatedAt</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {comments.map((comment, index) => (
-                            <tr key={`${comment.id_blog}-${comment.id_user}`}>
-                                <td>{index + 1}</td>
-                                <td>{comment.id_blog}</td>
-                                <td>{comment.id_user}</td>
-                                <td>{comment.description}</td>
-                                <td>{comment.created_at}</td>
-                                <td>{comment.updated_at}</td>
-                                <td>
-                                    <Link
-                                        to={`/comment/edit/${comment.id_blog}/${comment.id_user}`}
-                                        className="button is-small is-info mr-2">
-                                        Edit
-                                    </Link>
-                                    <button
-                                        onClick={() => deleteComment(`${comment.id_blog}-${comment.id_user}`)}
-                                        className="button is-small is-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+				<table className="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>ID Blog</th>
+							<th>ID User</th>
+							<th>Description</th>
+							<th>CreatedAt</th>
+							<th>UpdatedAt</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{comments.map((comment, index) => (
+							<tr key={`${comment.id_blog}-${comment.id_user}`}>
+								<td>{index + 1}</td>
+								<td>{comment.id_blog}</td>
+								<td>{comment.id_user}</td>
+								<td>{comment.description}</td>
+								<td>{comment.created_at}</td>
+								<td>{comment.updated_at}</td>
+								<td>
+									<Link
+										to={`/comment/edit/${comment.id_blog}/${comment.id_user}`}
+										className="button is-small is-info mr-2">
+										Edit
+									</Link>
+									<button
+										onClick={() =>
+											deleteComment(
+												`${comment.id_blog}-${comment.id_user}`
+											)
+										}
+										className="button is-small is-danger">
+										Delete
+									</button>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default CommentBlogList;

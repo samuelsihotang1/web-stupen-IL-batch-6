@@ -3,35 +3,38 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CartList = () => {
-    const [carts, setCarts] = useState([]);
+	const [carts, setCarts] = useState([]);
 
-    useEffect(() => {
-        getCarts();
-    }, []);
+	useEffect(() => {
+		getCarts();
+	}, []);
 
-    const getCarts = async () => {
-        const response = await axios.get('http://localhost:5000/carts');
-        setCarts(response.data);
-    };
+	const getCarts = async () => {
+		const response = await axios.get('http://localhost:5000/carts');
+		setCarts(response.data);
+	};
 
-    const deleteCart = async (id) => {
-        try {
-            await axios.delete(`http://localhost:5000/carts/${id}`);
-            getCarts();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+	const deleteCart = async (id) => {
+		try {
+			await axios.delete(`http://localhost:5000/carts/${id}`);
+			getCarts();
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    return (
-        <div className="columns mt-5">
-            <div className="column is-half">
-                <Link to={`/cart/add`} className="button is-success">
-                    Add New Cart
-                </Link>
-                
+	return (
+		<div className="columns mt-5">
+			<div className="column is-half">
+				<Link to={`/cart/add`} className="button is-success">
+					Add New Cart
+				</Link>
+
 				<Link to="/" className="button is-success">
 					Home
+				</Link>
+				<Link to="/checkout-cart" className="button is-success">
+					Checkout Cart
 				</Link>
 				<Link to="/user" className="button is-success">
 					User
@@ -60,46 +63,46 @@ const CartList = () => {
 				<Link to="/comment-blog" className="button is-success">
 					Comment Blog
 				</Link>
-                <table className="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>ID Product</th>
-                            <th>ID User</th>
-                            <th>Quantity</th>
-                            <th>CreatedAt</th>
-                            <th>UpdatedAt</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {carts.map((cart, index) => (
-                            <tr key={`${cart.id}`}>
-                                <td>{index + 1}</td>
-                                <td>{cart.id_product}</td>
-                                <td>{cart.id_user}</td>
-                                <td>{cart.quantity}</td>
-                                <td>{cart.created_at}</td>
-                                <td>{cart.updated_at}</td>
-                                <td>
-                                    <Link
-                                        to={`/cart/edit/${cart.id}`}
-                                        className="button is-small is-info mr-2">
-                                        Edit
-                                    </Link>
-                                    <button
-                                        onClick={() => deleteCart(`${cart.id}`)}
-                                        className="button is-small is-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+				<table className="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>ID Product</th>
+							<th>ID User</th>
+							<th>Quantity</th>
+							<th>CreatedAt</th>
+							<th>UpdatedAt</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{carts.map((cart, index) => (
+							<tr key={`${cart.id}`}>
+								<td>{index + 1}</td>
+								<td>{cart.id_product}</td>
+								<td>{cart.id_user}</td>
+								<td>{cart.quantity}</td>
+								<td>{cart.created_at}</td>
+								<td>{cart.updated_at}</td>
+								<td>
+									<Link
+										to={`/cart/edit/${cart.id}`}
+										className="button is-small is-info mr-2">
+										Edit
+									</Link>
+									<button
+										onClick={() => deleteCart(`${cart.id}`)}
+										className="button is-small is-danger">
+										Delete
+									</button>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default CartList;

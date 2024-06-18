@@ -30,6 +30,9 @@ import ReviewList from './components/review/ReviewList';
 import AddUser from './components/user/AddUser';
 import EditUser from './components/user/EditUser';
 import UserList from './components/user/UserList';
+import AddCheckoutCart from './components/checkoutCart/AddCheckoutCart';
+import CheckoutCartList from './components/checkoutCart/CheckoutCartList';
+import EditCheckoutCart from './components/checkoutCart/EditCheckoutCart';
 
 function App() {
 	return (
@@ -89,6 +92,11 @@ function App() {
 				<Route path="/comment-blog" element={<CommentBlogList />} />
 				<Route path="/comment-blog/add" element={<AddCommentBlog />} />
 				<Route path="/comment-blog/edit/:id" element={<EditCommentBlog />} />
+
+				{/* CheckoutCart routes */}
+				<Route path="/checkout-cart" element={<CheckoutCartList />} />
+				<Route path="/checkout-cart/add" element={<AddCheckoutCart />} />
+				<Route path="/checkout-cart/edit/:id" element={<EditCheckoutCart />} />
 			</Routes>
 		</BrowserRouter>
 	);

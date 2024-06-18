@@ -16,14 +16,6 @@ const Checkout = db.define('checkout', {
             key: 'id'
         }
     },
-    id_carts: {
-        type: DataTypes.JSON,
-        allowNull: true
-    },
-    total_price: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false
-    },
     created_at: {
         type: DataTypes.DATE,
         defaultValue: Sequelize.NOW

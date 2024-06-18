@@ -29,9 +29,12 @@ const ProductList = () => {
 				<Link to={`/product/add`} className="button is-success">
 					Add New Product
 				</Link>
-                
+
 				<Link to="/" className="button is-success">
 					Home
+				</Link>
+				<Link to="/checkout-cart" className="button is-success">
+					Checkout Cart
 				</Link>
 				<Link to="/user" className="button is-success">
 					User

@@ -3,35 +3,38 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ReviewList = () => {
-    const [reviews, setReviews] = useState([]);
+	const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
-        getReviews();
-    }, []);
+	useEffect(() => {
+		getReviews();
+	}, []);
 
-    const getReviews = async () => {
-        const response = await axios.get('http://localhost:5000/reviews');
-        setReviews(response.data);
-    };
+	const getReviews = async () => {
+		const response = await axios.get('http://localhost:5000/reviews');
+		setReviews(response.data);
+	};
 
-    const deleteReview = async (id) => {
-        try {
-            await axios.delete(`http://localhost:5000/reviews/${id}`);
-            getReviews();
-        } catch (error) {
-            console.log(error);
-        }
-    };
+	const deleteReview = async (id) => {
+		try {
+			await axios.delete(`http://localhost:5000/reviews/${id}`);
+			getReviews();
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    return (
-        <div className="columns mt-5">
-            <div className="column is-half">
-                <Link to={`/review/add`} className="button is-success">
-                    Add New Review
-                </Link>
-                
+	return (
+		<div className="columns mt-5">
+			<div className="column is-half">
+				<Link to={`/review/add`} className="button is-success">
+					Add New Review
+				</Link>
+
 				<Link to="/" className="button is-success">
 					Home
+				</Link>
+				<Link to="/checkout-cart" className="button is-success">
+					Checkout Cart
 				</Link>
 				<Link to="/user" className="button is-success">
 					User
@@ -60,50 +63,50 @@ const ReviewList = () => {
 				<Link to="/comment-blog" className="button is-success">
 					Comment Blog
 				</Link>
-                <table className="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>ID</th>
-                            <th>ID Product</th>
-                            <th>ID User</th>
-                            <th>Rate</th>
-                            <th>Description</th>
-                            <th>CreatedAt</th>
-                            <th>UpdatedAt</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {reviews.map((review, index) => (
-                            <tr key={`${review.id}`}>
-                                <td>{index + 1}</td>
-                                <td>{review.id}</td>
-                                <td>{review.id_product}</td>
-                                <td>{review.id_user}</td>
-                                <td>{review.rate}</td>
-                                <td>{review.description}</td>
-                                <td>{review.created_at}</td>
-                                <td>{review.updated_at}</td>
-                                <td>
-                                    <Link
-                                        to={`/review/edit/${review.id}`}
-                                        className="button is-small is-info mr-2">
-                                        Edit
-                                    </Link>
-                                    <button
-                                        onClick={() => deleteReview(`${review.id}`)}
-                                        className="button is-small is-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    );
+				<table className="table is-striped is-fullwidth">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>ID</th>
+							<th>ID Product</th>
+							<th>ID User</th>
+							<th>Rate</th>
+							<th>Description</th>
+							<th>CreatedAt</th>
+							<th>UpdatedAt</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						{reviews.map((review, index) => (
+							<tr key={`${review.id}`}>
+								<td>{index + 1}</td>
+								<td>{review.id}</td>
+								<td>{review.id_product}</td>
+								<td>{review.id_user}</td>
+								<td>{review.rate}</td>
+								<td>{review.description}</td>
+								<td>{review.created_at}</td>
+								<td>{review.updated_at}</td>
+								<td>
+									<Link
+										to={`/review/edit/${review.id}`}
+										className="button is-small is-info mr-2">
+										Edit
+									</Link>
+									<button
+										onClick={() => deleteReview(`${review.id}`)}
+										className="button is-small is-danger">
+										Delete
+									</button>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default ReviewList;
