@@ -10,13 +10,13 @@ const CategoryProductList = () => {
     }, []);
 
     const getCategories = async () => {
-        const response = await axios.get('http://localhost:5000/category_product');
+        const response = await axios.get('http://localhost:5000/category-products');
         setCategories(response.data);
     };
 
     const deleteCategory = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/category_product/${id}`);
+            await axios.delete(`http://localhost:5000/category-products/${id}`);
             getCategories();
         } catch (error) {
             console.log(error);
@@ -26,7 +26,7 @@ const CategoryProductList = () => {
     return (
         <div className="columns mt-5">
             <div className="column is-half">
-                <Link to={`/category/add`} className="button is-success">
+                <Link to={`/category-product/add`} className="button is-success">
                     Add New Category
                 </Link>
                 
@@ -64,6 +64,7 @@ const CategoryProductList = () => {
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>ID</th>
                             <th>ID Product</th>
                             <th>Category</th>
                             <th>CreatedAt</th>
@@ -73,20 +74,21 @@ const CategoryProductList = () => {
                     </thead>
                     <tbody>
                         {categories.map((category, index) => (
-                            <tr key={category.id_product}>
+                            <tr key={category.id_}>
                                 <td>{index + 1}</td>
+                                <td>{category.id}</td>
                                 <td>{category.id_product}</td>
                                 <td>{category.category}</td>
                                 <td>{category.created_at}</td>
                                 <td>{category.updated_at}</td>
                                 <td>
                                     <Link
-                                        to={`/category/edit/${category.id_product}`}
+                                        to={`/category-product/edit/${category.id}`}
                                         className="button is-small is-info mr-2">
                                         Edit
                                     </Link>
                                     <button
-                                        onClick={() => deleteCategory(category.id_product)}
+                                        onClick={() => deleteCategory(category.id)}
                                         className="button is-small is-danger">
                                         Delete
                                     </button>

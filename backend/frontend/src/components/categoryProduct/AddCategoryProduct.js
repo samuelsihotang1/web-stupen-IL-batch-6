@@ -1,16 +1,19 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddCategoryProduct = () => {
 	const [idProduct, setIdProduct] = useState('');
 	const [category, setCategory] = useState('');
+	const [id, setId] = useState(uuidv4());
 	const navigate = useNavigate();
 
 	const saveCategoryProduct = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/category_product', {
+			await axios.post('http://localhost:5000/category-products', {
+                id: id,
 				id_product: idProduct,
 				category,
 			});
