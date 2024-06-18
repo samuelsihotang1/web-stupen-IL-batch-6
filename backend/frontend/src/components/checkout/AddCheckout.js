@@ -6,18 +6,16 @@ import { v4 as uuidv4 } from 'uuid';
 const AddCheckout = () => {
 	const [id, setId] = useState(uuidv4());
 	const [idUser, setIdUser] = useState('');
-	const [idCarts, setIdCarts] = useState('');
-	const [totalPrice, setTotalPrice] = useState('');
+	const [paymentStatus, setPaymentStatus] = useState('unpaid');
 	const navigate = useNavigate();
 
 	const saveCheckout = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post('http://localhost:5000/checkout', {
+			await axios.post('http://localhost:5000/checkouts', {
 				id,
 				id_user: idUser,
-				id_carts: JSON.parse(idCarts),
-				total_price: totalPrice,
+				payment_status: paymentStatus,
 			});
 			navigate('/');
 		} catch (error) {
@@ -42,28 +40,15 @@ const AddCheckout = () => {
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">Cart IDs (JSON)</label>
+						<label className="label">Payment Status</label>
 						<div className="control">
-							<input
-								type="text"
+							<select
 								className="input"
-								value={idCarts}
-								onChange={(e) => setIdCarts(e.target.value)}
-								placeholder='["cart_id1", "cart_id2"]'
-							/>
-						</div>
-					</div>
-					<div className="field">
-						<label className="label">Total Price</label>
-						<div className="control">
-							<input
-								type="number"
-								step="0.01"
-								className="input"
-								value={totalPrice}
-								onChange={(e) => setTotalPrice(e.target.value)}
-								placeholder="Total Price"
-							/>
+								value={paymentStatus}
+								onChange={(e) => setPaymentStatus(e.target.value)}>
+								<option value="unpaid" selected>Unpaid</option>
+								<option value="paid">Paid</option>
+							</select>
 						</div>
 					</div>
 					<div className="field">

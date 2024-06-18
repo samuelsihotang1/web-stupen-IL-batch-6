@@ -72,6 +72,7 @@ const CheckoutList = () => {
 							<th>No</th>
 							<th>ID</th>
 							<th>ID User</th>
+							<th>Payment Status</th>
 							<th>CreatedAt</th>
 							<th>UpdatedAt</th>
 							<th>Actions</th>
@@ -83,6 +84,7 @@ const CheckoutList = () => {
 								<td>{index + 1}</td>
 								<td>{checkout.id}</td>
 								<td>{checkout.id_user}</td>
+								<td>{checkout.payment_status}</td>
 								<td>{checkout.created_at}</td>
 								<td>{checkout.updated_at}</td>
 								<td>

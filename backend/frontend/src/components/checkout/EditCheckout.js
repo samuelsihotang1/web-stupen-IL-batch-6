@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const EditCheckout = () => {
-	const [idCarts, setIdCarts] = useState('');
-	const [totalPrice, setTotalPrice] = useState('');
+	const [idUser, setIdUser] = useState('');
+	const [paymentStatus, setPaymentStatus] = useState('');
 	const navigate = useNavigate();
 	const { id } = useParams();
 
@@ -15,9 +15,9 @@ const EditCheckout = () => {
 	const updateCheckout = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.patch(`http://localhost:5000/checkout/${id}`, {
-				id_carts: idCarts,
-				total_price: totalPrice,
+			await axios.patch(`http://localhost:5000/checkouts/${id}`, {
+				id_user: idUser,
+				payment_status: paymentStatus,
 			});
 			navigate('/');
 		} catch (error) {
@@ -27,9 +27,9 @@ const EditCheckout = () => {
 
 	const getCheckoutById = async () => {
 		try {
-			const response = await axios.get(`http://localhost:5000/checkout/${id}`);
-			setIdCarts(response.data.id_carts);
-			setTotalPrice(response.data.total_price);
+			const response = await axios.get(`http://localhost:5000/checkouts/${id}`);
+			setIdUser(response.data.id_user);
+			setPaymentStatus(response.data.payment_status);
 		} catch (error) {
 			console.log(error);
 		}
@@ -40,29 +40,29 @@ const EditCheckout = () => {
 			<div className="column is-half">
 				<form onSubmit={updateCheckout}>
 					<div className="field">
-						<label className="label">Carts</label>
+						<label className="label">User ID</label>
 						<div className="control">
 							<input
 								type="text"
 								className="input"
-								value={idCarts}
-								onChange={(e) => setIdCarts(e.target.value)}
-								placeholder="Carts IDs (JSON format)"
+								value={idUser}
+								onChange={(e) => setIdUser(e.target.value)}
+								placeholder="User ID"
 							/>
 						</div>
 					</div>
 					<div className="field">
-						<label className="label">Total Price</label>
+						<label className="label">Payment Status</label>
 						<div className="control">
-							<input
-								type="number"
+							<select
 								className="input"
-								value={totalPrice}
-								onChange={(e) => setTotalPrice(e.target.value)}
-								placeholder="Total Price"
-								min="0"
-								step="0.01"
-							/>
+								value={paymentStatus}
+								onChange={(e) => setPaymentStatus(e.target.value)}>
+								<option value="unpaid" selected>
+									Unpaid
+								</option>
+								<option value="paid">Paid</option>
+							</select>
 						</div>
 					</div>
 					<div className="field">

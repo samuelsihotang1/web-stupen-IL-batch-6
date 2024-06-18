@@ -67,6 +67,7 @@ CREATE TABLE cart (
 CREATE TABLE checkout (
     id CHAR(36) PRIMARY KEY,
     id_user CHAR(36),
+    payment_status ENUM('paid', 'unpaid') DEFAULT 'unpaid',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE

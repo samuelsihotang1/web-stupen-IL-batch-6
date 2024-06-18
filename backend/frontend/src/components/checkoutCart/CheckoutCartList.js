@@ -33,8 +33,8 @@ const CheckoutListCart = () => {
 				<Link to="/" className="button is-success">
 					Home
 				</Link>
-				<Link to="/checkout-cart" className="button is-success">
-					Checkout Cart
+				<Link to="/checkout" className="button is-success">
+					Checkout
 				</Link>
 				<Link to="/user" className="button is-success">
 					User
