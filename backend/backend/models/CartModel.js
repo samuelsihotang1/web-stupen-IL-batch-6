@@ -31,16 +31,17 @@ const Cart = db.define('cart', {
     },
     created_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+        defaultValue: Sequelize.NOW
     },
     updated_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
+        defaultValue: Sequelize.NOW
     }
 }, {
     freezeTableName: true,
-    timestamps: false,
-    primaryKey: ['id_product', 'id_user']
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
 });
 
 export default Cart;

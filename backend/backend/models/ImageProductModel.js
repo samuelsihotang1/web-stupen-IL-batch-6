@@ -25,17 +25,18 @@ const ImageProduct = db.define(
 		},
 		created_at: {
 			type: DataTypes.DATE,
-			defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+			defaultValue: Sequelize.NOW,
 		},
 		updated_at: {
 			type: DataTypes.DATE,
-			defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-			onUpdate: Sequelize.literal('CURRENT_TIMESTAMP'),
+			defaultValue: Sequelize.NOW,
 		},
 	},
 	{
 		freezeTableName: true,
-		timestamps: false,
+		timestamps: true,
+		createdAt: 'created_at',
+		updatedAt: 'updated_at',
 	}
 );
 

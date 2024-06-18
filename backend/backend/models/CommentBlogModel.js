@@ -30,16 +30,17 @@ const CommentBlog = db.define('comment_blog', {
     },
     created_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+        defaultValue: Sequelize.NOW
     },
     updated_at: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
+        defaultValue: Sequelize.NOW
     }
 }, {
     freezeTableName: true,
-    timestamps: false,
-    primaryKey: ['id_blog', 'id_user']
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
 });
 
 export default CommentBlog;
