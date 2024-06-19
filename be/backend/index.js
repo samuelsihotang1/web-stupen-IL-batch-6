@@ -1,24 +1,30 @@
-const express = require("express");
-const bodyparser = require("body-parser");
-const cors = require("cors");
+import cors from 'cors';
+import express from 'express';
+import ProductRouter from './routes/ProductRoute.js';
+import UserRoute from './routes/UserRoute.js';
+import ImageProductRoute from './routes/ImageProductRoute.js';
+import CategoryProductRoute from './routes/CategoryProductRoute.js';
+import ReviewRoute from './routes/ReviewRoute.js';
+import CartRoute from './routes/CartRoute.js';
+import CheckoutRoute from './routes/CheckoutRoute.js';
+import CheckoutCartRoute from './routes/CheckoutCartRoute.js';
+import BlogRoute from './routes/BlogRoute.js';
+import CategoryBlogRoute from './routes/CategoryBlogRoute.js';
+import CommentBlogRoute from './routes/CommentBlogRoute.js';
+
 const app = express();
-const routeProduk = require("./route/produkRoute");
-const routeArtikel = require("./route/artikelRoute");
-const routeUser = require("./route/userRoute");
-const routePesanan = require("./route/pesananRoute");
-
-const dotenv = require("dotenv");
-const { testConnection } = require("./database/Db");
 app.use(cors());
-dotenv.config();
+app.use(express.json());
+app.use(UserRoute);
+app.use(ProductRouter);
+app.use(ImageProductRoute);
+app.use(CategoryProductRoute);
+app.use(ReviewRoute);
+app.use(CartRoute);
+app.use(CheckoutRoute);
+app.use(BlogRoute);
+app.use(CategoryBlogRoute);
+app.use(CommentBlogRoute);
+app.use(CheckoutCartRoute);
 
-app.use(bodyparser.json());
-app.use(routeProduk);
-app.use(routeArtikel);
-app.use(routeUser);
-app.use(routePesanan);
-
-app.listen(process.env.APP_PORT, async () => {
-  await testConnection();
-  console.log(`Server running at http://localhost:${process.env.APP_PORT}`);
-});
+app.listen(5000, () => console.log('Server up and running...'));

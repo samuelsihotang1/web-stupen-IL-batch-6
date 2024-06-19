@@ -1,5 +1,0 @@
-1. Buat Database dengan Nama eco_warriors
-2. Buat Table dan Isi Tabel dengan Script yang ada di template.sql
-3. Atur .env sesuai dengan konfigurasi kalian
-4. Ketik npm install di terminal
-5. Jalankan dengan npm run dev
