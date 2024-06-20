@@ -81,9 +81,9 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 												<span>Account</span>
 											</a>
 											<div className="dropdown-menu">
-											<Link to="/signIn" className="btn_1">													
-											Sign In
-											</Link>
+												<Link to="/signIn" className="btn_1">
+													Sign In
+												</Link>
 												<ul>
 													<li>
 														<a href="track-order.html">
@@ -104,7 +104,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 														</a>
 													</li>
 													<li>
-														<a href="account.html">
+														<a href="/Account">
 															<i className="ti-user"></i>My
 															Profil
 														</a>

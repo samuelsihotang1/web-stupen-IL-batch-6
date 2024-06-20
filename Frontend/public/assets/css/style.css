@@ -2279,8 +2279,8 @@ header ul.top_tools > li .dropdown-access .dropdown-menu a {
 }
 header ul.top_tools > li .dropdown-cart .dropdown-menu a.btn_1,
 header ul.top_tools > li .dropdown-access .dropdown-menu a.btn_1 {
-  color: #111;
-  background-color: #89FF00;
+  color: #fff;
+  background-color: #325326;
   height: auto;
   line-height: 1.4;
 }
@@ -2290,8 +2290,8 @@ header ul.top_tools > li .dropdown-access .dropdown-menu a.btn_1.outline {
 }
 header ul.top_tools > li .dropdown-cart .dropdown-menu a.btn_1:hover,
 header ul.top_tools > li .dropdown-access .dropdown-menu a.btn_1:hover {
-  color: #fff !important;
-  background-color: #325326;
+  color: #111 !important;
+  background-color: #89FF00;
 }
 header .main_nav {
   position: relative;
@@ -2721,11 +2721,11 @@ header.version_1 .main-menu > ul > li:hover > a {
 /*First level version 2 */
 header.version_2 .main-menu > ul > li > a,
 .main-menu > ul > li.submenu:hover > a {
-  color: #282828;
+  color: white;
 }
 
 header.version_2 .main-menu > ul > li:hover > a {
-  color: #325326;
+  color: #89FF00;
 }
 
 header.version_2 .main-menu ul > li.submenu > a:after {
