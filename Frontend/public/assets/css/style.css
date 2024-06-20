@@ -1937,7 +1937,7 @@ a.btn_1,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 7px;
   line-height: normal;
 }
 a.btn_1:focus,
@@ -1980,7 +1980,7 @@ a.btn_1.outline:focus,
 }
 a.btn_1.gray,
 .btn_1.gray {
-  background: #f0f0f0;
+  background: #ffffff;
   color: #325326 !important;
   font-weight: bold;
 }
