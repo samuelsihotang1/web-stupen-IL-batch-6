@@ -115,7 +115,7 @@ function Cart() {
                                         <div className="thumb_cart">
                                             <img
                                                 src="img/products/product_placeholder_square_small.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/vas-bunga-botol-kaca.png"
                                                 className="lazy"
                                                 alt="Image"
                                             />

@@ -155,7 +155,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 															<figure>
 																<img
 																	src="/assets/img/products/product_placeholder_square_small.jpg"
-																	data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+																	data-src="/real_assets/img/products/hiasan-dinding.png"
 																	alt=""
 																	width="50"
 																	height="50"
@@ -182,7 +182,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 													</div>
 													<a
 														href="/cart"
-														className="btn_1 outline">
+														className="btn_1">
 														Keranjang
 													</a>
 													<a
