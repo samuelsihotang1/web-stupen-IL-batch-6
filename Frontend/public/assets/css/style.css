@@ -1787,7 +1787,7 @@ hr {
 .main_title h2 {
   font-size: 36px;
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: bold;
   margin: 0;
   position: relative;
   z-index: 2;
@@ -1797,6 +1797,7 @@ hr {
   .main_title h2 {
     font-size: 28px;
     font-size: 1.75rem;
+    font-weight: bold;
   }
 }
 .main_title h1 {
@@ -1980,7 +1981,8 @@ a.btn_1.outline:focus,
 a.btn_1.gray,
 .btn_1.gray {
   background: #f0f0f0;
-  color: #111 !important;
+  color: #325326 !important;
+  font-weight: bold;
 }
 a.btn_1.gray:hover,
 .btn_1.gray:hover {

@@ -50,13 +50,13 @@ function Article() {
 															style={{
 																marginRight: '1vw',
 															}}>
-															Daftar
+															DAFTAR
 														</a>
 														<a
 															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button">
-															Belanja
+															BELANJA
 														</a>
 													</div>
 												</div>

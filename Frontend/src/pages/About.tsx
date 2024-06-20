@@ -52,13 +52,13 @@ function About() {
 															style={{
 																marginRight: '1vw',
 															}}>
-															Daftar
+															DAFTAR
 														</a>
 														<a
 															className="btn_1 gray"
 															href="listing-grid-1-full.html"
 															role="button">
-															Belanja
+															BELANJA
 														</a>
 													</div>
 												</div>
@@ -143,7 +143,7 @@ function About() {
 											/>
 										</a>
 									</figure>
-									
+
 									<h4>Aniec Anafisah</h4>
 									<p className="lead">Designer</p>
 								</div>
