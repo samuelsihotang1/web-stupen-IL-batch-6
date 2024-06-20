@@ -198,13 +198,13 @@ function Favorite() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/vas-bunga-botol-kaca.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/vas-bunga-botol-kaca.png"
                                                 alt=""
                                             />
                                         </a>
@@ -217,7 +217,7 @@ function Favorite() {
                                         <i className="icon-star"></i>
                                     </div>
                                     <a href="/detailproduct">
-                                        <h3>Hiasan Dinding Gantung</h3>
+                                        <h3>Vas Bunga</h3>
                                     </a>
                                     <div className="price_box">
                                         <span className="new_price">Rp. 20.000</span>
@@ -261,13 +261,13 @@ function Favorite() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+                                                data-src="/real_assets/img/products/lampu-hias.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/tas-botol-plastik-1.png"
+                                                data-src="/real_assets/img/products/lampu-hias.png"
                                                 alt=""
                                             />
                                         </a>
@@ -280,10 +280,10 @@ function Favorite() {
                                         <i className="icon-star"></i>
                                     </div>
                                     <a href="/detailproduct">
-                                        <h3>Tas Tutup Botol</h3>
+                                        <h3>Lampu Hias</h3>
                                     </a>
                                     <div className="price_box">
-                                        <span className="new_price">Rp. 50.000</span>
+                                        <span className="new_price">Rp. 30.000</span>
                                     </div>
                                     <ul>
                                         <li>
@@ -320,13 +320,13 @@ function Favorite() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/gantungan-kunci.png"
+                                                data-src="/real_assets/img/products/rompi-rajut.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/gantungan-kunci.png"
+                                                data-src="/real_assets/img/products/rompi-rajut.png"
                                                 alt=""
                                             />
                                         </a>
@@ -339,10 +339,10 @@ function Favorite() {
                                         <i className="icon-star"></i>
                                     </div>
                                     <a href="/detailproduct">
-                                        <h3>Gantungan Kunci</h3>
+                                        <h3>Rompi Rajut</h3>
                                     </a>
                                     <div className="price_box">
-                                        <span className="new_price">Rp. 25.000</span>
+                                        <span className="new_price">Rp. 125.000</span>
                                     </div>
                                     <ul>
                                         <li>
@@ -379,13 +379,13 @@ function Favorite() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/gaun-kertas.png"
+                                                data-src="/real_assets/img/products/tas-kain.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/gaun-kertas.png"
+                                                data-src="/real_assets/img/products/tas-kain.png"
                                                 alt=""
                                             />
                                         </a>
@@ -398,7 +398,7 @@ function Favorite() {
                                         <i className="icon-star"></i>
                                     </div>
                                     <a href="/detailproduct">
-                                        <h3>Gaun Kertas</h3>
+                                        <h3>Tas Ransel</h3>
                                     </a>
                                     <div className="price_box">
                                         <span className="new_price">Rp. 150.000</span>
@@ -438,13 +438,13 @@ function Favorite() {
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/hiasan-dinding.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="img-fluid lazy"
                                                 src="/assets/img/products/product_placeholder_square_medium.jpg"
-                                                data-src="/real_assets/img/products/hiasan-dinding-gantung.png"
+                                                data-src="/real_assets/img/products/hiasan-dinding.png"
                                                 alt=""
                                             />
                                         </a>
