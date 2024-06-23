@@ -11,18 +11,7 @@ function Cart() {
                 <main className="bg_gray">
                     <div className="container margin_30">
                         <div className="page_header">
-                            <div className="breadcrumbs">
-                                <ul>
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Category</a>
-                                    </li>
-                                    <li>Page active</li>
-                                </ul>
-                            </div>
-                            <h1>Cart page</h1>
+                            <h1>Cart Page</h1>
                         </div>
                         {/* /page_header */}
                         <table className="table table-striped cart-list">

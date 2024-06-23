@@ -92,7 +92,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 														</a>
 													</li>
 													<li>
-														<a href="account.html">
+														<a href="/favorite">
 															<i className="ti-package"></i>
 															Pesanan Anda
 														</a>
@@ -110,7 +110,7 @@ function Header({ isSticky = true }: { isSticky?: boolean }) {
 														</a>
 													</li>
 													<li>
-														<a href="help.html">
+														<a href="/about">
 															<i className="ti-help-alt"></i>
 															Bantuan
 														</a>
