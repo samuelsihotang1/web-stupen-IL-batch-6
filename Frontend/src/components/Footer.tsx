@@ -14,7 +14,7 @@ function Footer() {
 										<p className="white-text">
 											Mengubah plastik menjadi peluang:
 											<br />
-											Satu langkah kecil untuk bumi yang lebih
+											Satu langkah kecil untuk Bumi yang lebih
 											hijau.
 										</p>
 									</li>
